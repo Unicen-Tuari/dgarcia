@@ -1,0 +1,131 @@
+﻿#menuPrincipal {
+	height: 35px;
+	padding-left: 10px;
+	background: #333333; /* Color de fondo */
+	border-radius: 20px;
+	padding-right: 0px;
+	padding-top: 0px;
+	margin-left: 100px;
+	margin-right: 100px;
+	float: none;
+	clear: both;
+	padding-bottom: 0px;
+	margin-top: -170px;
+	z-index: 6;
+}
+#Maquinarias{
+	background-color: #333;
+	padding-bottom: 7px;
+}
+
+.menu {
+	width: 81%;
+	font-family: "Lucida Sans Unicode", "Trebuchet Unicode MS", "Lucida Grande",sans-serif;
+	font-size: 15px; /* Tamaño de la fuente */
+	font-weight: bold;
+}
+
+.menu ul {
+	list-style: none;
+	border-radius: 10px;
+}
+
+.menu li{
+	float: left;
+}
+
+.menu li a{
+	color: #FFFFFF; /* Color de la fuente */
+	display: table;
+	font-weight: normal;
+	line-height: 20px;
+	text-decoration: none;
+	margin-right: 20px;
+	margin-left: 20px;
+	text-align: center;
+	background-color: #333333;
+	background-repeat: no-repeat;
+	border-spacing: 10px 0px;
+	margin-top: 8px;
+}
+
+.menu li a:hover{
+	color: #FFFFFF; /* Color del texto al pasar el cursor */
+	text-decoration: none;
+	border-radius: 10px;
+	background-color: #191970;
+	min-height: 0px;
+}
+
+.menu ul li:hover a {
+	color: #FFFFFF; /* Color del texto al pasar el cursor */
+	text-decoration: none;
+	border-radius: 10px;
+	background-color: #191970;	
+	
+}
+
+.menu li ul {
+	display: none;
+	position: absolute;
+	width: 100px; /* Ancho del submenú */
+	z-index: 2; 
+	background-color: #333333;
+	top: 30px;
+}
+
+
+
+.menu li:hover ul{
+	display: block;
+	background-color: #333;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.menu li li {
+	display:block;
+	float:none;
+	margin:0px;
+	padding:0px;
+	width:100px;
+	
+}
+
+.menu li:hover li a {
+	background:none;	
+
+}
+
+.menu  ul li ul li{
+	margin-left: -20px;
+	margin-top: 4px;
+	bottom: 10px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+
+.menu  ul li ul li:hover{
+	border-radius: 10px;
+	text-align: center;
+	background-color: #191970;
+}
+	
+#search {
+	width: 229px;
+	float: right;
+	text-align: center;
+	margin-top: 6px;
+	/* Imagen de fondo del buscador */
+	background: url(../images/search-bar.png) no-repeat;
+	margin-right: -175px;
+	margin-left: 0px;
+}
+
+#search-box {
+	border: 0px;
+	background: transparent;
+	text-align: center;
+	height: 20px;
+}

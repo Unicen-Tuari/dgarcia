@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/contactoCA.css">
+		<title>Campo Activo S.A.</title> 
+       <link rel="shortcut icon" href="images/favicon.ico">
+	</head>
+	<body>
+		<nav id='menuPrincipal'>
+            <div class='menu'>
+                <ul>
+                    <li><a href="indexCA.html">Inicio</a></li>
+                    <li><a href="reseñaCA.html">Reseña</a></li>
+                    <li><a>Maquinarias</a>
+                        <ul>
+                            <li><a href="nuevasCA.html">Nuevas</a></li>
+                            <li><a href="usadasCA.html">Usadas</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="eventosCA.html">Eventos</a></li>
+                    <li><a href="galeriaCA.html">Galería</a></li>
+                    <li><a href="contactoCA.html">Contacto</a></li>            
+           	</ul>
+                        
+            <form action='/search' id='search' method='get' name='searchForm' style='display:inline;'> 
+            	<input id='search-box' size='28' type='text' value='Buscar...'/>
+           </form>
+            
+            </div>
+        </nav>
+		<section class="ContactoSection">
+		<!--Para que se pueda hacer Contacto con le Concesionario -->
+			<form action="">
+				<fieldset>
+                <div id='facebook'><a href="https://www.facebook.com/cristian.peronja.1">
+                	<img src="images/facebook.jpg" width="121" height="36"  alt=""/></a>
+                </div>
+					<p class = "Contacto">
+				  <h1>Contacto:</h1>
+						<div class=" adentro">
+							Nombre:	
+							<input type="text" name="Nombre" required>*<br>
+							Apellido:
+							<input type="text" name="Apellido" required>*<br>
+							Tel&eacutefono:	
+							<input type="tel" name="NroTel"><br>
+							E-Mail: 
+							<input type="email" name="emali" required size=40>*<br>Comentario:<br>
+							<textarea rows="6" cols="65"></textarea>
+							<h5>* Campo Obligatorio</h5>
+							<a href="http://www.rednh.com.ar/" target="_blank">
+                            Busque su concesionario m&aacutes cercano de New Holland. Aqui!</a>
+							<br>
+							<input type="submit" value="Contactar">
+							<br>
+						</div>
+					</p>
+                    
+				</fieldset>
+			</form>
+			
+		</section>
+		
+		<footer>
+			<small>
+		                Copyright &copy; 2014 Daniela - Matias
+			</small>   
+		</footer>
+
+
+	</body>
+</html>
