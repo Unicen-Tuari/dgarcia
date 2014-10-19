@@ -218,29 +218,46 @@ footer p {
     text-align: center;
     font-size: 13px; 
 }
+
 .dropdown-menu{
     min-width: 204px;
     background-color: rgba(255,255,255,0.9);
     border:none;
 }
+
 .dropdown-menu>li>a{
     font-size: 18px;
     text-align: center;
 }
+
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
     background-color:transparent;
 }
-/*#logo {
-border-radius: 40px 40px 40px 40px;
-opacity: 0.7;
-box-shadow: 4px 4px 9px #666666;
-z-index: 3;
-width: 248px;
-margin-left: 44px;
-height: 118px;
-background-image: url(..images/logo.png);
+
+.btn-primary{
+    background-color: #0032AB;
 }
-*/
+
+#tipeoUser{
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    margin-right: 4px;
+    background-color: rgba(90, 143, 226, 0.38);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form.busqueda button{
+    width: 100%;
+}
+
+#cantResultados{
+    color: #777;
+    padding: 6px;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
 
 @media screen and (max-width:768px) {
     .dropdown-menu>li>a{

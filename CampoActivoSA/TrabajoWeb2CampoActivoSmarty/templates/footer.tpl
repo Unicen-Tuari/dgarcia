@@ -18,7 +18,16 @@
     <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
-    })
+    });
+
+    $("#tipeoUser").keyup(function(){
+        var query=$("#tipeoUser").val();
+        $.get("resultadosParciales.php?q="+query,function(data,status){
+            //console.log(data);
+            $("#cantResultados").html(data + " Resultados");
+        });
+    });
+
     </script>
 
 </body>

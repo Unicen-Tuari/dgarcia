@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-15 06:19:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-19 02:21:44
          compiled from ".\templates\evento.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10355543af7d9895b80-13937840%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a3b99b6c44d8390563878e45b75eb942a4977889' => 
     array (
       0 => '.\\templates\\evento.tpl',
-      1 => 1413344899,
+      1 => 1413677137,
       2 => 'file',
     ),
   ),
@@ -47,7 +47,7 @@ $_smarty_tpl->tpl_vars['evento']->_loop = true;
 
                     <img class="img-responsive img-border img-full" src="<?php echo $_smarty_tpl->tpl_vars['evento']->value['Ruta'];?>
 " alt="">
-                    <h2><?php echo $_smarty_tpl->tpl_vars['evento']->value['Nombre'];?>
+                    <h2><?php echo utf8_encode($_smarty_tpl->tpl_vars['evento']->value['Nombre']);?>
 
                         <br>
                         <small><h4>Fecha: <?php echo $_smarty_tpl->tpl_vars['evento']->value['Fecha'];?>
@@ -55,8 +55,7 @@ $_smarty_tpl->tpl_vars['evento']->_loop = true;
                         <small><h4>Ubicaci&oacute;n: <?php echo $_smarty_tpl->tpl_vars['evento']->value['Ubicacion'];?>
 </h4></small>
                     </h2>
-                    <p><?php echo $_smarty_tpl->tpl_vars['evento']->value['Texto'];?>
-
+                    <p><?php echo utf8_encode($_smarty_tpl->tpl_vars['evento']->value['Texto']);?>
                     </p>
                     <a href="index.php?action=carouselE&amp;id=<?php echo $_smarty_tpl->tpl_vars['evento']->value['id_Contenido'];?>
 " class="btn btn-default btn-lg">M&aacute;s Im&aacute;genes</a>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-15 06:07:31
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-19 02:16:41
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:131605439c3e214b587-68986167%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1413346026,
+      1 => 1413677795,
       2 => 'file',
     ),
   ),
@@ -36,6 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/business-casual.css" rel="stylesheet">
@@ -84,10 +85,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="index.php?action=listarMaquinas&amp;tipo=n">Nuevas</a>
+                                <a href="index.php?action=maquina&amp;estado=N">Nuevas</a>
                             </li>
                             <li>
-                                <a href="index.php?action=listarMaquinas&amp;tipo=u">Usadas</a>
+                                <a href="index.php?action=maquina&amp;estado=U">Usadas</a>
                             </li>
                         </ul>           
                     </li>
@@ -103,8 +104,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
+            <form class = "busqueda" action = "index.php">
+                <input type = "hidden" name  = "action" value = "resultado">
+                <div class="row">
+                    <div class="col-sm-8 text-center">
+                        <input id = "tipeoUser" name = "q">
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <button class = "btn btn-primary" type = "submit" value = "B&uacute;squeda">
+                            <i class="fa fa-search-plus"></i>
+                            <span>Búsqueda</span>
+                        </button>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id = "cantResultados">0 Resultados</p>
+                    </div>   
+                </div>          
+            </form>
         </div>
-        <!-- /.container -->        
+        <!-- /.container -->   
+
     </nav>
 
     <div class="brand">

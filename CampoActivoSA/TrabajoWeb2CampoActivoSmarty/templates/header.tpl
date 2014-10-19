@@ -15,6 +15,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/business-casual.css" rel="stylesheet">
@@ -63,10 +64,10 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="index.php?action=listarMaquinas&amp;tipo=n">Nuevas</a>
+                                <a href="index.php?action=maquina&amp;estado=N">Nuevas</a>
                             </li>
                             <li>
-                                <a href="index.php?action=listarMaquinas&amp;tipo=u">Usadas</a>
+                                <a href="index.php?action=maquina&amp;estado=U">Usadas</a>
                             </li>
                         </ul>           
                     </li>
@@ -82,8 +83,26 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
+            <form class = "busqueda" action = "index.php">
+                <input type = "hidden" name  = "action" value = "resultado">
+                <div class="row">
+                    <div class="col-sm-8 text-center">
+                        <input id = "tipeoUser" name = "q">
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <button class = "btn btn-primary" type = "submit" value = "B&uacute;squeda">
+                            <i class="fa fa-search-plus"></i>
+                            <span>Búsqueda</span>
+                        </button>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id = "cantResultados">0 Resultados</p>
+                    </div>   
+                </div>          
+            </form>
         </div>
-        <!-- /.container -->        
+        <!-- /.container -->   
+
     </nav>
 
     <div class="brand">
