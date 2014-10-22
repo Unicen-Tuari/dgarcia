@@ -44,20 +44,20 @@
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>Nombre y Apellido</label>
-                                <input name="nombre" type="text" class="form-control">
+                                <input name="name" type="text" class="form-control">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label> Direcci&oacuten de Email </label>
-                                <input name="correoelectronico" type="email" class="form-control">
+                                <input name="email" type="email" class="form-control">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Tel&eacutefono</label>
-                                <input name="telefono" type="tel" class="form-control">
+                                <input name="phone" type="tel" class="form-control">
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
                                 <label>Mensaje</label>
-                                <textarea name="mensaje" class="form-control" rows="6"></textarea>
+                                <textarea name="message" class="form-control" rows="6"></textarea>
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">

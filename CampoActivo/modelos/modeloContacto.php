@@ -12,7 +12,7 @@
 		{			
 			return $this->query("
 				INSERT INTO contactos (Nombre,Telefono,Correoelectronico,Comentario)
-						 VALUES ($nombre,$telefono,$correoelectronico,$mensaje)
+						 VALUES ('$nombre','$telefono','$correoelectronico','$mensaje')
 	        ");		
 		}
 	}

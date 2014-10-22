@@ -101,23 +101,19 @@ ini_set("display_errors", 1);
 								if($_REQUEST['action']=='contacto')
 								{
 																		
-									if((array_key_exists('nombre', $_POST)) && (array_key_exists('correoelectronico', $_POST)) 
-										&& (array_key_exists('telefono', $_POST)) && (array_key_exists('mensaje', $_POST)))
+									if((array_key_exists('name', $_POST)) && (array_key_exists('email', $_POST)) 
+										&& (array_key_exists('phone', $_POST)) && (array_key_exists('message', $_POST)))
 									{
-										
 										include "./controladores/controladorContacto.php";
 										$c = new ContactoController();
-										$c->actionMensaje($_POST['nombre'],$_POST['correoelectronico'],$_POST['telefono'],$_POST['mensaje']);									
+										$c->actionMensaje($_POST['name'],$_POST['email'],$_POST['phone'],$_POST['message']);									
 									}
 									else
 									{
 										include "./controladores/controladorContacto.php";
 										$c = new ContactoController();
 										$c->actionContacto();
-									}
-									// include "./controladores/controladorContacto.php";
-									// $c = new ContactoController();
-									// $c->actionContacto();
+									}								
 								}
 								else
 									if($_REQUEST['action']=='resultado')
@@ -130,7 +126,6 @@ ini_set("display_errors", 1);
 										}
 										else 
 										{
-
 											echo "Error de Parametros";
 										}
 									}

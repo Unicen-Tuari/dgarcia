@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-19 00:50:20
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-22 23:04:43
          compiled from ".\templates\footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:172815439c3e2162e30-66906874%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1be7ff7fdee636597edd726ee98dfef4bfd55d1f' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1413672618,
+      1 => 1414011880,
       2 => 'file',
     ),
   ),
@@ -34,6 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!--  <script src="js/jqBootstrapValidation.js"></script>
+    // <script src="js/contact_me.js"></script -->
 
     <!-- Script to Activate the Carousel -->
     <script>
