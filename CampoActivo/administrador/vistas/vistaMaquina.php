@@ -19,6 +19,11 @@ class MaquinaView extends View{
 		$this->smarty->display('carouselMaq.tpl');
 	}
 
+
+	function nuevaMaquina()
+	{
+		$this->smarty->display('agregarMaq.tpl'); 
+	}
 }
 
 ?>

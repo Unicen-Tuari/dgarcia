@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-17 00:50:54
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-18 22:49:02
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:131605439c3e214b587-68986167%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1416181634,
+      1 => 1416347302,
       2 => 'file',
     ),
   ),
@@ -91,14 +91,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 <a href="index.php?action=maquina&amp;estado=U">Usadas</a>
                             </li>
                             <li>
-                                <a href="index.php?action=maquina&amp;agregarM">Agregar</a>
+                                <a href="index.php?action=verCrearMaq">Agregar</a>
                             </li>
                             <li>
-                                <a href="index.php?action=maquina&amp;modificarM">Modificar</a>
-                            </li>
-                            <li>
-                                <a href="index.php?action=maquina&amp;eliminarM">Eliminar</a>
-                            </li>
+                                <a href="index.php?action=verModElim">Mod/Elim</a>
+                            </li> 
                         </ul>           
                     </li>
                     <li class="dropdown">
@@ -113,29 +110,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 <a href="index.php?action=verCrearEvento">Agregar</a>
                             </li>
                             <li>
-                                <a href="index.php?action=verModificarE">Modificar</a>
-                            </li>
-                            <li>
-                                <a href="index.php?action=eliminarE">Eliminar</a>
-                            </li>
+                                <a href="index.php?action=verModElim">Mod/Elim</a>
+                            </li>                            
                         </ul>           
                     </li>
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle">Turno
-                                <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="index.php?action=turno&amp;agregarT">Agregar</a>
-                            </li>
-                            <li>
-                                <a href="index.php?action=turno&amp;eliminarE">Eliminar</a>
-                            </li>
-                        </ul>           
-                    </li>
-                    <!-- <li>
+                    <li>
                         <a href="index.php?action=turno">Turno</a>
-                    </li> -->
+                    </li>
                     <li>
                         <a href="index.php?action=contacto">Contacto</a>
                     </li>                    

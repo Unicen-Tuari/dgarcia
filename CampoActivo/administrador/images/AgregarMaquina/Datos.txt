@@ -1,0 +1,14 @@
+nombre: Rastra niveladora DISTRIMAQ
+tipo niveladora
+modelo: 2014
+estado: N
+ruta:	/images/AgregarMaquina/01.jpg
+	/images/Agregar Maquina/02.jpg
+	/images/Agregar Maquina/03.jpg
+	/images/Agregar Maquina/04.jpg
+
+precio: $280000
+
+texto: 
+
+

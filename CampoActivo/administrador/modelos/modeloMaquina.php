@@ -56,6 +56,43 @@ class Maquina extends ModeloDB{
         	GROUP BY c.id_contenido			     	
         ");
 	}
+
+
+	public function insertarContenidoMaq($nombre,$texto)
+	{
+		return $this->query("
+			INSERT INTO contenido (nombre,texto)
+					VALUES ('$nombre','$texto')
+		");
+	}
+
+	public function obtenerID_ContenidoMaq()
+	{
+		$datos =  $this->query("
+			SELECT id_contenido
+					FROM contenido
+					ORDER BY id_contenido ASC
+		");
+
+		$id = array_pop ($datos); //Obtiene el ultimo dato del arreglo.....
+		return $id['id_contenido'];
+	}
+
+	public function insertarImagenesMaq($id_contenido,$ruta)
+	{
+		return $this->query("
+			INSERT INTO imagenes (id_contenido,ruta)
+						VALUES ('$id_contenido','$ruta')
+		");
+	}
+
+	public function insertarMaq($id_contenido,$estado,$modelo,$tipo,$precio)
+	{
+		return $this->query("
+			INSERT INTO maquinas (id_contenido, estado, modelo, tipo, precio)
+					VALUES ('$id_contenido','$estado', '$modelo', '$tipo', '$precio')
+		");
+	}	
 }
 
 ?>

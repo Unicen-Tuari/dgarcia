@@ -21,7 +21,7 @@ class EventoView extends View{
 
 	function nuevoEvento()
 	{
-		$this->smarty->display('modificarE.tpl'); //agregarE
+		$this->smarty->display('agregarE.tpl'); //agregarE
 	}
 
 

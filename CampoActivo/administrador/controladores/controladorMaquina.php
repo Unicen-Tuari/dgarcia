@@ -1,48 +1,82 @@
 <?php
 
-include "./vistas/vistaMaquina.php";
-include "./modelos/modeloMaquina.php";
-
 class MaquinaController{
 	
+	private $modeloMaquinas;
+	private	$view;
+
+	public function __construct()
+	{
+		include "./vistas/vistaMaquina.php";
+		include "./modelos/modeloMaquina.php";
+
+		$this->modeloMaquinas = new Maquina();
+		$this->view = new MaquinaView;
+	}
+
 	public function actionMaquina($estado){
 		
-		$maquinas = new Maquina();
-		$view = new MaquinaView;
+		$this->modeloMaquinas = new Maquina();
+		$this->view = new MaquinaView;
 
-		$m = $maquinas->load_Maq($estado);	
+		$m = $this->modeloMaquinas->load_Maq($estado);	
 			
-		$view->set_maquinas($m);
+		$this->view->set_maquinas($m);
 		
-		$view->render();
+		$this->view->render();
 		
 	}
 
 	public function actionCarouselMaq($estado,$id_maq){
 
-		$maquinasI = new Maquina();
-		$view = new MaquinaView;
+		$this->modeloMaquinas = new Maquina();
+		$this->view = new MaquinaView;
 		
-		$imgMaq = $maquinasI->load_ImgMaq($estado,$id_maq);		 	 
+		$imgMaq = $this->modeloMaquinas->load_ImgMaq($estado,$id_maq);		 	 
 		
-		$view->set_imgMaq($imgMaq);
+		$this->view->set_imgMaq($imgMaq);
 
-		$view->renderCM();
+		$this->view->renderCM();
 
+	}
+
+	public function vistaAgregarMaq(){
+
+		$this->view->nuevaMaquina();
+	}
+
+	public function insertarMaquina()
+	{
+		//request toma post y get...
+
+		$nombre = $_REQUEST["nombre"];
+		$tipo 	= $_REQUEST["tipo"];
+		$modelo = $_REQUEST["modelo"];
+		$estado = $_REQUEST["estado"];
+		$ruta 	= $_REQUEST["ruta"];
+		$precio = $_REQUEST["precio"];
+		$texto 	= $_REQUEST["texto"];		
+
+		$arrMaq = $this->modeloMaquinas->insertarContenidoMaq($nombre,$texto);
+		$id_contenido = $this->modeloMaquinas->obtenerID_ContenidoMaq();		
+		$arrMaq = $this->modeloMaquinas->insertarImagenesMaq($id_contenido,$ruta);		
+		$arrMaq = $this->modeloMaquinas->insertarMaq($id_contenido,$estado,$modelo,$tipo,$precio);
+
+		$this->actionMaquina($estado);
+		$this->actionCarouselMaq($estado,$id_maq);		
 	}
 
 	public function actionBusquedaMaq($q){
 
-		$maquinasB = new Maquina();
-		$view = new MaquinaView;
+		$this->modeloMaquinas = new Maquina();
+		$this->view = new MaquinaView;
 		
-		$imgMaqB = $maquinasB->load_ResFinales($q);		 	 
+		$imgMaqB = $this->modeloMaquinas->load_ResFinales($q);		 	 
 		
-		$view->set_maquinas($imgMaqB);
+		$this->view->set_maquinas($imgMaqB);
 
-		$view->render();
-
-	}
+		$this->view->render();
+	}	
 
 }
 

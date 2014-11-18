@@ -70,14 +70,11 @@
                                 <a href="index.php?action=maquina&amp;estado=U">Usadas</a>
                             </li>
                             <li>
-                                <a href="index.php?action=maquina&amp;agregarM">Agregar</a>
+                                <a href="index.php?action=verCrearMaq">Agregar</a>
                             </li>
                             <li>
-                                <a href="index.php?action=maquina&amp;modificarM">Modificar</a>
-                            </li>
-                            <li>
-                                <a href="index.php?action=maquina&amp;eliminarM">Eliminar</a>
-                            </li>
+                                <a href="index.php?action=verModElim">Mod/Elim</a>
+                            </li> 
                         </ul>           
                     </li>
                     <li class="dropdown">
@@ -92,29 +89,13 @@
                                 <a href="index.php?action=verCrearEvento">Agregar</a>
                             </li>
                             <li>
-                                <a href="index.php?action=verModificarE">Modificar</a>
-                            </li>
-                            <li>
-                                <a href="index.php?action=eliminarE">Eliminar</a>
-                            </li>
+                                <a href="index.php?action=verModElim">Mod/Elim</a>
+                            </li>                            
                         </ul>           
                     </li>
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle">Turno
-                                <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="index.php?action=turno&amp;agregarT">Agregar</a>
-                            </li>
-                            <li>
-                                <a href="index.php?action=turno&amp;eliminarE">Eliminar</a>
-                            </li>
-                        </ul>           
-                    </li>
-                    <!-- <li>
+                    <li>
                         <a href="index.php?action=turno">Turno</a>
-                    </li> -->
+                    </li>
                     <li>
                         <a href="index.php?action=contacto">Contacto</a>
                     </li>                    
