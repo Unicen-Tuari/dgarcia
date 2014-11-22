@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-18 20:48:52
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-20 20:11:21
          compiled from ".\templates\agregarE.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12735469129a21b2f8-51192614%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '599f4bf56adb4dc82f786a73e910330fa1c40145' => 
     array (
       0 => '.\\templates\\agregarE.tpl',
-      1 => 1416181080,
+      1 => 1416510616,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <h2 class="intro-text text-center"><strong>Nuevo Evento</strong></h2>
                     <hr>
                         
-                    <form role="form" action="index.php?action=insertarEvento" method="POST">
+                    <form role="form" action="index.php?action=insertarEvento" method="POST" enctype = "multipart/form-data">
                         <div class="row">
                             <div class="form-group col-lg-12">
                                 <label>Nombre del Evento:</label>
@@ -46,9 +46,33 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 <input name="ubicacion" type="text" class="form-control">
                             </div>
                             <div class="form-group col-lg-12">
-                                <label>Ruta 1: </label>
-                                <input name="ruta" type="text" class="form-control" rows="6"></input>
-                                <label>Ruta 2: </label>
+                                <label>Seleccione im&aacute;genes: </label>
+                                
+                                <input type="file" name = "ruta[]" id="files" multiple>
+
+                                <div id="archivos">
+                                <ul></ul>
+                                </div>
+
+                                <script>
+                                var insertar_en = document.querySelector("#archivos ul");
+                                file_in = document.querySelector("#files")
+                                file_in.onchange = function(e){
+                                    var files = e.target.files;
+                                    for(var i=0,f;f= files[i];++i){
+                                        var archivo = document.createElement("li");
+                                        archivo.innerHTML = f.name + " - (<b>" + f.type + "</b>) ->" + f.size;
+                                        insertar_en.appendChild(archivo);
+                                    }
+                                }
+                                </script>
+
+                                <!-- <form action="demo_form.asp">
+                                  Select images: <input type="file" name="ruta" multiple>
+                                  <input type="submit">
+                                </form> -->
+                                <!-- <input name="ruta" type="text" class="form-control" rows="6"></input> -->
+                                <!-- <label>Ruta 2: </label>
                                 <input name="ruta" type="text" class="form-control" rows="6"></input>
                                 <label>Ruta 3:</label>
                                 <input name="ruta" type="text" class="form-control" rows="6"></input>
@@ -61,7 +85,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 <label>Ruta 7: </label>
                                 <input name="ruta" type="text" class="form-control" rows="6"></input>
                                 <label>Ruta 8: </label>
-                                <input name="ruta" type="text" class="form-control" rows="6"></input>
+                                <input name="ruta" type="text" class="form-control" rows="6"></input> -->
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Descripci&oacute;n: </label>

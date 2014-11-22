@@ -2,7 +2,8 @@
 
 class IndexController{
 	
-	public function actionIndex(){
+	public function actionIndex()
+	{
 		include "./vistas/vistaInicio.php";
 		$view = new IndexView;
 		$view->render();

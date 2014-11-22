@@ -47,7 +47,8 @@ class EventoController{
 		$ruta = $_REQUEST['ruta'];
 		$fecha = $_REQUEST['fecha'];
 		$ubicacion = $_REQUEST['ubicacion'];
-
+		// print_r($ruta);
+		// die();
 		$arrEvento = $this->modeloEventos->insertarContenidoEvento($nombre,$texto);
 		$id_contenido = $this->modeloEventos->obtenerID_ContenidoEvento();		
 		$arrEvento = $this->modeloEventos->insertarImagenesEvento($id_contenido,$ruta);		

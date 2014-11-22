@@ -4,18 +4,23 @@ require('vista.php');
 
 class MaquinaView extends View{
 		
-	function set_maquinas($arrM){
+	function set_maquinas($arrM)
+	{
 		$this->smarty->assign("maquinas",$arrM);
 	}
-	function set_imgMaq($arrIM){
+
+	function set_imgMaq($arrIM)
+	{
 		$this->smarty->assign("imagenes",$arrIM);		
 	}
 
-	function render(){
+	function render()
+	{
 		$this->smarty->display('maquina.tpl');
 	}	
 
-	function renderCM(){
+	function renderCM()
+	{
 		$this->smarty->display('carouselMaq.tpl');
 	}
 

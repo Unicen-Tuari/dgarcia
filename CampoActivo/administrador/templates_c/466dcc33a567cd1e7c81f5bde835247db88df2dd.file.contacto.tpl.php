@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-22 22:46:53
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-22 00:46:24
          compiled from ".\templates\contacto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11490543af7d18cdeb6-28387350%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '466dcc33a567cd1e7c81f5bde835247db88df2dd' => 
     array (
       0 => '.\\templates\\contacto.tpl',
-      1 => 1414010803,
+      1 => 1416613571,
       2 => 'file',
     ),
   ),
@@ -66,20 +66,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>Nombre y Apellido</label>
-                                <input name="name" type="text" class="form-control">
+                                <input name="name" type="text" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-4">
                                 <label> Direcci&oacuten de Email </label>
-                                <input name="email" type="email" class="form-control">
+                                <input name="email" type="email" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Tel&eacutefono</label>
-                                <input name="phone" type="tel" class="form-control">
+                                <input name="phone" type="tel" class="form-control" required>
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
                                 <label>Mensaje</label>
-                                <textarea name="message" class="form-control" rows="6"></textarea>
+                                <textarea name="message" class="form-control" rows="6" required></textarea>
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">

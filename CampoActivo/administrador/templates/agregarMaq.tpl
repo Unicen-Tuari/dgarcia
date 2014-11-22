@@ -27,8 +27,8 @@
                             <div class="form-group col-lg-12">
                                 <label>Estado (U: Usado - N: Nuevo:) </label>
                                 <select enabled name="estado"  required >
-                                    <option value="N"> N </option>
-                                    <option value="U"> U </option>
+                                    <option value="NUEVA"> NUEVA </option>
+                                    <option value="USADA"> USADA </option>
                                 </select><br>
                             </div>
                             <div class="form-group col-lg-12">

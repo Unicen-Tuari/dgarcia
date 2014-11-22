@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-18 23:29:58
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-20 21:01:09
          compiled from ".\templates\agregarMaq.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:30603546bac5b6f9ea4-86273720%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef689b00cc8d06ed62b1ea38e7f6181fef715c9c' => 
     array (
       0 => '.\\templates\\agregarMaq.tpl',
-      1 => 1416349788,
+      1 => 1416513655,
       2 => 'file',
     ),
   ),
@@ -49,8 +49,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             <div class="form-group col-lg-12">
                                 <label>Estado (U: Usado - N: Nuevo:) </label>
                                 <select enabled name="estado"  required >
-                                    <option value="N"> N </option>
-                                    <option value="U"> U </option>
+                                    <option value="NUEVA"> NUEVA </option>
+                                    <option value="USADA"> USADA </option>
                                 </select><br>
                             </div>
                             <div class="form-group col-lg-12">

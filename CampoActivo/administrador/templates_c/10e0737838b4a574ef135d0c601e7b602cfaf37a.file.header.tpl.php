@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-18 22:49:02
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-21 23:33:48
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:131605439c3e214b587-68986167%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1416347302,
+      1 => 1416609111,
       2 => 'file',
     ),
   ),
@@ -80,50 +80,53 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <a href="index.php?action=resenia">La Empresa</a>
                     </li> -->
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle">M&aacute;quinas
+                        <a data-toggle="dropdown" class="dropdown-toggle"><small>M&aacute;quinas</small>
                                 <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="index.php?action=maquina&amp;estado=N">Nuevas</a>
+                                <a href="index.php?action=maquina&amp;estado=NUEVA"><small>Nuevas</small></a>
                             </li>
                             <li>
-                                <a href="index.php?action=maquina&amp;estado=U">Usadas</a>
+                                <a href="index.php?action=maquina&amp;estado=USADA"><small>Usadas</small></a>
                             </li>
                             <li>
-                                <a href="index.php?action=verCrearMaq">Agregar</a>
+                                <a href="index.php?action=verCrearMaq"><small>Agregar</small></a>
                             </li>
                             <li>
-                                <a href="index.php?action=verModElim">Mod/Elim</a>
+                                <a href="index.php?action=verModElim"><small>Mod/Elim</small></a>
                             </li> 
                         </ul>           
                     </li>
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle">Evento
-                                <b class="caret"></b>
+                        <a data-toggle="dropdown" class="dropdown-toggle"><small>Evento</small><b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="index.php?action=evento">Eventos</a>
+                                <a href="index.php?action=evento"><small>Eventos</small></a>
                             </li>
                             <li>
-                                <a href="index.php?action=verCrearEvento">Agregar</a>
+                                <a href="index.php?action=verCrearEvento"><small>Agregar</small></a>
                             </li>
                             <li>
-                                <a href="index.php?action=verModElim">Mod/Elim</a>
+                                <a href="index.php?action=verModElim"><small>Mod/Elim</small></a>
                             </li>                            
                         </ul>           
                     </li>
                     <li>
-                        <a href="index.php?action=turno">Turno</a>
+                        <a href="index.php?action=turno"><small>Turno</small></a>
                     </li>
                     <li>
-                        <a href="index.php?action=contacto">Contacto</a>
+                        <a href="index.php?action=contacto"><small>Contacto</small></a>
+                    </li>
+                    <li> <a href="#" title="Click para registrarse y comenzar a utilizar la aplicacion" data-toggle="modal" data-target="#Registrarse"><i class="fa fa-sign-in fa-1x"></i><small> Registrarse</small></a>
+                    </li>
+                    <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i> <small>Iniciar sesión</small></a>
                     </li>                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-            <form class = "busqueda" action = "index.php">
+            <!-- <form class = "busqueda" action = "index.php">
                 <input type = "hidden" name  = "action" value = "resultado">
                 <div class="row">
                     <div class="col-sm-8 text-center">
@@ -139,7 +142,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <p id = "cantResultados">0 Resultados</p>
                     </div>   
                 </div>          
-            </form>
+            </form> -->
         </div>
         <!-- /.container -->   
 
@@ -151,4 +154,159 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
     </div>
         
-    <div class="address-bar">Ruta 3 KM 299,2 | CP 7300 | Azul, Buenos Aires| 02281-427465</div><?php }} ?>
+    <div class="address-bar">Ruta 3 KM 299,2 | CP 7300 | Azul, Buenos Aires| 02281-427465</div>
+
+<!--*************************************************************************************-->
+<!--*************************************************************************************-->
+
+                              <!-- Modal Registrarse -->
+<!-- 
+<button type="button" class="close" action="index.php?action=logout" ><span aria-hidden="true">&times;</span><span class="sr-only">Logout</span></button>
+ -->
+
+<div class="modal fade" id="Registrarse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Registrarse</h4>
+      </div>
+      <div class="modal-body">
+       <form class="form-horizontal"  action="index.php" method="post">
+        <fieldset>
+            <legend>Ingrese todo los datos requeridos.</legend>
+              <div class="form-group">
+                  <label for="inputUsuario" class="col-lg-2 control-label" required>Usuario</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="usuario_registrarse" class="form-control" id="usuario" placeholder="que utilizará para loguearse" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputNombre" class="col-lg-2 control-label" required>Nombres</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="nombre_registrarse" class="form-control" id="nombre" placeholder="" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="apellido" class="col-lg-2 control-label" required>Apellidos</label>
+                <div class="col-lg-10">
+                  <input type="text" name="apellido_registrarse" class="form-control" id="apellido" placeholder="" required>
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputDocumento" class="col-lg-2 control-label">Documento</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="dni_registrarse"  class="form-control" id="inputDocumento" placeholder="D.N.I" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputFechaNacimiento" class="col-lg-2 control-label">Fecha de Nacimiento</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="FechaNacimiento"  class="form-control" id="inputFechaNacimiento" placeholder="Año-Mes-Día" >
+                  </div>
+              </div>
+              <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">E-mail</label>
+                    <div class="col-lg-10">
+                      <input type="email" name="email_registrarse" class="form-control" id="inputEmail"  placeholder="EJ: Minombre@gmail.com"  required>
+                    </div>
+              </div>
+              <div class="form-group">
+                    <label for="inputCelular" class="col-lg-2 control-label">Teléfono 
+                    celular</label>
+                    <div class="col-lg-10">
+                      <input type="integer" name="Celular_registrarse" class="form-control" id="inputCelular" placeholder="XXXX-XXXXXXXXX" >
+                    </div>
+               </div>
+              <div class="form-group">
+                    <label for="inputTelefonoFijo" class="col-lg-2 control-label">Teléfono fíjo</label>
+                    <div class="col-lg-10">
+                      <input type="integer" name="Telefono_fijo_registrarse" class="form-control" id="inputTelefonoFijo" placeholder="XXXX-XXXXXXX">
+                    </div>
+               </div>
+
+              <div class="form-group">
+                <label for="text" class="col-lg-2 control-label">Dirección</label>
+                     <div class="col-lg-10">
+                         <input type="text" name="Direccion_registrarse"  class="form-control" id="inputEmail" placeholder="Direccion" required>
+                    </div>
+              </div>
+
+              <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                   <div class="col-lg-10">
+                          <input type="password" name="pass_registrarse" class="form-control" id="inputPassword" placeholder="Contraseña" required >
+                  </div>
+              </div>
+
+
+              <div class="form-group">
+                  <div class="col-lg-10 col-lg-offset-2">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                  </div>
+              </div>
+         </fieldset>  
+      </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--*************************************************************************************-->
+<!--*************************************************************************************-->
+
+                            <!-- Modal login -->
+
+
+<div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title  text-center" id="myModalLabel">Ingresar</h4>
+            </div>
+
+      <div class="modal-body">
+
+            <form class="form-horizontal"   method="post" action="index.php?action=login">
+              <fieldset>
+                
+                    <div class="form-group">
+                      <label for="inputEmail" class="col-lg-2 control-label">Usuario</label>
+                          <div class="col-lg-10">
+                            <input type="text" type="email" name="user" class="form-control" id="usuario" required>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPassword"  class="col-lg-2 control-label" required>Contraseña</label>
+                          <div class="col-lg-10">
+                            <input type="password" name="pass" class="form-control" id="inputPassword" required>
+                            <!-- <div id="error_login_div">
+                                 <?php echo $_smarty_tpl->getSubTemplate ("error_login.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+                            </div> -->
+                          </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-lg-10 col-lg-offset-2">
+                            <button class="btn btn-default">Cancelar</button>
+                            <button type="submit"  name="commit" value="Login" id="iniciar" class="btn btn-primary">Ingresar</button>
+                      </div>
+                    </div>
+                     
+                     <script src="./js/Ajax_login.js"></script>
+                 </fieldset>
+              </form>
+               <!--  <form method="post" action="index.php?action=login">
+                    <p><input type="text" name="user" value="" placeholder="Username o E-mail"></p>
+                    <p><input type="password" name="pass" value="" placeholder="Password"></p>
+                    <p><input type="submit" name="commit" value="Login"></p>
+                </form> -->
+           
+        </div>
+   
+    </div>
+  </div>
+</div><?php }} ?>

@@ -28,7 +28,7 @@ class Maquina extends ModeloDB{
 			SELECT m.id_contenido as id_Contenido, i.ruta as Ruta
         	FROM imagenes i
             JOIN maquinas m ON (m.id_contenido = i.id_contenido)
-        	WHERE ((m.estado = '$estado') and (m.id_contenido = $id_maq))
+        	WHERE ((m.estado = '$estado') and (m.id_contenido = '$id_maq'))
         	
     	");
 	}
@@ -52,7 +52,9 @@ class Maquina extends ModeloDB{
             FROM contenido c
         	INNER JOIN maquinas m ON (c.id_contenido = m.id_contenido)
             LEFT JOIN imagenes i ON (c.id_contenido = i.id_contenido)
-		   	WHERE((c.nombre LIKE '%".$q."%')||(c.texto LIKE '%".$q."%')||(m.tipo LIKE '%".$q."%')||(m.modelo LIKE '%".$q."%'))
+		   	WHERE((c.nombre LIKE '%".$q."%')||(c.texto LIKE '%".$q."%')
+		   		||(m.tipo LIKE '%".$q."%')||(m.modelo LIKE '%".$q."%') 
+		   		||(m.estado LIKE '%".$q."%'))
         	GROUP BY c.id_contenido			     	
         ");
 	}

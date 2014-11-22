@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-17 01:22:17
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-20 05:29:48
          compiled from ".\templates\modificarE.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:111285469385e93e1b4-99887885%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e582a1bd990a5c7b204286246951a468caeeda3a' => 
     array (
       0 => '.\\templates\\modificarE.tpl',
-      1 => 1416183735,
+      1 => 1416457736,
       2 => 'file',
     ),
   ),
@@ -28,7 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center"><strong>Nuevo Evento</strong></h2>
+                    <h2 class="intro-text text-center"><strong>Modificar/Eliminar Evento</strong></h2>
                     <hr>
                         
                     <form role="form" action="index.php?action=insertarEvento" method="POST">

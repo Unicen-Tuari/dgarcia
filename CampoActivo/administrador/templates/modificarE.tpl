@@ -6,7 +6,7 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center"><strong>Nuevo Evento</strong></h2>
+                    <h2 class="intro-text text-center"><strong>Modificar/Eliminar Evento</strong></h2>
                     <hr>
                         
                     <form role="form" action="index.php?action=insertarEvento" method="POST">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-19 02:21:44
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-20 18:02:46
          compiled from ".\templates\evento.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10355543af7d9895b80-13937840%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a3b99b6c44d8390563878e45b75eb942a4977889' => 
     array (
       0 => '.\\templates\\evento.tpl',
-      1 => 1413677137,
+      1 => 1416502829,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_543af7d98c7b70_77502558')) {function content_543af7d98c7b70_77502558($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_543af7d98c7b70_77502558')) {function content_543af7d98c7b70_77502558($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerBusq.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
 <div class="container">
@@ -33,7 +33,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center"><strong>Eventos de Campo Activo</strong></h2>
+                    <h2 class="intro-text text-center"><strong>Eventos</strong></h2>
                     <hr>
                 </div>
                 <?php  $_smarty_tpl->tpl_vars['evento'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['evento']->_loop = false;
@@ -59,7 +59,21 @@ $_smarty_tpl->tpl_vars['evento']->_loop = true;
                     </p>
                     <a href="index.php?action=carouselE&amp;id=<?php echo $_smarty_tpl->tpl_vars['evento']->value['id_Contenido'];?>
 " class="btn btn-default btn-lg">M&aacute;s Im&aacute;genes</a>
-                    <hr>
+                    <hr> 
+                </div>
+                <div class="col-lg-6 text-center">
+                    <form name = "modificar">
+                        <input type = "hidden" value = "<?php echo 'id_contenido';?>
+">
+                        <input type = "submit"> Modificar
+                    </form>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <form name = "eliminar">
+                        <input type = "hidden" value = "<?php echo 'id_contenido';?>
+">
+                        <input type = "submit"> Eliminar
+                    </form>
                 </div>
                 <?php } ?>
                 

@@ -1,4 +1,4 @@
-{include file = "header.tpl" title = foo}
+{include file = "headerBusq.tpl" title = foo}
 
 <div class="container">
 
@@ -6,7 +6,7 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center"><strong>Eventos de Campo Activo</strong></h2>
+                    <h2 class="intro-text text-center"><strong>Eventos</strong></h2>
                     <hr>
                 </div>
                 {foreach key=id_evento item=evento from=$eventos}
@@ -20,7 +20,19 @@
                     </h2>
                     <p>{utf8_encode($evento['Texto'])}                    </p>
                     <a href="index.php?action=carouselE&amp;id={$evento['id_Contenido']}" class="btn btn-default btn-lg">M&aacute;s Im&aacute;genes</a>
-                    <hr>
+                    <hr> 
+                </div>
+                <div class="col-lg-6 text-center">
+                    <form name = "modificar">
+                        <input type = "hidden" value = "{'id_contenido'}">
+                        <input type = "submit"> Modificar
+                    </form>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <form name = "eliminar">
+                        <input type = "hidden" value = "{'id_contenido'}">
+                        <input type = "submit"> Eliminar
+                    </form>
                 </div>
                 {/foreach}
                 

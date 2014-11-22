@@ -64,10 +64,10 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="index.php?action=maquina&amp;estado=N">Nuevas</a>
+                                <a href="index.php?action=maquina&amp;estado=NUEVA">Nuevas</a>
                             </li>
                             <li>
-                                <a href="index.php?action=maquina&amp;estado=U">Usadas</a>
+                                <a href="index.php?action=maquina&amp;estado=USADA">Usadas</a>
                             </li>
                         </ul>           
                     </li>
@@ -83,7 +83,7 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-            <form class = "busqueda" action = "index.php">
+            <!-- <form class = "busqueda" action = "index.php">
                 <input type = "hidden" name  = "action" value = "resultado">
                 <div class="row">
                     <div class="col-sm-8 text-center">
@@ -99,7 +99,7 @@
                         <p id = "cantResultados">0 Resultados</p>
                     </div>   
                 </div>          
-            </form>
+            </form> -->
         </div>
         <!-- /.container -->   
 

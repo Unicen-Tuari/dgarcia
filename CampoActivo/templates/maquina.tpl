@@ -1,4 +1,4 @@
-{include file = "header.tpl" title = foo}
+{include file = "headerBusq.tpl" title = foo}
 
 <div class="container">
 
