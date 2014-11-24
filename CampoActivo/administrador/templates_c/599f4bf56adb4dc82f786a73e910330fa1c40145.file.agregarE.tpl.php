@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-20 20:11:21
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 00:08:07
          compiled from ".\templates\agregarE.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12735469129a21b2f8-51192614%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2064954725621381092-64746160%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '599f4bf56adb4dc82f786a73e910330fa1c40145' => 
     array (
       0 => '.\\templates\\agregarE.tpl',
-      1 => 1416510616,
+      1 => 1416784046,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12735469129a21b2f8-51192614',
+  'nocache_hash' => '2064954725621381092-64746160',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5469129a256c43_69842091',
+  'unifunc' => 'content_5472562143a517_53146179',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5469129a256c43_69842091')) {function content_5469129a256c43_69842091($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_5472562143a517_53146179')) {function content_5472562143a517_53146179($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
 <div class="container">        
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <h2 class="intro-text text-center"><strong>Nuevo Evento</strong></h2>
                     <hr>
                         
-                    <form role="form" action="index.php?action=insertarEvento" method="POST" enctype = "multipart/form-data">
+                    <form role="form" action="index.php?action=insertarEvento" method="POST">
                         <div class="row">
                             <div class="form-group col-lg-12">
                                 <label>Nombre del Evento:</label>
@@ -48,11 +48,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             <div class="form-group col-lg-12">
                                 <label>Seleccione im&aacute;genes: </label>
                                 
-                                <input type="file" name = "ruta[]" id="files" multiple>
+                                <input name="ruta" type="text" class="form-control" rows="6">
 
-                                <div id="archivos">
+                                <!-- <div id="archivos">
                                 <ul></ul>
-                                </div>
+                                </div> -->
 
                                 <script>
                                 var insertar_en = document.querySelector("#archivos ul");

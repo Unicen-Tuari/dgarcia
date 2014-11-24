@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-20 18:19:19
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 06:24:48
          compiled from ".\templates\maquina.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11778543af60f68b026-61654670%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2051954716db7d240f8-16910723%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a574a12e60f518c3c5b7a927d2e3e3df672fc92f' => 
     array (
       0 => '.\\templates\\maquina.tpl',
-      1 => 1416503950,
+      1 => 1416720284,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11778543af60f68b026-61654670',
+  'nocache_hash' => '2051954716db7d240f8-16910723',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_543af60f764de8_57336298',
+  'unifunc' => 'content_54716db7d6b893_99915576',
   'variables' => 
   array (
     'maquinas' => 0,
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_543af60f764de8_57336298')) {function content_543af60f764de8_57336298($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerBusq.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_54716db7d6b893_99915576')) {function content_54716db7d6b893_99915576($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerBusq.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
 <div class="container">
@@ -63,6 +63,21 @@ $_smarty_tpl->tpl_vars['maquina']->_loop = true;
 &amp;estado=<?php echo $_smarty_tpl->tpl_vars['maquina']->value['estado'];?>
 " class="btn btn-default btn-lg">M&aacute;s Im&aacute;genes</a>
                     <hr>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <form name = "modificar" action="index.php?action=modificarMaq" method="POST">
+                        <input name = "id_maq" type = "hidden" value = "<?php echo $_smarty_tpl->tpl_vars['maquina']->value['id_Contenido'];?>
+&amp;<?php echo $_smarty_tpl->tpl_vars['maquina']->value['estado'];?>
+">
+                        <button type = "submit">Modificar</button>
+                    </form>                    
+                </div>
+                <div class="col-lg-6 text-center">
+                    <form name = "eliminar">
+                        <input type = "hidden" value = "<?php echo $_smarty_tpl->tpl_vars['maquina']->value['Precio'];?>
+">
+                        <button type = "submit">Eliminar</button>
+                    </form>
                 </div>
                 <?php } ?>
                 

@@ -79,6 +79,15 @@ class ControllerUser
 		return $this->model_comprobar_existencia_usuario->verificar_usuario($email);
 	}
 
+	public function logout()
+	{
+		session_destroy();
+		header("Location:index.php");
+		// $this->actionIndex();
+
+		// $this->actionLoginForm();
+	}
+
 	public function registrarse()
 	{
 		$usuario = $_POST['usuario_registrarse'];	 

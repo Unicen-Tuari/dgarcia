@@ -64,13 +64,14 @@ class Evento extends ModeloDB
 		");
 	}
 
-	// public function modificarContenidoEvento($nombre,$texto)
-	// {
-	// 	return $this->query("
-	// 		INSERT INTO contenido (nombre,texto)
-	// 				VALUES ('$nombre','$texto')
-	// 	");
-	// }
+	public function eliminarContenidoEvento($nombre,$texto)
+	{
+		return $this->query("
+			DELETE evento
+			FROM table_sources
+			WHERE (nombre = '$nombre') AND (texto = '$texto')
+		");
+	}
 
 	// public function modificarID_ContenidoEvento()
 	// {

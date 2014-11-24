@@ -23,6 +23,18 @@
                     <a href="index.php?action=carouselMaq&amp;id={$maquina['id_Contenido']}&amp;estado={$maquina['estado']}" class="btn btn-default btn-lg">M&aacute;s Im&aacute;genes</a>
                     <hr>
                 </div>
+                <div class="col-lg-6 text-center">
+                    <form name = "modificar" action="index.php?action=modificarMaq" method="POST">
+                        <input name = "id_maq" type = "hidden" value = "{$maquina['id_Contenido']}&amp;{$maquina['estado']}">
+                        <button type = "submit">Modificar</button>
+                    </form>                    
+                </div>
+                <div class="col-lg-6 text-center">
+                    <form name = "eliminar">
+                        <input type = "hidden" value = "{$maquina['Precio']}">
+                        <button type = "submit">Eliminar</button>
+                    </form>
+                </div>
                 {/foreach}
                 
                 <div class="col-lg-12 text-center">

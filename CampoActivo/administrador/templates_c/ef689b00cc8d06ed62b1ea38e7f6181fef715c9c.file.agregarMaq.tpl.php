@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-20 21:01:09
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 23:57:15
          compiled from ".\templates\agregarMaq.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:30603546bac5b6f9ea4-86273720%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2212554724c2b09e8a6-70003343%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ef689b00cc8d06ed62b1ea38e7f6181fef715c9c' => 
     array (
       0 => '.\\templates\\agregarMaq.tpl',
-      1 => 1416513655,
+      1 => 1416783404,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '30603546bac5b6f9ea4-86273720',
+  'nocache_hash' => '2212554724c2b09e8a6-70003343',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_546bac5b72ec12_33126744',
+  'unifunc' => 'content_54724c2b0ecbf5_43179484',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_546bac5b72ec12_33126744')) {function content_546bac5b72ec12_33126744($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_54724c2b0ecbf5_43179484')) {function content_54724c2b0ecbf5_43179484($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
 <div class="container">        
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <h2 class="intro-text text-center"><strong>Nueva Maquina</strong></h2>
                     <hr>
                         
-                    <form role="form" action="index.php?action=insertarMaq" method="POST">
+                    <form role="form" action="index.php?action=insertarMaq" method="POST"> <!-- enctype="multipart/form-data" -->
                         <div class="row">
                             
                             <div class="form-group col-lg-12">
@@ -55,7 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Ruta 1: </label>
-                                <input name="ruta" type="text" class="form-control" rows="6"></input>
+                                <input name="ruta" type="text" class="form-control" rows="6">
                                 <!-- <label>Ruta 2: </label>
                                 <input name="ruta" type="text" class="form-control" rows="6"></input>
                                 <label>Ruta 3:</label>

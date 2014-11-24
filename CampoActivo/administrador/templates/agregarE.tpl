@@ -9,7 +9,7 @@
                     <h2 class="intro-text text-center"><strong>Nuevo Evento</strong></h2>
                     <hr>
                         
-                    <form role="form" action="index.php?action=insertarEvento" method="POST" enctype = "multipart/form-data">
+                    <form role="form" action="index.php?action=insertarEvento" method="POST">
                         <div class="row">
                             <div class="form-group col-lg-12">
                                 <label>Nombre del Evento:</label>
@@ -26,11 +26,11 @@
                             <div class="form-group col-lg-12">
                                 <label>Seleccione im&aacute;genes: </label>
                                 
-                                <input type="file" name = "ruta[]" id="files" multiple>
+                                <input name="ruta" type="text" class="form-control" rows="6">
 
-                                <div id="archivos">
+                                <!-- <div id="archivos">
                                 <ul></ul>
-                                </div>
+                                </div> -->
 
                                 <script>
                                 var insertar_en = document.querySelector("#archivos ul");

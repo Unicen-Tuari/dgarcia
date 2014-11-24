@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-19 02:16:41
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-22 20:13:05
          compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:131605439c3e214b587-68986167%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:230045470e0415c08f5-91309523%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1413677795,
+      1 => 1416506511,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '131605439c3e214b587-68986167',
+  'nocache_hash' => '230045470e0415c08f5-91309523',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5439c3e214d0c3_77862090',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5470e0415eb0a0_54311789',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5439c3e214d0c3_77862090')) {function content_5439c3e214d0c3_77862090($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5470e0415eb0a0_54311789')) {function content_5470e0415eb0a0_54311789($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -85,10 +85,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="index.php?action=maquina&amp;estado=N">Nuevas</a>
+                                <a href="index.php?action=maquina&amp;estado=NUEVA">Nuevas</a>
                             </li>
                             <li>
-                                <a href="index.php?action=maquina&amp;estado=U">Usadas</a>
+                                <a href="index.php?action=maquina&amp;estado=USADA">Usadas</a>
                             </li>
                         </ul>           
                     </li>
@@ -104,7 +104,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-            <form class = "busqueda" action = "index.php">
+            <!-- <form class = "busqueda" action = "index.php">
                 <input type = "hidden" name  = "action" value = "resultado">
                 <div class="row">
                     <div class="col-sm-8 text-center">
@@ -120,7 +120,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <p id = "cantResultados">0 Resultados</p>
                     </div>   
                 </div>          
-            </form>
+            </form> -->
         </div>
         <!-- /.container -->   
 

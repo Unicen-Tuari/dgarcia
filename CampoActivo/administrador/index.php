@@ -96,11 +96,11 @@ ini_set("display_errors", 1);
 					$c->insertarMaquina();
 				}
 				else
-					if($_REQUEST['action']=='verModificarMaq')
+					if($_REQUEST['action']=='modificarMaq')
 					{
 						include "./controladores/controladorMaquina.php";
 						$c = new MaquinaController();
-						$c->actionEvento();
+						$c->editarMaq();
 					}			
 					else
 						if($_REQUEST['action']=='carouselMaq')

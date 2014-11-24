@@ -17,14 +17,18 @@
 
 		<script type="text/javascript">
 			
-			function diasCalendario()
-			{
-				var dia = 31;
-				for (var i = 0; i < dia; i++) 
-				{
-					document.getElementById("i").innerHTML = i;
-				}
-			};
+			function diasCalendario(MesIngresado)
+            {
+                var arrmes = new Array();
+                arrmes = { enero: 31, febrero: 28, marzo: 31, abril:30 , mayo:31 , junio:30, julio: 31, agosto: 31 , septiembre:30, octubre: 31, noviembre: 30, diciembre: 31 };            
+           
+                for (var i = 1; i <= 30; i++) 
+                {
+                    // document.getElementById("calendarioContainer").innerHTML = "<div class = 'diaCalender' id = '2' data-estado = 'desocupado'>=+'i'<div>";
+                    $("#calendarioContainer").html("<div class = 'diaCalender'  data-estado = 'desocupado'>"+i+"</div>");
+
+                }
+            };
 
 		</script>
 
@@ -54,8 +58,8 @@
 
 		</style>
 
-			<div class = "calendario">
-				<div class = "diaCalender" id = "1" onclick = "dia">1</div>
+			<div id = "calendarioContainer" class = "calendario">
+				<!-- <div class = "diaCalender" id = "1" onclick = "dia">1</div>
 				<div class = "diaCalender" id = "2">2</div>
 				<div class = "diaCalender" id = "3">3</div>
 				<div class = "diaCalender" id = "4">4</div>
@@ -85,9 +89,10 @@
 				<div class = "diaCalender" id = "28"></div>
 				<div class = "diaCalender" id = "29"></div>
 				<div class = "diaCalender" id = "30"></div>
-				<div class = "diaCalender" id = "31"></div>
+				<div class = "diaCalender" id = "31"></div> -->
 			</div>
 
 	</body>
+	<script src="js/jquery-1.11.0.js"></script>
 
 </html>

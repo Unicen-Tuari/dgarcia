@@ -9,7 +9,7 @@
                     <h2 class="intro-text text-center"><strong>Nueva Maquina</strong></h2>
                     <hr>
                         
-                    <form role="form" action="index.php?action=insertarMaq" method="POST">
+                    <form role="form" action="index.php?action=insertarMaq" method="POST"> <!-- enctype="multipart/form-data" -->
                         <div class="row">
                             
                             <div class="form-group col-lg-12">
@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Ruta 1: </label>
-                                <input name="ruta" type="text" class="form-control" rows="6"></input>
+                                <input name="ruta" type="text" class="form-control" rows="6">
                                 <!-- <label>Ruta 2: </label>
                                 <input name="ruta" type="text" class="form-control" rows="6"></input>
                                 <label>Ruta 3:</label>

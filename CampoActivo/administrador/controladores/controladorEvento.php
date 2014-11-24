@@ -56,6 +56,11 @@ class EventoController{
 
 		$this->actionEvento();
 	}
+
+	public function eliminarEvento()
+	{
+		
+	}
 }
 
 
