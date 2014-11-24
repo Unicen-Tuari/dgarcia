@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 21:52:54
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 05:39:20
          compiled from ".\templates\modificarMaq.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:775754716d8fa8bcd4-25034526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e271d23d5862720f68a42bdd4a7f00b595e93276' => 
     array (
       0 => '.\\templates\\modificarMaq.tpl',
-      1 => 1416775963,
+      1 => 1416803823,
       2 => 'file',
     ),
   ),
@@ -42,7 +42,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['maquina']->key => $_smarty_tpl->tpl_v
 $_smarty_tpl->tpl_vars['maquina']->_loop = true;
  $_smarty_tpl->tpl_vars['id_maquina']->value = $_smarty_tpl->tpl_vars['maquina']->key;
 ?>    
-                    <form role="form" action="index.php?action=modificarMaq" method="POST">
+                    <form role="form" action="index.php?action=actualizarMaq" method="POST">
                         <div class="row">
                             
                             <div class="form-group col-lg-12">
@@ -75,7 +75,7 @@ $_smarty_tpl->tpl_vars['maquina']->_loop = true;
 
                                 <label>Ruta 1: </label>
                                 <input name="ruta" type="text" class="form-control" value = "<?php echo $_smarty_tpl->tpl_vars['maquina']->value['Ruta'];?>
-" rows="6"></input>
+" rows="6">
                               
                             </div>
                             <div class="form-group col-lg-12">
@@ -89,8 +89,8 @@ $_smarty_tpl->tpl_vars['maquina']->_loop = true;
 </textarea>
                             </div>
                             <div class="form-group col-lg-12">
-                                <input type="hidden" name="yaModificado" >                                
-                                 <input name = "id_maq" type = "text" value = "<?php echo $_smarty_tpl->tpl_vars['maquina']->value['id_Contenido'];?>
+                                                               
+                                 <input name = "id_maq" type = "hidden" value = "<?php echo $_smarty_tpl->tpl_vars['maquina']->value['id_Contenido'];?>
 &amp;<?php echo $_smarty_tpl->tpl_vars['maquina']->value['estado'];?>
 ">
                                 <button type="submit" class="btn btn-default">Enviar</button>

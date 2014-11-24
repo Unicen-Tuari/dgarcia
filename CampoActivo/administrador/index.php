@@ -101,118 +101,125 @@ ini_set("display_errors", 1);
 						include "./controladores/controladorMaquina.php";
 						$c = new MaquinaController();
 						$c->editarMaq();
-					}			
+					}
 					else
-						if($_REQUEST['action']=='eliminarMaq')
+						if($_REQUEST['action']=='actualizarMaq')
 						{
 							include "./controladores/controladorMaquina.php";
 							$c = new MaquinaController();
-							$c->eliminarMaq();
-						}			
+							$c->actualizarMaq();
+						}
 						else
-							if($_REQUEST['action']=='carouselMaq')
-							{					
-								if((array_key_exists('estado', $_GET)) && (array_key_exists('id', $_GET)))
-								{
-									include "./controladores/controladorMaquina.php";
-									$c = new MaquinaController();
-									$c->actionCarouselMaq($_GET['estado'],$_GET['id']);
+							if($_REQUEST['action']=='eliminarMaq')
+							{
+								include "./controladores/controladorMaquina.php";
+								$c = new MaquinaController();
+								$c->eliminarMaq();
+							}			
+							else
+								if($_REQUEST['action']=='carouselMaq')
+								{					
+									if((array_key_exists('estado', $_GET)) && (array_key_exists('id', $_GET)))
+									{
+										include "./controladores/controladorMaquina.php";
+										$c = new MaquinaController();
+										$c->actionCarouselMaq($_GET['estado'],$_GET['id']);
+									}
 								}
-							}
-							else 
-								if($_REQUEST['action']=='evento')
-								{
-									include "./controladores/controladorEvento.php";
-									$c = new EventoController();
-									$c->actionEvento();
-								}
-								else
-									if($_REQUEST['action']=='verCrearEvento')
+								else 
+									if($_REQUEST['action']=='evento')
 									{
 										include "./controladores/controladorEvento.php";
 										$c = new EventoController();
-										$c->vistaAgregarE();
+										$c->actionEvento();
 									}
-									else 
-										if($_REQUEST['action']=='insertarEvento')
+									else
+										if($_REQUEST['action']=='verCrearEvento')
 										{
 											include "./controladores/controladorEvento.php";
 											$c = new EventoController();
-											$c->insertarEvento();
+											$c->vistaAgregarE();
 										}
-										else
-											if($_REQUEST['action']=='verModificarE')
+										else 
+											if($_REQUEST['action']=='insertarEvento')
 											{
 												include "./controladores/controladorEvento.php";
 												$c = new EventoController();
-												$c->actionEvento();
+												$c->insertarEvento();
 											}
 											else
-												if($_REQUEST['action']=='modificarE')
+												if($_REQUEST['action']=='verModificarE')
 												{
 													include "./controladores/controladorEvento.php";
 													$c = new EventoController();
 													$c->actionEvento();
 												}
-											else
-												if($_REQUEST['action']=='eliminarE')
-												{
-													include "./controladores/controladorEvento.php";
-													$c = new EventoController();
-													$c->actionEvento();
-												}
-
-											else
-												if($_REQUEST['action']=='carouselE')
-												{
-													if(array_key_exists('id', $_GET))
+												else
+													if($_REQUEST['action']=='modificarE')
 													{
 														include "./controladores/controladorEvento.php";
 														$c = new EventoController();
-														$c->actionCarousel($_GET['id']);									
+														$c->actionEvento();
 													}
-												}
 												else
-													if($_REQUEST['action']=='turno')
+													if($_REQUEST['action']=='eliminarE')
 													{
-														include "./controladores/controladorTurno.php";
-														$c = new TurnoController();
-														$c->actionTurno();
+														include "./controladores/controladorEvento.php";
+														$c = new EventoController();
+														$c->actionEvento();
+													}
+
+												else
+													if($_REQUEST['action']=='carouselE')
+													{
+														if(array_key_exists('id', $_GET))
+														{
+															include "./controladores/controladorEvento.php";
+															$c = new EventoController();
+															$c->actionCarousel($_GET['id']);									
+														}
 													}
 													else
-														if($_REQUEST['action']=='contacto')
+														if($_REQUEST['action']=='turno')
 														{
-																								
-															if((array_key_exists('name', $_POST)) && (array_key_exists('email', $_POST)) 
-																&& (array_key_exists('phone', $_POST)) && (array_key_exists('message', $_POST)))
-															{
-																include "./controladores/controladorContacto.php";
-																$c = new ContactoController();
-																$c->actionMensaje($_POST['name'],$_POST['email'],$_POST['phone'],$_POST['message']);									
-															}
-															else
-															{
-																include "./controladores/controladorContacto.php";
-																$c = new ContactoController();
-																$c->actionContacto();
-															}								
+															include "./controladores/controladorTurno.php";
+															$c = new TurnoController();
+															$c->actionTurno();
 														}
 														else
-															if($_REQUEST['action']=='resultado')
+															if($_REQUEST['action']=='contacto')
 															{
-																if(array_key_exists('q', $_GET))
+																									
+																if((array_key_exists('name', $_POST)) && (array_key_exists('email', $_POST)) 
+																	&& (array_key_exists('phone', $_POST)) && (array_key_exists('message', $_POST)))
 																{
-																	include "./controladores/controladorMaquina.php";
-																	$c = new MaquinaController();
-																	$c->actionBusquedaMaq($_GET['q']);
+																	include "./controladores/controladorContacto.php";
+																	$c = new ContactoController();
+																	$c->actionMensaje($_POST['name'],$_POST['email'],$_POST['phone'],$_POST['message']);									
+																}
+																else
+																{
+																	include "./controladores/controladorContacto.php";
+																	$c = new ContactoController();
+																	$c->actionContacto();
+																}								
+															}
+															else
+																if($_REQUEST['action']=='resultado')
+																{
+																	if(array_key_exists('q', $_GET))
+																	{
+																		include "./controladores/controladorMaquina.php";
+																		$c = new MaquinaController();
+																		$c->actionBusquedaMaq($_GET['q']);
+																	}
+																	else 
+																	{
+																		echo "Error de Parametros";
+																	}
 																}
 																else 
 																{
-																	echo "Error de Parametros";
+																	echo "ERROR ACCION NO VALIDA";
 																}
-															}
-															else 
-															{
-																echo "ERROR ACCION NO VALIDA";
-															}
 ?>

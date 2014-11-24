@@ -9,7 +9,7 @@
                     <h2 class="intro-text text-center"><strong>Modificar Maquina</strong></h2>
                     <hr>
                     {foreach key=id_maquina item=maquina from=$maquinas}    
-                    <form role="form" action="index.php?action=modificarMaq" method="POST" enctype="multipart/form-data">
+                    <form role="form" action="index.php?action=actualizarMaq" method="POST">
                         <div class="row">
                             
                             <div class="form-group col-lg-12">
@@ -35,7 +35,7 @@
                             <div class="form-group col-lg-12">
 
                                 <label>Ruta 1: </label>
-                                <input name="ruta" type="file" class="form-control" value = "{$maquina['Ruta']}" rows="6">
+                                <input name="ruta" type="text" class="form-control" value = "{$maquina['Ruta']}" rows="6">
                               
                             </div>
                             <div class="form-group col-lg-12">
@@ -47,8 +47,8 @@
                                 <textarea rows="6" cols="60" name="texto" type="text" class="form-control" rows="6">{utf8_encode($maquina['Texto'])}</textarea>
                             </div>
                             <div class="form-group col-lg-12">
-                                <input type="hidden" name="yaModificado" >                                
-                                 <input name = "id_maq" type = "text" value = "{$maquina['id_Contenido']}&amp;{$maquina['estado']}">
+                                                               
+                                 <input name = "id_maq" type = "hidden" value = "{$maquina['id_Contenido']}&amp;{$maquina['estado']}">
                                 <button type="submit" class="btn btn-default">Enviar</button>
                             </div>
                         </div>
