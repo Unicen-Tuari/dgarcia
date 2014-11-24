@@ -26,11 +26,7 @@
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Estado Actual: {$maquina['estado']} </label>
-                                 <input name="estado" type="text" class="form-control" value = "{utf8_encode($maquina['estado'])}">
-                                <!-- <select enabled name="estado"  required >
-                                    <option value="NUEVA"> {utf8_encode($maquina['estado'])} </option>
-                                    <option value="USADA"> USADA </option>
-                                </select><br> -->
+                                 <input name="estado" type="text" class="form-control" value = "{utf8_encode($maquina['estado'])}">                                
                             </div>
                             <div class="form-group col-lg-12">
 
@@ -49,7 +45,7 @@
                             <div class="form-group col-lg-12">
                                                                
                                  <input name = "id_maq" type = "hidden" value = "{$maquina['id_Contenido']}&amp;{$maquina['estado']}">
-                                <button type="submit" class="btn btn-default">Enviar</button>
+                                <button type="submit" class="btn btn-default">Modificar</button>
                             </div>
                         </div>
                     </form>

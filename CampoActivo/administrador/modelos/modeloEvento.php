@@ -64,44 +64,70 @@ class Evento extends ModeloDB
 		");
 	}
 
-	public function eliminarContenidoEvento($nombre,$texto)
+	public function datos_Evento($id_contenido) 
+	{			
+		return $this->query("
+			SELECT c.id_contenido as id_Contenido,  c.nombre as Nombre, c.texto as Texto, 
+                            e.fecha as Fecha, e.ubicacion as Ubicacion,
+                            e.id_contenido, i.Ruta,i.id_contenido
+        	FROM evento e 
+            INNER JOIN contenido c ON (c.id_contenido = e.id_contenido)
+            INNER JOIN imagenes i ON (e.id_contenido = i.id_contenido)
+		   	WHERE e.id_contenido = '$id_contenido'
+        	GROUP BY e.id_contenido	
+        ");			
+	}
+
+	public function modificarContenidoE($nombre,$texto,$id_contenido)
 	{
 		return $this->query("
-			DELETE evento
-			FROM table_sources
-			WHERE (nombre = '$nombre') AND (texto = '$texto')
+			UPDATE contenido
+			SET nombre = '$nombre',texto = '$texto'
+            WHERE (id_contenido = '$id_contenido')
+		");
+	}	
+
+	public function modificarImagenesE($id_contenido,$ruta)
+	{
+		return $this->query("
+			UPDATE imagenes
+			SET id_contenido = '$id_contenido',ruta = '$ruta'
+			WHERE (id_contenido = '$id_contenido')
 		");
 	}
 
-	// public function modificarID_ContenidoEvento()
-	// {
-	// 	$datos =  $this->query("
-	// 		SELECT id_contenido
-	// 				FROM contenido
-	// 				ORDER BY id_contenido ASC
-	// 	");
+	public function modificarE($id_contenido,$fecha,$ubicacion)
+	{
+		return $this->query("
+			UPDATE evento 
+			SET id_contenido = '$id_contenido', fecha = '$fecha', ubicacion = '$ubicacion'
+			WHERE (id_contenido = '$id_contenido')
+		");
+	}
 
-	// 	$id = array_pop ($datos); //Obtiene el ultimo dato del arreglo.....
-	// 	return $id['id_contenido'];
-	// }
+	public function eliminarContenidoE($id_contenido)
+	{
+		return $this->query("
+			DELETE FROM contenido			
+            WHERE (id_contenido = '$id_contenido')
+		");
+	}	
 
-	// public function insertarImagenesEvento($id_contenido,$ruta)
-	// {
-	// 	return $this->query("
-	// 		INSERT INTO imagenes (id_contenido,ruta)
-	// 					VALUES ('$id_contenido','$ruta')
-	// 	");
-	// }
+	public function eliminarImagenesE($id_contenido)
+	{
+		return $this->query("
+			DELETE FROM imagenes
+			WHERE (id_contenido = '$id_contenido')
+		");
+	}
 
-	// public function insertarEvento($id_contenido,$fecha,$ubicacion)
-	// {
-	// 	return $this->query("
-	// 		INSERT INTO evento (id_contenido,fecha,ubicacion)
-	// 				VALUES ('$id_contenido','$fecha','$ubicacion')
-	// 	");
-	// }
-
-
+	public function eliminarE($id_contenido)
+	{
+		return $this->query("
+			DELETE FROM evento
+			WHERE WHERE (id_contenido = '$id_contenido')
+		");
+	}
 }
 
 ?>

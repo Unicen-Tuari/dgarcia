@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 05:39:20
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 20:51:21
          compiled from ".\templates\modificarMaq.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:775754716d8fa8bcd4-25034526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e271d23d5862720f68a42bdd4a7f00b595e93276' => 
     array (
       0 => '.\\templates\\modificarMaq.tpl',
-      1 => 1416803823,
+      1 => 1416858604,
       2 => 'file',
     ),
   ),
@@ -64,12 +64,7 @@ $_smarty_tpl->tpl_vars['maquina']->_loop = true;
                                 <label>Estado Actual: <?php echo $_smarty_tpl->tpl_vars['maquina']->value['estado'];?>
  </label>
                                  <input name="estado" type="text" class="form-control" value = "<?php echo utf8_encode($_smarty_tpl->tpl_vars['maquina']->value['estado']);?>
-">
-                                <!-- <select enabled name="estado"  required >
-                                    <option value="NUEVA"> <?php echo utf8_encode($_smarty_tpl->tpl_vars['maquina']->value['estado']);?>
- </option>
-                                    <option value="USADA"> USADA </option>
-                                </select><br> -->
+">                                
                             </div>
                             <div class="form-group col-lg-12">
 
@@ -93,7 +88,7 @@ $_smarty_tpl->tpl_vars['maquina']->_loop = true;
                                  <input name = "id_maq" type = "hidden" value = "<?php echo $_smarty_tpl->tpl_vars['maquina']->value['id_Contenido'];?>
 &amp;<?php echo $_smarty_tpl->tpl_vars['maquina']->value['estado'];?>
 ">
-                                <button type="submit" class="btn btn-default">Enviar</button>
+                                <button type="submit" class="btn btn-default">Modificar</button>
                             </div>
                         </div>
                     </form>

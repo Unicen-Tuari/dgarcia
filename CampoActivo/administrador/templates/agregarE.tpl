@@ -25,7 +25,6 @@
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Seleccione im&aacute;genes: </label>
-                                
                                 <input name="ruta" type="text" class="form-control" rows="6">
 
                                 <!-- <div id="archivos">
@@ -71,7 +70,7 @@
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default">Enviar</button>
+                                <button type="submit" class="btn btn-default">Agregar</button>
                             </div>
                         </div>
                     </form>

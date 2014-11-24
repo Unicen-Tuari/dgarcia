@@ -21,17 +21,17 @@
                     <p>{utf8_encode($evento['Texto'])}                    </p>
                     <a href="index.php?action=carouselE&amp;id={$evento['id_Contenido']}" class="btn btn-default btn-lg">M&aacute;s Im&aacute;genes</a>
                     <hr> 
+                </div>                
+                <div class="col-lg-6 text-center">
+                    <form name = "modificar" action="index.php?action=modificarEvento" method="POST">
+                        <input name = "id_evento" type = "hidden" value = "{$evento['id_contenido']}">
+                        <button type = "submit">Modificar</button>
+                    </form>                    
                 </div>
                 <div class="col-lg-6 text-center">
-                    <form name = "modificar">
-                        <input type = "hidden" value = "{'id_contenido'}">
-                        <input type = "submit"> Modificar
-                    </form>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <form name = "eliminar">
-                        <input type = "hidden" value = "{'id_contenido'}">
-                        <input type = "submit"> Eliminar
+                    <form name = "eliminar" action="index.php?action=eliminarEvento" method="POST">
+                        <input name = "id_evento" type = "hidden" value = "{$evento['id_contenido']}">
+                        <button type = "submit">Eliminar</button>
                     </form>
                 </div>
                 {/foreach}

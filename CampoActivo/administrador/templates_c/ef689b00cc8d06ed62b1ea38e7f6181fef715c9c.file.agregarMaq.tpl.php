@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 23:57:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 20:51:40
          compiled from ".\templates\agregarMaq.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2212554724c2b09e8a6-70003343%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef689b00cc8d06ed62b1ea38e7f6181fef715c9c' => 
     array (
       0 => '.\\templates\\agregarMaq.tpl',
-      1 => 1416783404,
+      1 => 1416858659,
       2 => 'file',
     ),
   ),
@@ -81,7 +81,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default">Enviar</button>
+                                <button type="submit" class="btn btn-default">Agregar</button>
                             </div>
                         </div>
                     </form>

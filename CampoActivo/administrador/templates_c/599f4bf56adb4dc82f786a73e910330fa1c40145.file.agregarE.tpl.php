@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 00:08:07
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 20:51:50
          compiled from ".\templates\agregarE.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2064954725621381092-64746160%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '599f4bf56adb4dc82f786a73e910330fa1c40145' => 
     array (
       0 => '.\\templates\\agregarE.tpl',
-      1 => 1416784046,
+      1 => 1416858645,
       2 => 'file',
     ),
   ),
@@ -47,7 +47,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Seleccione im&aacute;genes: </label>
-                                
                                 <input name="ruta" type="text" class="form-control" rows="6">
 
                                 <!-- <div id="archivos">
@@ -93,7 +92,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default">Enviar</button>
+                                <button type="submit" class="btn btn-default">Agregar</button>
                             </div>
                         </div>
                     </form>

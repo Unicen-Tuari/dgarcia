@@ -24,6 +24,11 @@ class EventoView extends View{
 		$this->smarty->display('agregarE.tpl'); //agregarE
 	}
 
+	function modificarEvento($evento)
+	{
+		$this->smarty->assign("eventos",$evento);
+		$this->smarty->display('modificarEvento.tpl'); 
+	}
 
 }
 
