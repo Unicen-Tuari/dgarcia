@@ -92,6 +92,22 @@ class MaquinaController{
 			
 		$this->view->modificarMaquina($maqmod);
 	}
+
+	public function eliminarMaq()
+	{
+		$maquina=$_POST['id_maq'];
+		$m = explode("&", $maquina);
+		// 		echo'<pre>';
+		// print_r($maquina);
+		// echo'</pre>';
+		// die("controlermq");
+		//print_r($maqmod[0]['Nombre']);		
+		$this->modeloMaquinas->eliminarMaq($m[0]);
+		$this->modeloMaquinas->eliminarImagenesMaq($m[0]);
+		$this->modeloMaquinas->eliminarContenidoMaq($m[0]);
+		$this->actionMaquina($m[1]);
+	}
+
 }
 
 ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 06:24:48
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 01:33:01
          compiled from ".\templates\maquina.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2051954716db7d240f8-16910723%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a574a12e60f518c3c5b7a927d2e3e3df672fc92f' => 
     array (
       0 => '.\\templates\\maquina.tpl',
-      1 => 1416720284,
+      1 => 1416788780,
       2 => 'file',
     ),
   ),
@@ -73,8 +73,9 @@ $_smarty_tpl->tpl_vars['maquina']->_loop = true;
                     </form>                    
                 </div>
                 <div class="col-lg-6 text-center">
-                    <form name = "eliminar">
-                        <input type = "hidden" value = "<?php echo $_smarty_tpl->tpl_vars['maquina']->value['Precio'];?>
+                    <form name = "eliminar" action="index.php?action=eliminarMaq" method="POST">
+                        <input name = "id_maq" type = "hidden" value = "<?php echo $_smarty_tpl->tpl_vars['maquina']->value['id_Contenido'];?>
+&amp;<?php echo $_smarty_tpl->tpl_vars['maquina']->value['estado'];?>
 ">
                         <button type = "submit">Eliminar</button>
                     </form>

@@ -30,8 +30,8 @@
                     </form>                    
                 </div>
                 <div class="col-lg-6 text-center">
-                    <form name = "eliminar">
-                        <input type = "hidden" value = "{$maquina['Precio']}">
+                    <form name = "eliminar" action="index.php?action=eliminarMaq" method="POST">
+                        <input name = "id_maq" type = "hidden" value = "{$maquina['id_Contenido']}&amp;{$maquina['estado']}">
                         <button type = "submit">Eliminar</button>
                     </form>
                 </div>

@@ -134,7 +134,32 @@ class Maquina extends ModeloDB{
 			 tipo = '$tipo', precio = '$precio'
 			WHERE (id_contenido = '$id_contenido')
 		");
+	}
+
+	public function eliminarContenidoMaq($id_contenido)
+	{
+		return $this->query("
+			DELETE FROM contenido			
+            WHERE (id_contenido = '$id_contenido')
+		");
 	}	
+
+	public function eliminarImagenesMaq($id_contenido)
+	{
+		return $this->query("
+			DELETE FROM imagenes
+			WHERE (id_contenido = '$id_contenido')
+		");
+	}
+
+	public function eliminarMaq($id_contenido)
+	{
+		return $this->query("
+			DELETE FROM maquinas 			
+			WHERE (id_contenido = '$id_contenido')
+		");
+	}	
+	
 }
 
 ?>
