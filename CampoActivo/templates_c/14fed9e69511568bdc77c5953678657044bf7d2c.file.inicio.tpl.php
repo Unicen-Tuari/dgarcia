@@ -1,40 +1,35 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-22 20:13:05
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 17:59:05
          compiled from ".\templates\inicio.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:36635470e041415b37-65083250%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2225474357258b1f5-37217676%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '14fed9e69511568bdc77c5953678657044bf7d2c' => 
     array (
       0 => '.\\templates\\inicio.tpl',
-      1 => 1413321592,
+      1 => 1416934740,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '36635470e041415b37-65083250',
+  'nocache_hash' => '2225474357258b1f5-37217676',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5470e041576b25_19106099',
+  'unifunc' => 'content_5474357260b421_30162735',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5470e041576b25_19106099')) {function content_5470e041576b25_19106099($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_5474357260b421_30162735')) {function content_5474357260b421_30162735($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
     <div class="container">
 
         <div class="row">
             <div class="box">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-2 text-center"></div>
+                <div class="col-lg-8 text-center">
                     <div id="carousel-example-generic" class="carousel slide">
-                        <!-- Indicators -->
-                        <!-- <ol class="carousel-indicators hidden-xs">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol> -->
-
+                        
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
@@ -73,6 +68,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         </small>
                     </h2>
                 </div>
+                <div class="col-lg-2 text-center"></div>
             </div>
         </div>
 

@@ -4,15 +4,11 @@
 
         <div class="row">
             <div class="box">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-2 text-center"></div>
+                <div class="col-lg-8 text-center">
+                
                     <div id="carousel-example-generic" class="carousel slide">
-                        <!-- Indicators -->
-                        <!-- <ol class="carousel-indicators hidden-xs">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol> -->
-
+                        
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
@@ -28,7 +24,7 @@
                                 <img class="img-responsive img-full" src="img/slide-7.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/slide-8.jpg" alt="">
+                                <img class="img-responsive " src="img/slide-8.jpg" alt="">
                             </div>
                         </div>
 
@@ -51,6 +47,7 @@
                         </small>
                     </h2>
                 </div>
+                <div class="col-lg-2 text-center"></div>
             </div>
         </div>
 

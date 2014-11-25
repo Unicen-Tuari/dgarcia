@@ -36,7 +36,7 @@
                     <h2 class="intro-text text-center"><strong>Contacto</strong></h2>
                     <hr>
                         <div id = "contacto">
-                            <p>Usted podr&aacute contactarnos dejando su mensaje aqu&iacute. 
+                            <p>Usted podr&aacute; contactarnos dejando su mensaje aqu&iacute;. 
                                <br>A la brevedad uno de nuestros representantes se comunicar&aacute con usted.
                             </p>
                         </div>
@@ -44,20 +44,20 @@
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>Nombre y Apellido</label>
-                                <input name="name" type="text" class="form-control">
+                                <input name="name" type="text" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-4">
                                 <label> Direcci&oacuten de Email </label>
-                                <input name="email" type="email" class="form-control">
+                                <input name="email" type="email" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Tel&eacutefono</label>
-                                <input name="phone" type="tel" class="form-control">
+                                <input name="phone" type="tel" class="form-control" required>
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
                                 <label>Mensaje</label>
-                                <textarea name="message" class="form-control" rows="6"></textarea>
+                                <textarea name="message" class="form-control" rows="6" required></textarea>
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">

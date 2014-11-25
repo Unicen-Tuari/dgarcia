@@ -1,30 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-22 20:16:04
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 16:46:52
          compiled from ".\templates\evento.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:88875470e0f47f1832-63481253%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:117615474a46c1a58d1-74665360%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a3b99b6c44d8390563878e45b75eb942a4977889' => 
     array (
       0 => '.\\templates\\evento.tpl',
-      1 => 1416502768,
+      1 => 1416890491,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '88875470e0f47f1832-63481253',
+  'nocache_hash' => '117615474a46c1a58d1-74665360',
   'function' => 
   array (
   ),
-  'variables' => 
-  array (
-    'eventos' => 0,
-    'evento' => 0,
-  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5470e0f4841f09_33051113',
+  'unifunc' => 'content_5474a46c2980e7_86677682',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5470e0f4841f09_33051113')) {function content_5470e0f4841f09_33051113($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerBusq.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_5474a46c2980e7_86677682')) {function content_5474a46c2980e7_86677682($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerBusqEvento.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
 <div class="container">
@@ -36,33 +31,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <h2 class="intro-text text-center"><strong>Eventos</strong></h2>
                     <hr>
                 </div>
-                <?php  $_smarty_tpl->tpl_vars['evento'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['evento']->_loop = false;
- $_smarty_tpl->tpl_vars['id_evento'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['eventos']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['evento']->key => $_smarty_tpl->tpl_vars['evento']->value){
-$_smarty_tpl->tpl_vars['evento']->_loop = true;
- $_smarty_tpl->tpl_vars['id_evento']->value = $_smarty_tpl->tpl_vars['evento']->key;
-?>
-                <div class="col-lg-12 text-center">                    
+                <div id="resEventos"> 
+                <?php echo $_smarty_tpl->getSubTemplate ("soloevento.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-                    <img class="img-responsive img-border img-full" src="<?php echo $_smarty_tpl->tpl_vars['evento']->value['Ruta'];?>
-" alt="">
-                    <h2><?php echo utf8_encode($_smarty_tpl->tpl_vars['evento']->value['Nombre']);?>
-
-                        <br>
-                        <small><h4>Fecha: <?php echo $_smarty_tpl->tpl_vars['evento']->value['Fecha'];?>
-</h4></small>
-                        <small><h4>Ubicaci&oacute;n: <?php echo $_smarty_tpl->tpl_vars['evento']->value['Ubicacion'];?>
-</h4></small>
-                    </h2>
-                    <p><?php echo utf8_encode($_smarty_tpl->tpl_vars['evento']->value['Texto']);?>
-                    </p>
-                    <a href="index.php?action=carouselE&amp;id=<?php echo $_smarty_tpl->tpl_vars['evento']->value['id_Contenido'];?>
-" class="btn btn-default btn-lg">M&aacute;s Im&aacute;genes</a>
-                    <hr>                    
                 </div>
-                <?php } ?>
-                
                 <div class="col-lg-12 text-center">
                     <ul class="pager">
                         <li class="previous"><a href="#">&larr; Anterior</a>

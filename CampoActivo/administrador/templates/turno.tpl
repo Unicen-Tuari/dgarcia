@@ -34,16 +34,14 @@
                     <hr>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <!-- <img class="img-responsive" src="img/equipo.jpg" alt="">
-                    <h3><small>Equipo de la empresa.</small></h3> -->
+                   
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="img/calendario.jpg" alt="">
-                    <!-- <h3><small>En la f&aacutebrica.</small></h3> -->
+                    
                 </div>
                 <div class="col-sm-4 text-center">
-                    <!-- <img class="img-responsive" src="img/taller.jpg" alt="">
-                    <h3><small>Nuestro Taller.</small></h3> -->
+                   
                 </div>
                 <div class="clearfix"></div>
             </div>

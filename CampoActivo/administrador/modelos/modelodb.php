@@ -6,7 +6,8 @@
  * 
  */
 
-abstract class ModeloDB{
+abstract class ModeloDB
+{
 	
 	/**
 	 * Usuario de acceso a base de datos
@@ -20,9 +21,9 @@ abstract class ModeloDB{
 	protected $conn = null;
 	
 	protected abstract function load();
-	
-	
-	protected function connect(){
+		
+	protected function connect()
+	{
 		$conn = null;
 		try{
 			$conn = new PDO(
@@ -37,16 +38,16 @@ abstract class ModeloDB{
 		$this->conn = $conn;
 		return $conn;
 	}
-
 	
-	public function connection(){
+	public function connection()
+	{
 		if ($this->conn == null)
 			$this->connect();
 		return $this->conn;	
 	}
-	
-	
-	public function query($sql){
+		
+	public function query($sql)
+	{
 		$conn = $this->connection();
 		
 		$resultado = $conn->prepare($sql);
@@ -57,8 +58,7 @@ abstract class ModeloDB{
 		$data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 		
 		return $data;
-	}	 
-	
+	}	
 }
 
 ?>

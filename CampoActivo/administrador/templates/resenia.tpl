@@ -6,7 +6,7 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                        <h2 class="intro-text text-center"><strong>Rese&ntildea</strong></h2>
+                        <h2 class="intro-text text-center"><strong>Rese&ntilde;a</strong></h2>
                     <hr>
                 </div>
                 <div class="col-md-6"><br>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="img/fabrica.jpg" alt="">
-                    <h3><small>En la f&aacutebrica.</small></h3>
+                    <h3><small>En la f&aacute;brica.</small></h3>
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="img/taller.jpg" alt="">
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-    </div>
-    <!-- /.container -->
+</div>
+<!-- /.container -->
 
-    {include file = "footer.tpl"}
+{include file = "footer.tpl"}

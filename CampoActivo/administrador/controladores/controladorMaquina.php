@@ -22,14 +22,14 @@ class MaquinaController
 		$this->view->render();		
 	}
 
-	public function actionCarouselMaq($estado,$id_maq)
+	public function actionCarouselMaq($id_maq)
 	{
-		$imgMaq = $this->modeloMaquinas->load_ImgMaq($estado,$id_maq);		 	 
+		$imgMaq = $this->modeloMaquinas->load_ImgMaq($id_maq);
 		
 		$this->view->set_imgMaq($imgMaq);
 		$this->view->renderCM();
 	}
-
+	
 	public function vistaAgregarMaq()
 	{
 		$this->view->nuevaMaquina();
@@ -63,6 +63,15 @@ class MaquinaController
 		$this->view->set_maquinas($imgMaqB);
 		$this->view->render();
 	}	
+
+	public function actionBusqueda()
+	{      
+		$busquedaRealizada = $_POST['inputBuscarM'];
+		
+		$ResultMaq = $this->modeloMaquinas->busqueda($busquedaRealizada);
+
+		$this->view->busqueda($ResultMaq);
+	}
 
 	public function editarMaq()
 	{

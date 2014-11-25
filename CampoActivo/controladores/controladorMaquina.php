@@ -1,49 +1,57 @@
 <?php
 
-include "./vistas/vistaMaquina.php";
-include "./modelos/modeloMaquina.php";
+class MaquinaController
+{
 
-class MaquinaController{
+	private $modeloMaquinas;
+	private	$view;
+
+	public function __construct()
+	{
+		include "./vistas/vistaMaquina.php";
+		include "./modelos/modeloMaquina.php";
+
+		$this->modeloMaquinas = new Maquina();
+		$this->view = new MaquinaView;
+	}
 	
-	public function actionMaquina($estado){
-		
-		$maquinas = new Maquina();
-		$view = new MaquinaView;
-
-		$m = $maquinas->load_Maq($estado);	
+	public function actionMaquina($estado)
+	{
+		$m = $this->modeloMaquinas->load_Maq($estado);	
 			
-		$view->set_maquinas($m);
-		
-		$view->render();
-		
+		$this->view->set_maquinas($m);		
+		$this->view->render();		
 	}
 
-	public function actionCarouselMaq($estado,$id_maq){
-
-		$maquinasI = new Maquina();
-		$view = new MaquinaView;
+	public function actionCarouselMaq($id_maq)
+	{
+		$imgMaq = $this->modeloMaquinas->load_ImgMaq($id_maq);
 		
-		$imgMaq = $maquinasI->load_ImgMaq($estado,$id_maq);		 	 
-		
-		$view->set_imgMaq($imgMaq);
-
-		$view->renderCM();
-
+		$this->view->set_imgMaq($imgMaq);
+		$this->view->renderCM();
 	}
 
-	public function actionBusquedaMaq($q){
+	// public function actionBusquedaMaq($q){
 
-		$maquinasB = new Maquina();
-		$view = new MaquinaView;
+	// 	$maquinasB = new Maquina();
+	// 	$view = new MaquinaView;
 		
-		$imgMaqB = $maquinasB->load_ResFinales($q);		 	 
+	// 	$imgMaqB = $maquinasB->load_ResFinales($q);		 	 
 		
-		$view->set_maquinas($imgMaqB);
+	// 	$view->set_maquinas($imgMaqB);
 
-		$view->render();
+	// 	$view->render();
 
+	// }
+
+	public function actionBusqueda()
+	{      
+		$busquedaRealizada = $_POST['inputBuscarM'];
+		
+		$ResultMaq = $this->modeloMaquinas->busqueda($busquedaRealizada);
+
+		$this->view->busqueda($ResultMaq);
 	}
-
 }
 
 ?>

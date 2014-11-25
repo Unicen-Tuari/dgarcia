@@ -83,26 +83,9 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-            <!-- <form class = "busqueda" action = "index.php">
-                <input type = "hidden" name  = "action" value = "resultado">
-                <div class="row">
-                    <div class="col-sm-8 text-center">
-                        <input id = "tipeoUser" name = "q">
-                    </div>
-                    <div class="col-sm-2 text-center">
-                        <button class = "btn btn-primary" type = "submit" value = "B&uacute;squeda">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Búsqueda</span>
-                        </button>
-                    </div>
-                    <div class="col-sm-2">
-                        <p id = "cantResultados">0 Resultados</p>
-                    </div>   
-                </div>          
-            </form> -->
+            
         </div>
-        <!-- /.container -->   
-
+        <!-- /.container -->  
     </nav>
 
     <div class="brand">

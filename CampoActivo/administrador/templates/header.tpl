@@ -30,7 +30,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
@@ -54,10 +53,7 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="index.php?action=index">Inicio</a>
-                    </li>
-                    <!-- <li>
-                        <a href="index.php?action=resenia">La Empresa</a>
-                    </li> -->
+                    </li>                    
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle">M&aacute;quinas<b class="caret"></b>
                         </a>
@@ -117,10 +113,10 @@
               <h4 class="modal-title  text-center" id="myModalLabel">Ingresar</h4>
             </div>
 
-      <div class="modal-body">
+        <div class="modal-body">
 
-            <form class="form-horizontal"   method="post" action="index.php?action=login">
-              <fieldset>
+            <form class="form-horizontal" method="post" action="index.php?action=login">
+                <fieldset>
                 
                     <div class="form-group">
                       <label for="inputEmail" class="col-lg-2 control-label">Usuario</label>
@@ -145,16 +141,14 @@
                     </div>
                      
                      <script src="./js/Ajax_login.js"></script>
-                 </fieldset>
-              </form>
+                </fieldset>
+            </form>
                <!--  <form method="post" action="index.php?action=login">
                     <p><input type="text" name="user" value="" placeholder="Username o E-mail"></p>
                     <p><input type="password" name="pass" value="" placeholder="Password"></p>
                     <p><input type="submit" name="commit" value="Login"></p>
-                </form> -->
-           
-        </div>
-   
+                </form> -->           
+        </div>   
     </div>
   </div>
 </div>

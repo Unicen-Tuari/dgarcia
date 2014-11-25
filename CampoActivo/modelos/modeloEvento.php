@@ -2,16 +2,11 @@
 
 include_once "modelodb.php";
 
-class Evento extends ModeloDB{
-	
+class Evento extends ModeloDB
+{
 	
 	public function load()
 	{
-		// return $this->query("select c.id_contenido as id_Contenido, c.nombre as Nombre,e.fecha as 									Fecha, e.ubicacion as Ubicacion, c.texto as Texto
-		//     				from evento e  
-		//         			join contenido c on (c.id_contenido = e.id_contenido)
-		//         			join imagenes i on (e.id_contenido = i.id_contenido)
-		//     				where (c.id_contenido = e.id_contenido)");
 		return $this->query("
 			SELECT c.id_contenido AS id_Contenido, c.nombre AS Nombre,e.fecha AS Fecha, e.ubicacion AS Ubicacion, 
 			c.Texto AS Texto, e.id_contenido, i.Ruta
@@ -58,7 +53,20 @@ class Evento extends ModeloDB{
  //        ");
 
 	// }	
-	
+
+	public function busqueda($q) 
+	{	
+		return $this->query("
+			SELECT c.id_contenido AS id_Contenido, c.nombre AS Nombre,e.fecha AS Fecha, e.ubicacion AS Ubicacion, 
+			c.Texto AS Texto, i.Ruta
+			FROM evento e  
+			INNER JOIN contenido c ON (c.id_contenido = e.id_contenido)
+			INNER JOIN imagenes i ON (e.id_contenido = i.id_contenido)
+			WHERE((Nombre LIKE '%".$q."%')||(Texto LIKE '%".$q."%')
+				||(Ubicacion LIKE '%".$q."%')||(Fecha LIKE '%".$q."%'))
+			GROUP BY e.id_contenido		     	
+		");	
+	}	
 }
 
 ?>

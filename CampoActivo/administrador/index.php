@@ -41,8 +41,17 @@ ini_set("display_errors", 1);
 	/**
 	 * Acciones
 	 */
-	if(array_key_exists('action', $_REQUEST)&&$_REQUEST['action']=='login')
-	{
+	if(isset($_POST['inputBuscarE'])){
+			include "./controladores/controladorEvento.php";
+			$c = new EventoController();
+			$c->actionBusqueda();
+
+	}else if(isset($_POST['inputBuscarM'])){
+		include "./controladores/controladorMaquina.php";
+		$c = new MaquinaController();
+		$c->actionBusqueda();
+
+	}else if(array_key_exists('action', $_REQUEST)&&$_REQUEST['action']=='login'){
 		
 		include_once("./controladores/ControllerUser.php");			
 		$log = new ControllerUser();
@@ -53,6 +62,7 @@ ini_set("display_errors", 1);
 		$log->login();
 		// echo ("La seccion es: ");
 		// echo ($_SESSION['IDUsuario']);
+
 	}else if (isset($_POST['pass_registrarse'])){
 		
 		include_once("./controladores/ControllerUser.php");
@@ -98,12 +108,13 @@ ini_set("display_errors", 1);
 		$c = new MaquinaController();
 		$c->eliminarMaquina();
 
-	}else if($_REQUEST['action']=='carouselMaq'){					
-		if((array_key_exists('estado', $_GET)) && (array_key_exists('id', $_GET)))
+	}else if($_REQUEST['action']=='carouselMaq'){	
+		
+		if(array_key_exists('id', $_GET))
 		{
 			include "./controladores/controladorMaquina.php";
 			$c = new MaquinaController();
-			$c->actionCarouselMaq($_GET['estado'],$_GET['id']);
+			$c->actionCarouselMaq($_GET['id']);
 		}
 
 	}else if($_REQUEST['action']=='evento'){

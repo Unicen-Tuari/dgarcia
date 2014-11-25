@@ -1,7 +1,7 @@
 <?php
 
-class IndexController{
-	
+class IndexController
+{
 	public function actionIndex()
 	{
 		include "./vistas/vistaInicio.php";
@@ -35,9 +35,7 @@ class IndexController{
 	// public function actionLogout(){
 	// 	session_destroy();
 	// 	$this->actionLoginForm();
-	// }
-	
-	
+	// }	
 }
 
 ?>

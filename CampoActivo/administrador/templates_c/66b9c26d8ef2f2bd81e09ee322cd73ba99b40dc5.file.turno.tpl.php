@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 22:22:52
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 17:25:33
          compiled from ".\templates\turno.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:271175472502c6e5667-82079646%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '66b9c26d8ef2f2bd81e09ee322cd73ba99b40dc5' => 
     array (
       0 => '.\\templates\\turno.tpl',
-      1 => 1416337988,
+      1 => 1416932502,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5472502c79e5f2_73665614',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5472502c79e5f2_73665614')) {function content_5472502c79e5f2_73665614($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
@@ -56,16 +56,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <hr>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <!-- <img class="img-responsive" src="img/equipo.jpg" alt="">
-                    <h3><small>Equipo de la empresa.</small></h3> -->
+                   
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="img/calendario.jpg" alt="">
-                    <!-- <h3><small>En la f&aacutebrica.</small></h3> -->
+                    
                 </div>
                 <div class="col-sm-4 text-center">
-                    <!-- <img class="img-responsive" src="img/taller.jpg" alt="">
-                    <h3><small>Nuestro Taller.</small></h3> -->
+                   
                 </div>
                 <div class="clearfix"></div>
             </div>

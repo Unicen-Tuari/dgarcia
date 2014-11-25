@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-22 20:13:05
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 08:53:22
          compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:230045470e0415c08f5-91309523%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12991547435726212b7-69586505%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1416506511,
+      1 => 1416881109,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '230045470e0415c08f5-91309523',
+  'nocache_hash' => '12991547435726212b7-69586505',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5470e0415eb0a0_54311789',
+  'unifunc' => 'content_54743572628912_61765718',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5470e0415eb0a0_54311789')) {function content_5470e0415eb0a0_54311789($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_54743572628912_61765718')) {function content_54743572628912_61765718($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -104,26 +104,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-            <!-- <form class = "busqueda" action = "index.php">
-                <input type = "hidden" name  = "action" value = "resultado">
-                <div class="row">
-                    <div class="col-sm-8 text-center">
-                        <input id = "tipeoUser" name = "q">
-                    </div>
-                    <div class="col-sm-2 text-center">
-                        <button class = "btn btn-primary" type = "submit" value = "B&uacute;squeda">
-                            <i class="fa fa-search-plus"></i>
-                            <span>Búsqueda</span>
-                        </button>
-                    </div>
-                    <div class="col-sm-2">
-                        <p id = "cantResultados">0 Resultados</p>
-                    </div>   
-                </div>          
-            </form> -->
+            
         </div>
-        <!-- /.container -->   
-
+        <!-- /.container -->  
     </nav>
 
     <div class="brand">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 20:51:50
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 17:53:57
          compiled from ".\templates\agregarE.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2064954725621381092-64746160%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '599f4bf56adb4dc82f786a73e910330fa1c40145' => 
     array (
       0 => '.\\templates\\agregarE.tpl',
-      1 => 1416858645,
+      1 => 1416932083,
       2 => 'file',
     ),
   ),
@@ -47,30 +47,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Seleccione im&aacute;genes: </label>
-                                <input name="ruta" type="text" class="form-control" rows="6">
-
-                                <!-- <div id="archivos">
-                                <ul></ul>
-                                </div> -->
-
-                                <script>
-                                var insertar_en = document.querySelector("#archivos ul");
-                                file_in = document.querySelector("#files")
-                                file_in.onchange = function(e){
-                                    var files = e.target.files;
-                                    for(var i=0,f;f= files[i];++i){
-                                        var archivo = document.createElement("li");
-                                        archivo.innerHTML = f.name + " - (<b>" + f.type + "</b>) ->" + f.size;
-                                        insertar_en.appendChild(archivo);
-                                    }
-                                }
-                                </script>
-
-                                <!-- <form action="demo_form.asp">
-                                  Select images: <input type="file" name="ruta" multiple>
-                                  <input type="submit">
-                                </form> -->
-                                <!-- <input name="ruta" type="text" class="form-control" rows="6"></input> -->
+                                <input name="ruta" type="text" class="form-control" rows="6">                              
+                                
                                 <!-- <label>Ruta 2: </label>
                                 <input name="ruta" type="text" class="form-control" rows="6"></input>
                                 <label>Ruta 3:</label>

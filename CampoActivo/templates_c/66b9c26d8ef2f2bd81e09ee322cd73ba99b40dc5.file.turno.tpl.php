@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 01:44:39
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 17:05:21
          compiled from ".\templates\turno.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:148845470e111c00945-18054647%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:4955474a8c199ab15-97026261%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '148845470e111c00945-18054647',
+  'nocache_hash' => '4955474a8c199ab15-97026261',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5470e111c6b789_16558660',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5474a8c19f9ec2_22923864',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5470e111c6b789_16558660')) {function content_5470e111c6b789_16558660($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_5474a8c19f9ec2_22923864')) {function content_5474a8c19f9ec2_22923864($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
 <div class="container" onload = "diasCalendario(enero)">

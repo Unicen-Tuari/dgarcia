@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 20:51:21
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 08:36:41
          compiled from ".\templates\modificarMaq.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:775754716d8fa8bcd4-25034526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e271d23d5862720f68a42bdd4a7f00b595e93276' => 
     array (
       0 => '.\\templates\\modificarMaq.tpl',
-      1 => 1416858604,
+      1 => 1416896413,
       2 => 'file',
     ),
   ),
@@ -96,7 +96,6 @@ $_smarty_tpl->tpl_vars['maquina']->_loop = true;
                 </div>
             </div>
         </div>
-
     </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

@@ -1,45 +1,39 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-22 20:14:08
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 17:56:28
          compiled from ".\templates\carouselMaq.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:242415470e0802c2bd8-78369293%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:40725474a4b8322923-77529994%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8f180a4357b51c29ffa118ff8df09637d053ae7d' => 
     array (
       0 => '.\\templates\\carouselMaq.tpl',
-      1 => 1413430351,
+      1 => 1416934519,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '242415470e0802c2bd8-78369293',
+  'nocache_hash' => '40725474a4b8322923-77529994',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5474a4b83b2ab4_35614770',
   'variables' => 
   array (
     'imagenes' => 0,
     'imagen' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5470e0804485d5_34716346',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5470e0804485d5_34716346')) {function content_5470e0804485d5_34716346($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_5474a4b83b2ab4_35614770')) {function content_5474a4b83b2ab4_35614770($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
     <div class="container">
 
         <div class="row">
             <div class="box">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-2 text-center"></div>
+                <div class="col-lg-8 text-center">
                     <div id="carousel-example-generic" class="carousel slide">
-
-                        <!-- Indicators -->
-                        <!-- <ol class="carousel-indicators hidden-xs">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol> -->  
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
@@ -66,6 +60,7 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
                         </a>
                     </div>                    
                 </div>
+                <div class="col-lg-2 text-center"></div>
             </div>
         </div>
         

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 06:15:59
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 06:15:41
          compiled from ".\templates\footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:827254716d8fb75ce7-72754745%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1be7ff7fdee636597edd726ee98dfef4bfd55d1f' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1416337559,
+      1 => 1416889038,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_54716d8fb7b0d0_78800603',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54716d8fb7b0d0_78800603')) {function content_54716d8fb7b0d0_78800603($_smarty_tpl) {?><footer>
         <div class="container">
@@ -35,22 +35,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!--  <script src="js/jqBootstrapValidation.js"></script>
-    // <script src="js/contact_me.js"></script -->
+    <script src="js/busquedaJquery.js"></script>
 
+    <script src="./js/Ajax_login.js"></script>
+    
     <!-- Script to Activate the Carousel -->
     <script>
+    
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     });
 
-    $("#tipeoUser").keyup(function(){
-        var query=$("#tipeoUser").val();
-        $.get("resultadosParciales.php?q="+query,function(data,status){
-            //console.log(data);
-            $("#cantResultados").html(data + " Resultados");
-        });
-    });
+    // $("#tipeoUser").keyup(function(){
+    //     var query=$("#tipeoUser").val();
+    //     $.get("resultadosParciales.php?inputBuscarM="+query,function(data,status){
+    //         //console.log(data);
+    //         $("#cantResultados").html(data + " Resultados");
+    //     });
+    // });
 
     </script>
 

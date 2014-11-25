@@ -1,6 +1,7 @@
 <?php	
 
-class EventoController{	
+class EventoController
+{	
 
 	private $modeloEventos;
 	private	$view;
@@ -28,6 +29,14 @@ class EventoController{
 		
 		$this->view->set_img($img);
 		$this->view->renderC();
+	}
+
+	public function actionBusqueda()
+	{
+		$busquedaRealizada = $_POST['inputBuscarE'];
+		$eventoResultado = $this->modeloEventos->busqueda($busquedaRealizada);
+		
+		$this->view->busqueda($eventoResultado);
 	}
 
 	public function vistaAgregarE()
@@ -80,8 +89,8 @@ class EventoController{
 	{
 		$evento = $_POST['id_evento'];
 					
-		$this->modeloEventos->eliminarE($evento);
 		$this->modeloEventos->eliminarImagenesE($evento);
+		$this->modeloEventos->eliminarE($evento);
 		$this->modeloEventos->eliminarContenidoE($evento);
 		$this->actionEvento();
 	}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 06:15:59
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 17:24:29
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:333054716d8fb129a0-42126079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1416705042,
+      1 => 1416932240,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_54716d8fb200e2_51859945',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54716d8fb200e2_51859945')) {function content_54716d8fb200e2_51859945($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
@@ -51,7 +51,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
@@ -75,10 +74,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="index.php?action=index">Inicio</a>
-                    </li>
-                    <!-- <li>
-                        <a href="index.php?action=resenia">La Empresa</a>
-                    </li> -->
+                    </li>                    
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle">M&aacute;quinas<b class="caret"></b>
                         </a>
@@ -138,10 +134,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <h4 class="modal-title  text-center" id="myModalLabel">Ingresar</h4>
             </div>
 
-      <div class="modal-body">
+        <div class="modal-body">
 
-            <form class="form-horizontal"   method="post" action="index.php?action=login">
-              <fieldset>
+            <form class="form-horizontal" method="post" action="index.php?action=login">
+                <fieldset>
                 
                     <div class="form-group">
                       <label for="inputEmail" class="col-lg-2 control-label">Usuario</label>
@@ -167,16 +163,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </div>
                      
                      <script src="./js/Ajax_login.js"></script>
-                 </fieldset>
-              </form>
+                </fieldset>
+            </form>
                <!--  <form method="post" action="index.php?action=login">
                     <p><input type="text" name="user" value="" placeholder="Username o E-mail"></p>
                     <p><input type="password" name="pass" value="" placeholder="Password"></p>
                     <p><input type="submit" name="commit" value="Login"></p>
-                </form> -->
-           
-        </div>
-   
+                </form> -->           
+        </div>   
     </div>
   </div>
 </div><?php }} ?>

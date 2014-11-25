@@ -3,7 +3,8 @@
 	include "./modelos/modeloContacto.php";
 	include "./vistas/vistaContacto.php";
 	
-	class ContactoController{
+	class ContactoController
+	{
 		
 		public function actionContacto(){
 			
@@ -22,9 +23,6 @@
 
 			$view->renderContacto();
 		}
-
 	}
-
-
 
 ?>

@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-22 20:13:05
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 16:59:20
          compiled from ".\templates\footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:314615470e041602757-50376159%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:321405474357263d681-29277569%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1be7ff7fdee636597edd726ee98dfef4bfd55d1f' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1414011880,
+      1 => 1416930616,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '314615470e041602757-50376159',
+  'nocache_hash' => '321405474357263d681-29277569',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5470e041638560_93223730',
+  'unifunc' => 'content_547435726429e8_02316247',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5470e041638560_93223730')) {function content_5470e041638560_93223730($_smarty_tpl) {?><footer>
+<?php if ($_valid && !is_callable('content_547435726429e8_02316247')) {function content_547435726429e8_02316247($_smarty_tpl) {?><footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -35,22 +35,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!--  <script src="js/jqBootstrapValidation.js"></script>
-    // <script src="js/contact_me.js"></script -->
+    <script src="js/busquedaJquery.js"></script>
+
+    <script src="./js/Ajax_login.js"></script>
 
     <!-- Script to Activate the Carousel -->
+    
     <script>
+
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     });
 
-    $("#tipeoUser").keyup(function(){
-        var query=$("#tipeoUser").val();
-        $.get("resultadosParciales.php?q="+query,function(data,status){
-            //console.log(data);
-            $("#cantResultados").html(data + " Resultados");
-        });
-    });
+    // $("#tipeoUser").keyup(function(){
+    //     var query=$("#tipeoUser").val();
+    //     $.get("resultadosParciales.php?inputBuscarM="+query,function(data,status){
+    //         //console.log(data);
+    //         $("#cantResultados").html(data + " Resultados");
+    //     });
+    // });
 
     </script>
 

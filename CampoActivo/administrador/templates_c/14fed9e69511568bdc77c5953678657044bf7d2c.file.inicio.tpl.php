@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 06:17:09
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 17:50:46
          compiled from ".\templates\inicio.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2777354716dd50dbdc1-39037029%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '14fed9e69511568bdc77c5953678657044bf7d2c' => 
     array (
       0 => '.\\templates\\inicio.tpl',
-      1 => 1413321592,
+      1 => 1416934243,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_54716dd510fd84_84249942',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54716dd510fd84_84249942')) {function content_54716dd510fd84_84249942($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
@@ -26,15 +26,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
         <div class="row">
             <div class="box">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-2 text-center"></div>
+                <div class="col-lg-8 text-center">
+                
                     <div id="carousel-example-generic" class="carousel slide">
-                        <!-- Indicators -->
-                        <!-- <ol class="carousel-indicators hidden-xs">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol> -->
-
+                        
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
@@ -50,7 +46,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 <img class="img-responsive img-full" src="img/slide-7.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/slide-8.jpg" alt="">
+                                <img class="img-responsive " src="img/slide-8.jpg" alt="">
                             </div>
                         </div>
 
@@ -73,6 +69,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         </small>
                     </h2>
                 </div>
+                <div class="col-lg-2 text-center"></div>
             </div>
         </div>
 

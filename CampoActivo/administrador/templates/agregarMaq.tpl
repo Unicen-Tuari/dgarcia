@@ -9,7 +9,7 @@
                     <h2 class="intro-text text-center"><strong>Nueva Maquina</strong></h2>
                     <hr>
                         
-                    <form role="form" action="index.php?action=insertarMaq" method="POST"> <!-- enctype="multipart/form-data" -->
+                    <form role="form" action="index.php?action=insertarMaq" method="POST"> 
                         <div class="row">
                             
                             <div class="form-group col-lg-12">

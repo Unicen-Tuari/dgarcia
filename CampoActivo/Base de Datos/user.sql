@@ -8,21 +8,20 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 -- USE `campoactivo`;
 
 -- DROP TABLE IF EXISTS `usuario`;
-CREATE TABLE `usuario` (
-  `id_persona` int(11) NOT NULL AUTO_INCREMENT,
-  `Usuario` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
+CREATE TABLE `mes` (
+  `id_mes` int(2) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
-  `apellido` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
-  `dni_persona` int(11) NOT NULL,
-  `fecha_nacimiento` date DEFAULT NULL,
-  `email` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `celular` int(11) NOT NULL,
-  `telefono_fijo` int(11) DEFAULT NULL,
-  `direccion` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `fecha_registro` date NOT NULL,
-  `esAdmin` bit(1) NOT NULL DEFAULT b'0',
-  PRIMARY KEY (`id_persona`)
+  `cantidadDias` int(2) NOT NULL,
+  PRIMARY KEY (`id_mes`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+CREATE TABLE `dia` (
+  `id_dia` int(3) NOT NULL AUTO_INCREMENT,
+  `numDia` int(2) NOT NULL,
+  `estado` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `id_mes` int(2) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id_dia`),
+  FOREIGN KEY (`id_mes`) REFERENCES mes (`id_mes`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO `usuario` (`id_persona`, `Usuario`, `nombre`, `apellido`, `dni_persona`, `fecha_nacimiento`, `email`, `celular`, `telefono_fijo`, `direccion`, `password`, `fecha_registro`, `esAdmin`) VALUES

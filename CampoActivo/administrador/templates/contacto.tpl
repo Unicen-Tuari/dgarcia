@@ -14,13 +14,13 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2799.827187409258!2d-59.842185974121094!3d-36.79340037765881!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2s!4v1403727301661" width="600" height="450" frameborder="0" style="border:0"></iframe>
                 </div>
                 <div class="col-md-4">
-                    <p>Tel&eacutefono:
+                    <p>Tel&eacute;fono:
                         <strong>02281 - 427465</strong>
                     </p>
                     <p>Email:
                         <strong><a href="mailto:name@example.com">campoactivo@speedy.com.ar</a></strong>
                     </p>
-                    <p>Direcci&oacuten:
+                    <p>Direcci&oacute;n:
                         <strong>Ruta 3 KM 299,2 - CP 7300 
                             <br>Azul, Buenos Aires</strong>
                     </p>
@@ -36,7 +36,7 @@
                     <h2 class="intro-text text-center"><strong>Contacto</strong></h2>
                     <hr>
                         <div id = "contacto">
-                            <p>Usted podr&aacute contactarnos dejando su mensaje aqu&iacute. 
+                            <p>Usted podr&aacute; contactarnos dejando su mensaje aqu&iacute;. 
                                <br>A la brevedad uno de nuestros representantes se comunicar&aacute con usted.
                             </p>
                         </div>

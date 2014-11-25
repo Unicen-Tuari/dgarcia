@@ -1,35 +1,42 @@
 <?php
 
-	include "./vistas/vistaEvento.php";
-	include "./modelos/modeloEvento.php";
+class EventoController
+{	
+	private $modeloEventos;
+	private	$view;
 
-class EventoController{	
+	public function __construct()
+	{
+		include "./vistas/vistaEvento.php";
+		include "./modelos/modeloEvento.php";
+
+		$this->modeloEventos = new Evento();
+		$this->view = new EventoView;
+	}
 	
-	public function actionEvento(){
+	public function actionEvento()
+	{		
+		$e = $this->modeloEventos->load();		
 		
-		$eventos = new Evento();
-		$view = new EventoView;
-
-		$e = $eventos->load();		
-		
-		$view->set_eventos($e);
-		
-		$view->render();
+		$this->view->set_eventos($e);		
+		$this->view->render();
 	}
 
-	public function actionCarousel($id){
-
-		$eventos = new Evento();
-		$view = new EventoView;
+	public function actionCarousel($id)
+	{
+		$img = $this->modeloEventos->load_ImgEvento($id);		
 		
-		$img = $eventos->load_ImgEvento($id);		
+		$this->view->set_img($img);
+		$this->view->renderC();
+	}
+
+	public function actionBusqueda()
+	{
+		$busquedaRealizada = $_POST['inputBuscarE'];
+		$eventoResultado = $this->modeloEventos->busqueda($busquedaRealizada);
 		
-		$view->set_img($img);
-
-		$view->renderC();
-
+		$this->view->busqueda($eventoResultado);
 	}
 }
-
 
 ?>

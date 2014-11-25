@@ -2,15 +2,14 @@
 
 require('./lib/Smarty/Smarty.class.php');	
 
-class View{
-	
+class View
+{
 	protected $smarty;
 	
-	public function __construct(){
+	public function __construct()
+	{
 		$this->smarty = new Smarty();
-	}
-	
+	}	
 }
-
 
 ?>
