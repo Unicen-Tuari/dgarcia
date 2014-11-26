@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 21:18:48
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 06:13:10
          compiled from ".\templates\solomaquinasC.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:39625474e428afbd20-63218970%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a173b26e8508153df16dcad082c357e5d6959d79' => 
     array (
       0 => '.\\templates\\solomaquinasC.tpl',
-      1 => 1416945038,
+      1 => 1416978778,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5474e428b4cf34_84561776',
   'variables' => 
   array (
     'cantidad' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'maquina' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5474e428b4cf34_84561776',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5474e428b4cf34_84561776')) {function content_5474e428b4cf34_84561776($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['cantidad']->value>0){?>
     <?php  $_smarty_tpl->tpl_vars['maquina'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['maquina']->_loop = false;
@@ -58,8 +58,8 @@ $_smarty_tpl->tpl_vars['maquina']->_loop = true;
     </div>
     <div class="col-lg-6 text-center">
         <form name = "modificar" action="indexAdmin.php?action=modificarMaq" method="POST">
-            <input name = "id_maq" type = "hidden" value = "<?php echo $_smarty_tpl->tpl_vars['maquina']->value['id_Contenido'];?>
-&amp;<?php echo $_smarty_tpl->tpl_vars['maquina']->value['estado'];?>
+            <input name = "id_maq" type = "hidden" 
+            value = "<?php echo $_smarty_tpl->tpl_vars['maquina']->value['id_Contenido'];?>
 ">
             <button type = "submit">Modificar</button>
         </form>                    

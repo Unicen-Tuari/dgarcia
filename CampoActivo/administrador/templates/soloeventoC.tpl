@@ -14,13 +14,13 @@
     </div>                
     <div class="col-lg-6 text-center">
         <form name = "modificar" action="indexAdmin.php?action=modificarEvento" method="POST">
-            <input name = "id_evento" type = "hidden" value = "{$evento['id_contenido']}">
+            <input name = "id_evento" type = "hidden" value = "{$evento['id_Contenido']}">
             <button type = "submit">Modificar</button>
         </form>                    
     </div>
     <div class="col-lg-6 text-center">
         <form name = "eliminar" action="indexAdmin.php?action=eliminarEvento" method="POST">
-            <input name = "id_evento" type = "hidden" value = "{$evento['id_contenido']}">
+            <input name = "id_evento" type = "hidden" value = "{$evento['id_Contenido']}">
             <button type = "submit">Eliminar</button>
         </form>
     </div>

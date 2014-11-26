@@ -33,7 +33,10 @@ class MaquinaView extends View
 	}
 
 	function modificarMaquina($maquina)
-	{
+	{	
+		if (isset($_SESSION['usuario']))
+			$this->SetUser($_SESSION['usuario']);
+
 		$this->smarty->assign("maquinas",$maquina);
 		$this->smarty->display('modificarMaq.tpl'); 
 	}

@@ -80,16 +80,16 @@ class MaquinaController
 		$busquedaRealizada = $_POST['inputBuscarM'];
 		
 		$ResultMaq = $this->modeloMaquinas->busqueda($busquedaRealizada);
-
+		
 		$this->view->busqueda($ResultMaq);
+
 	}
 
 	public function editarMaq()
 	{
-		$maquina = $_POST['id_maq'];
-		$m = explode("&", $maquina);
-		
-		$maqmod = $this->modeloMaquinas->datos_Maq($m[1],$m[0]);			
+		$maquina = $_POST['id_maq'];		
+
+		$maqmod = $this->modeloMaquinas->datos_Maq($maquina);			
 		$this->view->modificarMaquina($maqmod);
 	}
 

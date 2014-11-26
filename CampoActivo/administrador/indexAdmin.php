@@ -1,11 +1,5 @@
 <?php
 
-// var_dump($_REQUEST);
-// var_dump($_FILES);
-// die();
-
-// session_start();
-
 /**
  * Script principal de la aplicacion. Todos los requerimientos de los usuarios son tratados por este script. 
  * Este script rutea al controlador apropiado según la variable de action. 
@@ -58,15 +52,20 @@ ini_set("display_errors", 1);
 		$c->actionBusqueda();
 
 	}else if (isset($_POST['pass_registrarse'])){
-		include_once("./controladores/controladorUsuario.php");
+		include "./controladores/controladorUsuario.php";
 		$Registrar= new UsuarioController();
 		$Registrar->registrarse();
 
 	}else if((array_key_exists('action', $_REQUEST))&&($_REQUEST['action']=='login')){	
-		include_once("./controladores/controladorUsuario.php");
+		include "./controladores/controladorUsuario.php";
 		$log= new UsuarioController();
 		$log->login();	
 		
+	}else if((array_key_exists('action', $_REQUEST))&&($_REQUEST['action']=='logout')){
+		include "./controladores/controladorUsuario.php";
+		$controller = new UsuarioController();
+		$controller->logout();
+
 	}else if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='index'){
 		include "./controladores/controladorInicio.php";
 		$controller = new IndexController();
@@ -183,7 +182,11 @@ ini_set("display_errors", 1);
 		{
 			echo "Error de Parametros";
 		}
-
+	}else if($_REQUEST['action']=='errorLogueo'){
+		include "./controladores/controladorUsuario.php";
+		$c = new UsuarioController();
+		$c->errorLogueo();
+		
 	}else 
 	{
 		echo "ERROR ACCION NO VALIDA";

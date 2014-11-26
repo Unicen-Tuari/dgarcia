@@ -17,7 +17,8 @@
     </div>
     <div class="col-lg-6 text-center">
         <form name = "modificar" action="indexAdmin.php?action=modificarMaq" method="POST">
-            <input name = "id_maq" type = "hidden" value = "{$maquina['id_Contenido']}&amp;{$maquina['estado']}">
+            <input name = "id_maq" type = "hidden" 
+            value = "{$maquina['id_Contenido']}">
             <button type = "submit">Modificar</button>
         </form>                    
     </div>

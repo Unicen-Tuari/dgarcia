@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 00:41:05
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 05:14:11
          compiled from ".\templates\headerBusqMaqC.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:83285474e3fe1dc573-92677998%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a9fc6ac0573f1abd91289c0850edbae7135e2d19' => 
     array (
       0 => '.\\templates\\headerBusqMaqC.tpl',
-      1 => 1416958801,
+      1 => 1416975245,
       2 => 'file',
     ),
   ),
@@ -77,6 +77,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    <?php if ((isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
                     <li>
                         <a href="indexAdmin.php?action=index">Inicio</a>
                     </li>
@@ -105,23 +106,48 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </li>
                             <li>
                                 <a href="indexAdmin.php?action=verCrearEvento">Agregar</a>
-                            </li>                                                     
-                        </ul>           
+                            </li>                    
+                        </ul>
                     </li>
                     <li>
                         <a href="indexAdmin.php?action=turno">Turno</a>
                     </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle">Evento
+                                <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  <?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
+</a>
+                            </li>
+                            <li>
+                                <a href="indexAdmin.php?action=logaut">Salir</a>
+                            </li>                    
+                        </ul>
+                    </li>
+                    <?php }?>
                     <?php if ((!isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
                         <li>
                           <a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>Iniciar sesión</a>
                         </li>
                     <?php }else{ ?>
-                        <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  <?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
-</a></li>
+                        <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle"><?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
+<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="indexAdmin.php?action=logout">Salir</a>
+                            </li>
+                        </ul>           
+                    </li>
+                        <!-- <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  <?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
+</a></li> -->
                     <?php }?>
                 </ul>                 
             </div>            
-
+            <?php if ((isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
             <form class = "busqueda" id="formBusquedaM" method="POST">                
                 <div class="row">
                     <div class="col-sm-8 text-center">
@@ -138,6 +164,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </div>   
                 </div>          
             </form>
+            <?php }?>
         </div>
         <!-- /.container --> 
     </nav>
@@ -154,7 +181,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <!--*************************************************************************************-->
                                 <!-- Modal login -->
 
-<!-- <div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
             <div class="modal-header">
@@ -176,30 +203,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <div class="form-group">
                       <label for="inputPassword"  class="col-lg-2 control-label" required>Contraseña</label>
                           <div class="col-lg-10">
-                            <input type="password" name="pass" class="form-control" id="inputPassword" required> -->
-                            <!-- <div id="error_login_div">
-                                 <?php echo $_smarty_tpl->getSubTemplate ("error_login.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
-                            </div> -->
-                          <!-- </div>
+                            <input type="password" name="pass" class="form-control" id="inputPassword" required>                            
+                          </div>
                     </div>
                     <div class="form-group">
                       <div class="col-lg-10 col-lg-offset-2">
-                            <button class="btn btn-default">Cancelar</button>
+                            <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
                             <button type="submit"  name="commit" value="Login" id="iniciar" class="btn btn-primary">Ingresar</button>
                       </div>
                     </div>
                      
                      <script src="./js/Ajax_login.js"></script>
                  </fieldset>
-              </form> -->
+              </form>
                <!--  <form method="post" action="indexAdmin.php?action=login">
                     <p><input type="text" name="user" value="" placeholder="Username o E-mail"></p>
                     <p><input type="password" name="pass" value="" placeholder="Password"></p>
                     <p><input type="submit" name="commit" value="Login"></p>
                 </form> -->
            
-       <!--  </div>   
+        </div>   
     </div>
   </div>
-</div> --><?php }} ?>
+</div><?php }} ?>

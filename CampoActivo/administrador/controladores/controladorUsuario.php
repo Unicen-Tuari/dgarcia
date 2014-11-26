@@ -4,22 +4,24 @@ error_reporting(E_ALL);
 ini_set("display_errors",1);
 
 class UsuarioController
-{		
-	private $model_registrarse;
-	private $Registrarse;	
-	private $view_registrado_exitoso;	
+{	
+	private $view;
+	private $registrarse;
+	private $existenciaUser;
 	
 	public function __construct()
 	{
-     	include_once("./vista/view_registrado_exitoso.php");		
-	  	include_once("./modelo/modeloExistencia.php");
-	  	include_once("./modelo/Modelo_registrarse.php");
-
-        $this->existeUsuario = new modeloExistencia();		
-		$this->view_registrado_exitoso = new view_registrado_exitoso();
-		$this->model_registrarse = new Registrarse();
+     	include "./vistas/vistaRegistroExitoso.php";				
+		include "./modelos/modeloExistenciaDatos.php";
+	  	include "./modelos/modeloRegistrarse.php";
+        
+		$this->existenciaUser = new modeloExistencia();
+		$this->registrarse	= new Registrarse();
+		$this->view	= new vistaRegExitoso();		
 	}
-								//le estoy pasando el id por referencia
+
+	
+						//le estoy pasando el id por referencia
 	public function Calendario()//datos home es informacion de una consulta 
 		{
 			echo ('calendario');
@@ -32,45 +34,55 @@ class UsuarioController
 		    // $this->viewCalendario->calendario($id_usuario);
 
 		}
-
-	public function error404()
+	
+	public function errorLogueo()
 	{
-		//https://es.wikipedia.org/wiki/Error_404
-		include_once("./vista/View_error404.php");
-		$error= new error_404();
-		$error->pagina_error();
+		include "./vistas/vistaErrores.php";
+		$error = new Errores();
+
+		$error->error_login();
 	}
 
 	public function login()
 	{
+		$usuario= $_POST['user'];
 		$email= $_POST['user'];	 
 		$pass=$_POST['pass'];
-		
-		$IdUser = $this->existeUsuario->existeUserLog($email,$pass);
+				
+		$IdUser = $this->existenciaUser->existeUserLog($usuario,$email,$pass);
 		
 		if($IdUser == NULL)
-		{
-			echo ('no se logueo');
+		{			
+			header("Location:indexAdmin.php?action=errorLogueo");	
 		}
 		else
 		{
 			$_SESSION['IDUsuario'] = $IdUser[0]["idUsuario"];
 			$_SESSION['usuario'] = $IdUser[0]["usuario"];
-			$_SESSION['esAdmin'] = $IdUser[0]["esAdmin"];						
+			$_SESSION['esAdmin'] = $IdUser[0]["esAdmin"];
+			echo "USUARIO: ".$email." ";
+			echo ($_SESSION['usuario']);
+			header("Location:indexAdmin.php");			
 		}
 	}
+
+	public function logout()
+	{
+		session_destroy();
+		header("Location:indexAdmin.php");
+	}	
 
 	public function registrarse()
 	{
 		$arr_registro = array();
 
-		$existeUsuario = $this->$this->existeUsuario->existeUserReg($_POST['usuario_registrarse']);		
+		$existeUsuario = $this->existenciaUser->existeUserReg($_POST['usuario_registrarse']);		
 		$resultado = count($existeUsuario);
 
 		if($resultado == 0)
-		{//si no existe el usuario por el campo usuario. Prueba con el email
-			$existeUsuario = $this->model_comprobar_existencia_usuario->verificar_usuario(
-									$_POST['email_registrarse']);
+		{
+			//si no existe el usuario por el campo usuario. Prueba con el email
+			$existeUsuario = $this->existenciaUser->existeUserReg($_POST['email_registrarse']);
 			$resultado = count($existeUsuario);
 		}
 
@@ -91,14 +103,18 @@ class UsuarioController
 			$arr_registro['direccion']		= strtolower ($_POST['Direccion_registrarse']);
 			$arr_registro['esAdmin']		= strtolower ('0');
 		
-			$this->model_registrarse->registrar($arr_registro);
-			$this->view_registrado_exitoso->r_exitoso();
+			$this->registrarse->registrar($arr_registro);
+			$this->view->r_exitoso();
 		}
 		else
 		{ 
-			include_once("./vista/View_error_login.php");
-			$error=new View_error_login();
-			$mail_existente="<h2El email ya fue usado para otra cuenta, ingrese otro o presione el  boton ingresar";
+			echo(' existeUsuario: '.$existeUsuario[0]['usuario']);
+			echo(' existeUsuario: '.$existeUsuario[0]['esAdmin']);
+
+			include "./vistas/View_error_login.php";
+			$error = new View_error_login();
+
+			$mail_existente = "El email ya fue usado para otra cuenta, ingrese otro o presione el  boton ingresar";
 			$error->error_login($mail_existente);
 		}
 	}

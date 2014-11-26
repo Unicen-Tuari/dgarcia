@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 17:52:43
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 05:12:43
          compiled from ".\templates\carouselE.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:57054739378dbf1e1-69969948%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '137b3e56c74b31620c334a015c01275555ec8202' => 
     array (
       0 => '.\\templates\\carouselE.tpl',
-      1 => 1416934342,
+      1 => 1416946032,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54739378e0fed5_96220222')) {function content_54739378e0fed5_96220222($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_54739378e0fed5_96220222')) {function content_54739378e0fed5_96220222($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerC.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
     <div class="container">

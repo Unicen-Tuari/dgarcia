@@ -51,6 +51,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    {if (isset($usuario))}
                     <li>
                         <a href="indexAdmin.php?action=index">Inicio</a>
                     </li>                    
@@ -84,12 +85,22 @@
                     <li>
                         <a href="indexAdmin.php?action=turno">Turno</a>
                     </li>
+                    {/if}
                     {if (!isset($usuario))}
                         <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  Iniciar sesión</a>
                         </li> 
                     {else}
-                        <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  {$usuario}</a></li>
-                    {/if}                   
+                        <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle">{$usuario}<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="indexAdmin.php?action=logout">Salir</a>
+                            </li>
+                        </ul>           
+                    </li>
+                        <!-- <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  {$usuario}</a></li> -->
+                    {/if}                 
                 </ul>
             </div>
             <!-- /.navbar-collapse -->            
@@ -118,7 +129,7 @@
 
         <div class="modal-body">
 
-            <form class="form-horizontal" method="post" action="indexAdmin.php?action=login">
+            <form class="form-horizontal" method="POST" action="indexAdmin.php?action=login">
                 <fieldset>
                 
                     <div class="form-group">
@@ -130,27 +141,19 @@
                     <div class="form-group">
                       <label for="inputPassword"  class="col-lg-2 control-label" required>Contraseña</label>
                           <div class="col-lg-10">
-                            <input type="password" name="pass" class="form-control" id="inputPassword" required>
-                            <!-- <div id="error_login_div">
-                                 {include file="error_login.tpl" }
-                            </div> -->
+                            <input type="password" name="pass" class="form-control" id="inputPassword" required>                            
                           </div>
                     </div>
                     <div class="form-group">
                       <div class="col-lg-10 col-lg-offset-2">
-                            <button class="btn btn-default">Cancelar</button>
+                            <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
                             <button type="submit"  name="commit" value="Login" id="iniciar" class="btn btn-primary">Ingresar</button>
                       </div>
                     </div>
                      
                      <script src="./js/Ajax_login.js"></script>
                 </fieldset>
-            </form>
-               <!--  <form method="post" action="indexAdmin.php?action=login">
-                    <p><input type="text" name="user" value="" placeholder="Username o E-mail"></p>
-                    <p><input type="password" name="pass" value="" placeholder="Password"></p>
-                    <p><input type="submit" name="commit" value="Login"></p>
-                </form> -->           
+            </form>                   
         </div>   
     </div>
   </div>

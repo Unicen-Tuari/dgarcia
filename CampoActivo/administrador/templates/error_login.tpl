@@ -1,1 +1,0 @@
-<p id="error_login_p">{$error_login}</p>

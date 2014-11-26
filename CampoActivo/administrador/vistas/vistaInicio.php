@@ -1,6 +1,6 @@
 <?php
 
-require('vista.php');	
+require_once('vista.php');	
 
 class IndexView extends View
 {

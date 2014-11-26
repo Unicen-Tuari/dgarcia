@@ -110,7 +110,7 @@ class Maquina extends ModeloDB
 		");
 	}
 
-	public function datos_Maq($estado,$id_contenido) 
+	public function datos_Maq($id_contenido) 
 	{			
 		return $this->query("
 			SELECT c.id_contenido as id_Contenido,  c.nombre as Nombre, c.texto as Texto, 
@@ -118,7 +118,7 @@ class Maquina extends ModeloDB
         	FROM maquinas m  
             INNER JOIN contenido c ON (c.id_contenido = m.id_contenido)
             INNER JOIN imagenes i ON (m.id_contenido = i.id_contenido)
-		   	WHERE(m.estado = '$estado') AND (m.id_contenido = '$id_contenido')
+		   	WHERE(m.id_contenido = '$id_contenido')
         	GROUP BY m.id_contenido	
         ");			
 	}

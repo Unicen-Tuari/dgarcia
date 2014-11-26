@@ -1,19 +1,16 @@
 <?php
 
-include_once( "modelo.php");
+include_once "modelodb.php";
 
-Class modeloExistencia extends ModeloDB
-{
-
-	/*******Atributos***********/
-
-	/*******Métodos***********************************/		    	
+// Model_comprobar_existencia_usuario
+Class modeloExistencia extends ModeloDB 
+{	    	
 	public function load()
 	{
 		
 	}
 
-	public function existeUserReg($usuario)
+	public function existeUserReg($usuario) //verificar_usuario
 	{	
 		return $this->query("
 			SELECT idUsuario, usuario, email, esAdmin
@@ -22,12 +19,12 @@ Class modeloExistencia extends ModeloDB
 		");	
 	}	
 	
-	public function existeUserLog($usuario,$email)
+	public function existeUserLog($usuario,$email,$pass) //verificar_existencia
 	{
 		return $this->query("
 			SELECT idUsuario, usuario, email, esAdmin
 	 		FROM usuario
-	 		WHERE ((usuario = '$usuario') OR (email = '$usuario')) AND (password = '$pass')
+	 		WHERE ((usuario = '$usuario') OR (email = '$usuario')) AND (password = '$pass') AND (esAdmin = '1')
 		");	
 	}
 }

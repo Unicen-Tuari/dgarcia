@@ -34,6 +34,9 @@ class EventoView extends View
 
 	function modificarEvento($evento)
 	{
+		if (isset($_SESSION['usuario']))
+			$this->SetUser($_SESSION['usuario']);
+		
 		$this->smarty->assign("eventos",$evento);
 		$this->smarty->display('modificarEvento.tpl'); 
 	}

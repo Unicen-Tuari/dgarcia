@@ -1,27 +1,27 @@
 <?php
-class Registrarse extends modelodb
-   {
 
-	/*******Atributos***********/
-	public $sectorReclamo;
+include_once "modelodb.php";
 
-		/*****acciones posibles a realizar con un reclamo******/
-	public function load(){
-		}
+class Registrarse extends ModeloDB
+{
+	public function load()
+	{
 
-	public function registrar($Registro)
-		{
-			$usuario		=	$Registro["usuario"];
-			$nombre			=	$Registro["nombre"];
-			$apellido		=	$Registro["apellido"];
-			$dni			=	$Registro["dni"];
-			$email			=	$Registro["email"];
-			$celular		=	$Registro["Celular"];
-			$fecha_nacimiento=	$Registro['FechaNacimiento'];
-			$telefono_fijo	=	$Registro["Telefono_fijo"];
-			$password		=	$Registro["pass"];
-			$direccion		=	$Registro["direccion"];
-			$fecha_registro	=	date("y/m/d");
+	}
+
+	public function registrar($registro)
+	{
+		$usuario		=	$registro["usuario"];
+		$nombre			=	$registro["nombre"];
+		$apellido		=	$registro["apellido"];
+		$dni			=	$registro["dni"];
+		$email			=	$registro["email"];
+		$celular		=	$registro["Celular"];
+		$fecha_nacimiento=	$registro['FechaNacimiento'];
+		$telefono_fijo	=	$registro["Telefono_fijo"];
+		$password		=	$registro["pass"];
+		$direccion		=	$registro["direccion"];
+		$fecha_registro	=	date("y/m/d");
 
 
 		$this->query("INSERT INTO usuario(
@@ -51,12 +51,7 @@ class Registrarse extends modelodb
 			 		'$fecha_registro'
 
 			 	  )");
-
-		}
-		
-
-		
+	}		
 }
-
 
 ?>

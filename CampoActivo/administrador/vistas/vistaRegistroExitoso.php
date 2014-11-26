@@ -1,9 +1,9 @@
 <?php
 
-include_once('vista.php');
+include('vista.php');
 
 
-class view_registrado_exitoso extends View
+class vistaRegExitoso extends View
 {
 	public function r_exitoso()
 	{
