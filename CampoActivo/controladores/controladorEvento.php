@@ -18,7 +18,11 @@ class EventoController
 	{		
 		$e = $this->modeloEventos->load();		
 		
-		$this->view->set_eventos($e);		
+		$this->view->set_eventos($e);
+
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+
 		$this->view->render();
 	}
 
@@ -27,6 +31,10 @@ class EventoController
 		$img = $this->modeloEventos->load_ImgEvento($id);		
 		
 		$this->view->set_img($img);
+
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+		
 		$this->view->renderC();
 	}
 

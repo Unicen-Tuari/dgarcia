@@ -50,12 +50,7 @@ ini_set("display_errors", 1);
 		include "./controladores/controladorMaquina.php";
 		$c = new MaquinaController();
 		$c->actionBusqueda();
-
-	}else if (isset($_POST['pass_registrarse'])){
-		include "./controladores/controladorUsuario.php";
-		$Registrar= new UsuarioController();
-		$Registrar->registrarse();
-
+	
 	}else if((array_key_exists('action', $_REQUEST))&&($_REQUEST['action']=='login')){	
 		include "./controladores/controladorUsuario.php";
 		$log= new UsuarioController();

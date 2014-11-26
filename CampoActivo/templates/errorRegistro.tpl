@@ -1,17 +1,18 @@
-{include file="header.tpl"}
+{include file = "header.tpl" title = foo}
 
-  <div class="container">
+    <div class="container">
 
         <div class="row">
             <div class="box">
                 <div class="col-lg-2 text-center"></div>
                     <div class="col-lg-8 text-center">
                     
-                        <h1>Usted ha sido registrado!!!!!!!</h1>
+                        <h1>Ya existe ese usuario o ese email!!!!!</h1>
                     </div>    
                 <div class="col-lg-2 text-center"></div>
             </div>
         </div>        
-  </div>      
-
-{include file="footer.tpl" }
+    </div>
+    <!-- /.container -->
+    
+{include file = "footer.tpl"}

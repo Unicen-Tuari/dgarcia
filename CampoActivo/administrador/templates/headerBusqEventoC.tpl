@@ -102,7 +102,6 @@
                             </li>
                         </ul>           
                     </li>
-                        <!-- <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  {$usuario}</a></li> -->
                     {/if}
                 </ul>                 
             </div>

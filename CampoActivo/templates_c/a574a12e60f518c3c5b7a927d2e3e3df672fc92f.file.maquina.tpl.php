@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 08:53:28
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 08:08:31
          compiled from ".\templates\maquina.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1969054743578912689-58425532%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2667354757c6f98ac10-28872308%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1969054743578912689-58425532',
+  'nocache_hash' => '2667354757c6f98ac10-28872308',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54743578945ce4_38185422',
+  'unifunc' => 'content_54757c6f9bab57_53899567',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54743578945ce4_38185422')) {function content_54743578945ce4_38185422($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerBusqMaq.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_54757c6f9bab57_53899567')) {function content_54757c6f9bab57_53899567($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerBusqMaq.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
 <div class="container">

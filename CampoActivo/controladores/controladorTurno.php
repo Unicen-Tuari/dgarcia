@@ -13,6 +13,9 @@ class TurnoController
 
 	public function actionTurno()
 	{
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+		
 		$this->view->render();
 	}
 }

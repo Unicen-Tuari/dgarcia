@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 05:11:52
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 09:34:22
          compiled from ".\templates\headerC.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:322035474e35ad47dd1-42878217%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5505ed38cc188a0f09493d4fd3d6f594bac47b2a' => 
     array (
       0 => '.\\templates\\headerC.tpl',
-      1 => 1416975037,
+      1 => 1416983328,
       2 => 'file',
     ),
   ),
@@ -124,9 +124,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 <a href="indexAdmin.php?action=logout">Salir</a>
                             </li>
                         </ul>           
-                    </li>
-                        <!-- <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  <?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
-</a></li> -->
+                    </li>                        
                     <?php }?>                 
                 </ul>
             </div>

@@ -15,7 +15,10 @@ class ContactoController
 	}
 	
 	public function actionContacto()
-	{
+	{		
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+
 		$this->view->render();
 	}
 
@@ -24,6 +27,10 @@ class ContactoController
 		$arrCont = $this->modeloContacto->nuevoMensaje($nombre,$correoelectronico,$telefono,$mensaje);		 	 
 		
 		$this->view->set_contacto($arrCont);
+
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+		
 		$this->view->renderContacto();
 	}
 }

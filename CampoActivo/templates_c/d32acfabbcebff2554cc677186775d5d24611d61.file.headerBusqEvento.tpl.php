@@ -1,25 +1,29 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 16:46:52
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 11:42:20
          compiled from ".\templates\headerBusqEvento.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:117345474a46c2bec70-85090497%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2457554757cdddc62b5-94744266%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd32acfabbcebff2554cc677186775d5d24611d61' => 
     array (
       0 => '.\\templates\\headerBusqEvento.tpl',
-      1 => 1416889461,
+      1 => 1416998491,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '117345474a46c2bec70-85090497',
+  'nocache_hash' => '2457554757cdddc62b5-94744266',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5474a46c322bb7_27274752',
+  'unifunc' => 'content_54757cddde79a0_51813330',
+  'variables' => 
+  array (
+    'usuario' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5474a46c322bb7_27274752')) {function content_5474a46c322bb7_27274752($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_54757cddde79a0_51813330')) {function content_54757cddde79a0_51813330($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,47 +78,57 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.php?action=index">Inicio</a>
+                        <a href="index.php?action=index"><small>Inicio</small></a>
                     </li>
                     <li>
-                        <a href="index.php?action=resenia">La Empresa</a>
+                        <a href="index.php?action=resenia"><small>La Empresa</small></a>
                     </li>
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle">M&aacute;quinas
+                        <a data-toggle="dropdown" class="dropdown-toggle"><small>M&aacute;quinas</small>
                                 <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="index.php?action=maquina&amp;estado=NUEVA">Nuevas</a>
+                                <a href="index.php?action=maquina&amp;estado=NUEVA"><small>Nuevas</small></a>
                             </li>
                             <li>
-                                <a href="index.php?action=maquina&amp;estado=USADA">Usadas</a>
+                                <a href="index.php?action=maquina&amp;estado=USADA"><small>Usadas</small></a>
                             </li>
                         </ul>           
                     </li>
                     <li>
-                        <a href="index.php?action=evento">Eventos</a>
+                        <a href="index.php?action=evento"><small>Eventos</small></a>
                     </li>
+                    <?php if ((isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
                     <li>
-                        <a href="index.php?action=turno">Turno</a>
+                        <a href="index.php?action=turno"><small>Turno</small></a>
                     </li>
+                    <?php }?>
                     <li>
-                        <a href="index.php?action=contacto">Contacto</a>
-                    </li> 
-                    <!-- <li>
-                      <a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>Iniciar sesión</a>
-                    </li> -->
+                        <a href="index.php?action=contacto"><small>Contacto</small></a>
+                    </li>
+                    <?php if ((!isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
+                    <li>
+                      <a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i><small>Iniciar sesión</small></a>
+                    </li>
+                    <li> 
+                      <a href="#" title="Click para registrarse y comenzar a utilizar la aplicacion" data-toggle="modal" data-target="#Registrarse"><i class="fa fa-sign-in fa-1x"></i><small>Registrarse</small></a>
+                    </li>
+                    <?php }else{ ?>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle"><small><?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
+</small><b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="index.php?action=logout"><small>Salir</small></a>
+                            </li>
+                        </ul>           
+                    </li>                        
+                    <?php }?>  
                 </ul>                 
             </div>
             <!-- /.navbar-collapse -->
-
-            <!-- <form class = "busqueda" id="formBusquedaE" method="POST">
-            <br>
-            <input type="text" name="inputBuscarE" placeholder = 'Buscar...'>
-            <button class = "btn btn-default" type = "submit" >
-                <i class="fa fa-search"></i>              
-            </button>
-        </form> -->
 
             <form class = "busqueda" id="formBusquedaE" method="POST">
                 <div class="row">
@@ -149,7 +163,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <!--*************************************************************************************-->
                                 <!-- Modal login -->
 
-<!-- <div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
             <div class="modal-header">
@@ -159,7 +173,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
       <div class="modal-body">
 
-            <form class="form-horizontal"   method="post" action="index.php?action=login">
+            <form class="form-horizontal"   method="POST" action="index.php?action=login">
               <fieldset>
                 
                     <div class="form-group">
@@ -171,12 +185,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <div class="form-group">
                       <label for="inputPassword"  class="col-lg-2 control-label" required>Contraseña</label>
                           <div class="col-lg-10">
-                            <input type="password" name="pass" class="form-control" id="inputPassword" required> -->
-                            <!-- <div id="error_login_div">
-                                 <?php echo $_smarty_tpl->getSubTemplate ("error_login.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
-                            </div> -->
-                          <!-- </div>
+                            <input type="password" name="pass" class="form-control" id="inputPassword" required>                            
+                          </div>
                     </div>
                     <div class="form-group">
                       <div class="col-lg-10 col-lg-offset-2">
@@ -187,14 +197,103 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                      
                      <script src="./js/Ajax_login.js"></script>
                  </fieldset>
-              </form> -->
-               <!--  <form method="post" action="index.php?action=login">
-                    <p><input type="text" name="user" value="" placeholder="Username o E-mail"></p>
-                    <p><input type="password" name="pass" value="" placeholder="Password"></p>
-                    <p><input type="submit" name="commit" value="Login"></p>
-                </form> -->
-           
-        <!-- </div>   
+              </form>
+        </div>   
     </div>
   </div>
-</div> --><?php }} ?>
+</div>
+
+<!--*************************************************************************************-->
+<!--*************************************************************************************-->
+                            <!-- Modal Registrarse -->
+<!-- 
+<button type="button" class="close" action="index.php?action=logout" ><span aria-hidden="true">&times;</span><span class="sr-only">Logout</span></button>
+ -->
+ 
+<div class="modal fade" id="Registrarse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Registrarse</h4>
+      </div>
+      <div class="modal-body">
+       <form class="form-horizontal"  action="index.php" method="post">
+        <fieldset>
+            <legend>Ingrese todo los datos requeridos.</legend>
+              <div class="form-group">
+                  <label for="inputUsuario" class="col-lg-2 control-label" required>Usuario</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="usuario_registrarse" class="form-control" id="usuario" placeholder="se utilizará para loguearse" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputNombre" class="col-lg-2 control-label" required>Nombres</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="nombre_registrarse" class="form-control" id="nombre" placeholder="" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="apellido" class="col-lg-2 control-label" required>Apellido</label>
+                <div class="col-lg-10">
+                  <input type="text" name="apellido_registrarse" class="form-control" id="apellido" placeholder="" required>
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputDocumento" class="col-lg-2 control-label">Documento</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="dni_registrarse"  class="form-control" id="inputDocumento" placeholder="D.N.I" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputFechaNacimiento" class="col-lg-2 control-label">Fecha de Nacimiento</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="FechaNacimiento"  class="form-control" id="inputFechaNacimiento" placeholder="Día/Mes/Año" >
+                  </div>
+              </div>
+              <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">E-mail</label>
+                    <div class="col-lg-10">
+                      <input type="email" name="email_registrarse" class="form-control" id="inputEmail"  placeholder="EJ: Minombre@gmail.com"  required>
+                    </div>
+              </div>
+              <div class="form-group">
+                    <label for="inputCelular" class="col-lg-2 control-label">Teléfono 
+                    celular</label>
+                    <div class="col-lg-10">
+                      <input type="integer" name="Celular_registrarse" class="form-control" id="inputCelular" placeholder="XXXX-XXXXXXXXX" >
+                    </div>
+               </div>
+              <div class="form-group">
+                    <label for="inputTelefonoFijo" class="col-lg-2 control-label">Teléfono fíjo</label>
+                    <div class="col-lg-10">
+                      <input type="integer" name="Telefono_fijo_registrarse" class="form-control" id="inputTelefonoFijo" placeholder="XXXX-XXXXXXX">
+                    </div>
+               </div>
+
+              <div class="form-group">
+                <label for="text" class="col-lg-2 control-label">Dirección</label>
+                     <div class="col-lg-10">
+                         <input type="text" name="Direccion_registrarse"  class="form-control" id="inputEmail" value=" " required>
+                    </div>
+              </div>
+
+              <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                   <div class="col-lg-10">
+                          <input type="password" name="pass_registrarse" class="form-control" id="inputPassword" placeholder="Contraseña" required >
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-lg-10 col-lg-offset-2">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                  </div>
+              </div>
+         </fieldset>  
+      </form>
+      </div>
+
+    </div>
+  </div>
+</div><?php }} ?>

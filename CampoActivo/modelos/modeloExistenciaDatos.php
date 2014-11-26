@@ -24,7 +24,7 @@ Class modeloExistencia extends ModeloDB
 		return $this->query("
 			SELECT idUsuario, usuario, email, esAdmin
 	 		FROM usuario
-	 		WHERE ((usuario = '$usuario') OR (email = '$usuario')) AND (password = '$pass') AND (esAdmin = '1')
+	 		WHERE ((usuario = '$usuario') OR (email = '$usuario')) AND (password = '$pass')
 		");	
 	}
 }

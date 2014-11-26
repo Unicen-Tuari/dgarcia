@@ -1,6 +1,6 @@
 <?php
 
-// session_start();
+session_start();
 
 /**
  * Script principal de la aplicacion. Todos los requerimientos de los usuarios son tratados por este script. 
@@ -15,30 +15,6 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-	/**
-	 * Manejo de Seguridad
-	 */
-	// if(array_key_exists('action', $_REQUEST)&&$_REQUEST['action']=='login')
-	// {	
-	// 	include "./controllers/IndexController.php";
-	// 	$controller = new IndexController();
-	// 	$controller->actionLogin();		
-	// }
-	// else if(!isset($_SESSION['user'])){
-	// 	include "./controllers/IndexController.php";
-	// 	$controller = new IndexController();
-	// 	$controller->actionLoginForm();		
-	// } 		
-	// else if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='logout')
-	// {
-	// 	include "./controllers/IndexController.php";
-	// 	$controller = new IndexController();
-	// 	$controller->actionLogout();		
-	// }	
-	/**
-	 * Acciones
-	 */
-	// else 
 	if(isset($_POST['inputBuscarE'])){
 			include "./controladores/controladorEvento.php";
 			$c = new EventoController();
@@ -48,6 +24,22 @@ ini_set("display_errors", 1);
 		include "./controladores/controladorMaquina.php";
 		$c = new MaquinaController();
 		$c->actionBusqueda();
+
+	}else if (isset($_POST['pass_registrarse'])){
+		include "./controladores/controladorUsuario.php";
+		$Registrar= new UsuarioController();
+		$Registrar->registrarse();
+
+	} else if((array_key_exists('action', $_REQUEST))&&($_REQUEST['action']=='login')){	
+		
+		include "./controladores/controladorUsuario.php";
+		$log = new UsuarioController();
+		$log->login();	
+		
+	}else if((array_key_exists('action', $_REQUEST))&&($_REQUEST['action']=='logout')){
+		include "./controladores/controladorUsuario.php";
+		$controller = new UsuarioController();
+		$controller->logout();
 
 	}else if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='index'){
 		include "./controladores/controladorInicio.php";
@@ -120,8 +112,17 @@ ini_set("display_errors", 1);
 		{
 			echo "Error de Parametros";
 		}
-	}
-	else 
+	}else if($_REQUEST['action']=='errorLogueo'){
+		include "./controladores/controladorUsuario.php";
+		$c = new UsuarioController();
+		$c->errorLogueo();
+
+	}else if($_REQUEST['action']=='errorRegistro'){
+		include "./controladores/controladorUsuario.php";
+		$c = new UsuarioController();
+		$c->errorRegistro();
+
+	}else 
 	{
 		echo "ERROR ACCION NO VALIDA";
 	}

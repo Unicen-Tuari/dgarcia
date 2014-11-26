@@ -13,6 +13,9 @@ class ReseniaController
 
 	public function actionResenia()
 	{
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+		
 		$this->view->render();
 	}
 }

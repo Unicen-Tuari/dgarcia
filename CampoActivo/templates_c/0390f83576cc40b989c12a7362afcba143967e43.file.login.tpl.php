@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 12:01:49
+         compiled from ".\templates\login.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:277535475b26f2b8ff9-15710457%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0390f83576cc40b989c12a7362afcba143967e43' => 
+    array (
+      0 => '.\\templates\\login.tpl',
+      1 => 1416999685,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '277535475b26f2b8ff9-15710457',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5475b26f2faee5_37905034',
+  'variables' => 
+  array (
+    'usuario' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5475b26f2faee5_37905034')) {function content_5475b26f2faee5_37905034($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -47,8 +72,8 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">Campo Activo S.A</a>
-            </div>
+            <!--     <a class="navbar-brand" href="index.html">Campo Activo S.A</a>
+            </div> -->
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">                    
@@ -74,24 +99,25 @@
                     <li>
                         <a href="index.php?action=evento"><small>Eventos</small></a>
                     </li>                    
-                    {if (isset($usuario))}
+                    <?php if ((isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
                     <li>
                         <a href="index.php?action=turno"><small>Turno</small></a>
                     </li>
-                    {/if}                    
+                    <?php }?>                    
                     <li>                    
                         <a href="index.php?action=contacto"><small>Contacto</small></a>
                     </li>                     
-                    {if (!isset($usuario))}
+                    <?php if ((!isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
                     <li>
                       <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i><small>Iniciar sesión</small></a>
                     </li> 
                     <li> 
                       <a href="#" title="Click para registrarse y comenzar a utilizar la aplicacion" data-toggle="modal" data-target="#Registrarse"><i class="fa fa-sign-in fa-1x"></i><small>Registrarse</small></a>
                     </li>
-                    {else}
+                    <?php }else{ ?>
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle"><small>{$usuario}</small><b class="caret"></b>
+                        <a data-toggle="dropdown" class="dropdown-toggle"><small><?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
+</small><b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -99,7 +125,7 @@
                             </li>
                         </ul>           
                     </li>                        
-                    {/if}          
+                    <?php }?>          
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -147,106 +173,11 @@
                             <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
                             <button type="submit"  name="commit" value="Login" id="iniciar" class="btn btn-primary">Ingresar</button>
                       </div>
-                    </div>
-                     
+                    </div>                     
                      <script src="./js/Ajax_login.js"></script>
                 </fieldset>
             </form>                   
         </div>   
     </div>
   </div>
-</div>
-<!--*************************************************************************************-->
-<!--*************************************************************************************-->
-                            <!-- Modal Registrarse -->
-<!-- 
-<button type="button" class="close" action="index.php?action=logout" ><span aria-hidden="true">&times;</span><span class="sr-only">Logout</span></button>
- -->
- 
-<div class="modal fade" id="Registrarse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-        <h4 class="modal-title text-center" id="myModalLabel">Registrarse</h4>
-      </div>
-      <div class="modal-body">
-       <form class="form-horizontal"  action="index.php" method="POST">
-        <fieldset>
-            <legend>Ingrese todo los datos requeridos.</legend>
-              <div class="form-group">
-                  <label for="inputUsuario" class="col-lg-2 control-label" required>Usuario</label>
-                  <div class="col-lg-10">
-                    <input type="text" name="usuario_registrarse" class="form-control" id="usuario" placeholder="se utilizará para loguearse" required>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label for="inputNombre" class="col-lg-2 control-label" required>Nombres</label>
-                  <div class="col-lg-10">
-                    <input type="text" name="nombre_registrarse" class="form-control" id="nombre" placeholder="" required>
-                  </div>
-              </div>
-              <div class="form-group">
-                <label for="apellido" class="col-lg-2 control-label" required>Apellido</label>
-                <div class="col-lg-10">
-                  <input type="text" name="apellido_registrarse" class="form-control" id="apellido" placeholder="" required>
-                </div>
-              </div>
-              <div class="form-group">
-                  <label for="inputDocumento" class="col-lg-2 control-label">Documento</label>
-                  <div class="col-lg-10">
-                    <input type="text" name="dni_registrarse"  class="form-control" id="inputDocumento" placeholder="D.N.I" required>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label for="inputFechaNacimiento" class="col-lg-2 control-label">Fecha de Nacimiento</label>
-                  <div class="col-lg-10">
-                    <input type="text" name="FechaNacimiento"  class="form-control" id="inputFechaNacimiento" placeholder="Día/Mes/Año" >
-                  </div>
-              </div>
-              <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">E-mail</label>
-                    <div class="col-lg-10">
-                      <input type="email" name="email_registrarse" class="form-control" id="inputEmail"  placeholder="EJ: Minombre@gmail.com"  required>
-                    </div>
-              </div>
-              <div class="form-group">
-                    <label for="inputCelular" class="col-lg-2 control-label">Teléfono 
-                    celular</label>
-                    <div class="col-lg-10">
-                      <input type="integer" name="Celular_registrarse" class="form-control" id="inputCelular" placeholder="XXXX-XXXXXXXXX" >
-                    </div>
-               </div>
-              <div class="form-group">
-                    <label for="inputTelefonoFijo" class="col-lg-2 control-label">Teléfono fíjo</label>
-                    <div class="col-lg-10">
-                      <input type="integer" name="Telefono_fijo_registrarse" class="form-control" id="inputTelefonoFijo" placeholder="XXXX-XXXXXXX">
-                    </div>
-               </div>
-
-              <div class="form-group">
-                <label for="text" class="col-lg-2 control-label">Dirección</label>
-                     <div class="col-lg-10">
-                         <input type="text" name="Direccion_registrarse"  class="form-control" id="inputEmail" value=" " required>
-                    </div>
-              </div>
-
-              <div class="form-group">
-                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-                   <div class="col-lg-10">
-                          <input type="password" name="pass_registrarse" class="form-control" id="inputPassword" placeholder="Contraseña" required >
-                  </div>
-              </div>
-              <div class="form-group">
-                  <div class="col-lg-10 col-lg-offset-2">
-                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Registrarse</button>
-                  </div>
-              </div>
-         </fieldset>  
-      </form>
-      </div>
-
-    </div>
-  </div>
-</div>
+</div><?php }} ?>
