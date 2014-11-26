@@ -19,6 +19,9 @@ class MaquinaController
 		$m = $this->modeloMaquinas->load_Maq($estado);				
 		
 		$this->view->set_maquinas($m);
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+
 		$this->view->render();		
 	}
 
@@ -27,11 +30,16 @@ class MaquinaController
 		$imgMaq = $this->modeloMaquinas->load_ImgMaq($id_maq);
 		
 		$this->view->set_imgMaq($imgMaq);
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+
 		$this->view->renderCM();
 	}
 	
 	public function vistaAgregarMaq()
 	{
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
 		$this->view->nuevaMaquina();
 	}
 
@@ -61,6 +69,9 @@ class MaquinaController
 		$imgMaqB = $this->modeloMaquinas->load_ResFinales($q);		 	 
 		
 		$this->view->set_maquinas($imgMaqB);
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+
 		$this->view->render();
 	}	
 

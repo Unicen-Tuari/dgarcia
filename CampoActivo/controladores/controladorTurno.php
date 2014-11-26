@@ -2,11 +2,18 @@
 
 class TurnoController
 {
-	public function actionTurno()
+	private	$view;
+
+	public function __construct()
 	{
 		include "./vistas/vistaTurno.php";
-		$view = new TurnoView;
-		$view->render();
+
+		$this->view = new TurnoView;
+	}
+
+	public function actionTurno()
+	{
+		$this->view->render();
 	}
 }
 

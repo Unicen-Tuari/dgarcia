@@ -1,25 +1,29 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 20:53:15
-         compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:333054716d8fb129a0-42126079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 00:40:53
+         compiled from ".\templates\headerC.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:322035474e35ad47dd1-42878217%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
+    '5505ed38cc188a0f09493d4fd3d6f594bac47b2a' => 
     array (
-      0 => '.\\templates\\header.tpl',
-      1 => 1416944811,
+      0 => '.\\templates\\headerC.tpl',
+      1 => 1416958660,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '333054716d8fb129a0-42126079',
+  'nocache_hash' => '322035474e35ad47dd1-42878217',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54716d8fb200e2_51859945',
+  'unifunc' => 'content_5474e35ad50e95_80706120',
+  'variables' => 
+  array (
+    'usuario' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54716d8fb200e2_51859945')) {function content_54716d8fb200e2_51859945($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5474e35ad50e95_80706120')) {function content_5474e35ad50e95_80706120($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -105,9 +109,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <li>
                         <a href="indexAdmin.php?action=turno">Turno</a>
                     </li>
-                    <li>
-                      <a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>Iniciar sesión</a>
-                    </li>                    
+                    <?php if ((!isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
+                        <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  Iniciar sesión</a>
+                        </li> 
+                    <?php }else{ ?>
+                        <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  <?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
+</a></li>
+                    <?php }?>                   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->            

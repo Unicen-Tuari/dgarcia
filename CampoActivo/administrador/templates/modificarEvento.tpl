@@ -1,4 +1,4 @@
-{include file = "header.tpl" title = foo}
+{include file = "headerC.tpl" title = foo}
 
 <div class="container">        
 
@@ -9,7 +9,7 @@
                     <h2 class="intro-text text-center"><strong>Modificar Evento</strong></h2>
                     <hr>
                     {foreach key=id_evento item=evento from=$eventos}   
-                    <form role="form" action="index.php?action=actualizarEvento" method="POST">
+                    <form role="form" action="indexAdmin.php?action=actualizarEvento" method="POST">
                         <div class="row">
                             <div class="form-group col-lg-12">
                                 <label>Nombre del Evento:</label>

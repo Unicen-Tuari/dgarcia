@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 08:36:41
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 01:09:05
          compiled from ".\templates\modificarMaq.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:775754716d8fa8bcd4-25034526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e271d23d5862720f68a42bdd4a7f00b595e93276' => 
     array (
       0 => '.\\templates\\modificarMaq.tpl',
-      1 => 1416896413,
+      1 => 1416945934,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54716d8faf5bd9_28959224')) {function content_54716d8faf5bd9_28959224($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_54716d8faf5bd9_28959224')) {function content_54716d8faf5bd9_28959224($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerC.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
 <div class="container">        
@@ -42,7 +42,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['maquina']->key => $_smarty_tpl->tpl_v
 $_smarty_tpl->tpl_vars['maquina']->_loop = true;
  $_smarty_tpl->tpl_vars['id_maquina']->value = $_smarty_tpl->tpl_vars['maquina']->key;
 ?>    
-                    <form role="form" action="index.php?action=actualizarMaq" method="POST">
+                    <form role="form" action="indexAdmin.php?action=actualizarMaq" method="POST">
                         <div class="row">
                             
                             <div class="form-group col-lg-12">

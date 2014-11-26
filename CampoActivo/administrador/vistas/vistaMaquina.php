@@ -19,7 +19,7 @@ class MaquinaView extends View
 
 	function render()
 	{
-		$this->smarty->display('maquina.tpl');
+		$this->smarty->display('maquinaC.tpl');
 	}	
 
 	function renderCM()
@@ -44,7 +44,7 @@ class MaquinaView extends View
 
 		$this->smarty->assign("cantidad",$cantidad);
 		$this->smarty->assign("maquinas",$Resultado);		
-		$this->smarty->display('solomaquinas.tpl');
+		$this->smarty->display('solomaquinasC.tpl');
 	}
 }
 

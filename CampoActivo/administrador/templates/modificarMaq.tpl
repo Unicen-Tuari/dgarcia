@@ -1,4 +1,4 @@
-{include file = "header.tpl" title = foo}
+{include file = "headerC.tpl" title = foo}
 
 <div class="container">        
 
@@ -9,7 +9,7 @@
                     <h2 class="intro-text text-center"><strong>Modificar Maquina</strong></h2>
                     <hr>
                     {foreach key=id_maquina item=maquina from=$maquinas}    
-                    <form role="form" action="index.php?action=actualizarMaq" method="POST">
+                    <form role="form" action="indexAdmin.php?action=actualizarMaq" method="POST">
                         <div class="row">
                             
                             <div class="form-group col-lg-12">

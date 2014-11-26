@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 17:53:57
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 00:49:29
          compiled from ".\templates\agregarE.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2064954725621381092-64746160%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '599f4bf56adb4dc82f786a73e910330fa1c40145' => 
     array (
       0 => '.\\templates\\agregarE.tpl',
-      1 => 1416932083,
+      1 => 1416946053,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5472562143a517_53146179',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5472562143a517_53146179')) {function content_5472562143a517_53146179($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_5472562143a517_53146179')) {function content_5472562143a517_53146179($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerC.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
 <div class="container">        
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <h2 class="intro-text text-center"><strong>Nuevo Evento</strong></h2>
                     <hr>
                         
-                    <form role="form" action="index.php?action=insertarEvento" method="POST">
+                    <form role="form" action="indexAdmin.php?action=insertarEvento" method="POST">
                         <div class="row">
                             <div class="form-group col-lg-12">
                                 <label>Nombre del Evento:</label>

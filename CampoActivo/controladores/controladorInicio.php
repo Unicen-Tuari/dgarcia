@@ -2,11 +2,18 @@
 
 class IndexController
 {
-	public function actionIndex()
+	private	$view;
+
+	public function __construct()
 	{
 		include "./vistas/vistaInicio.php";
-		$view = new IndexView;
-		$view->render();
+
+		$this->view = new IndexView;
+	}
+
+	public function actionIndex()
+	{
+		$this->view->render();
 	}
 	
 	

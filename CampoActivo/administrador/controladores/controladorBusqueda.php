@@ -1,51 +1,60 @@
 <?php
 
-include "./vistas/vistaMaquina.php";
-include "./modelos/modeloMaquina.php";
-include "./vistas/vistaEvento.php";
-include "./modelos/modeloEvento.php";
+class BusquedaController()
+{
+	private $modeloMaquinas;
+	private	$view;
 
-class BusquedaController(){
+	public function __construct()
+	{
+		include "./vistas/vistaMaquina.php";
+		include "./modelos/modeloMaquina.php";
+		include "./vistas/vistaEvento.php";
+		include "./modelos/modeloEvento.php";
 
-	public function actionBusquedaMaq($q){
+		$this->modeloMaquinas = new Maquina();
+		$this->view = new MaquinaView;
 
-		$maquinasB = new Maquina();
-		$view = new MaquinaView;
+		$this->eventos = new Evento();
+		$this->view = new EventoView;
+	}
+
+	public function actionBusquedaMaq($q)
+	{
+		$imgMaqB = $this->modeloMaquinas->load_ResFinales($q);		 	 
 		
-		$imgMaqB = $maquinasB->load_ResFinales($q);		 	 
-		
-		$view->set_maquinas($imgMaqB);
+		$this->view->set_maquinas($imgMaqB);
 
-		$view->render();
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+
+		$this->view->render();
 
 	}
 
-	public function actionCarouselMaq($estado,$id_maq){
-
-			$maquinasI = new Maquina();
-			$view = new MaquinaView;
+	public function actionCarouselMaq($estado,$id_maq)
+	{			
+			$imgMaq = $this->modeloMaquinas->load_ImgMaq($estado,$id_maq);		 	 
 			
-			$imgMaq = $maquinasI->load_ImgMaq($estado,$id_maq);		 	 
+			$this->view->set_imgMaq($imgMaq);
+
+			if (isset($_SESSION['usuario']))
+				$this->view->SetUser($_SESSION['usuario']);
+
+			$this->view->renderCM();
+	}
+
+	public function actionCarousel($id)
+	{
+			$img = $this->eventos->load_ImgEvento($id);		
 			
-			$view->set_imgMaq($imgMaq);
+			$this->view->set_img($img);
 
-			$view->renderCM();
+			if (isset($_SESSION['usuario']))
+				$this->view->SetUser($_SESSION['usuario']);
 
+			$this->view->renderC();
 		}
-
-	public function actionCarousel($id){
-
-			$eventos = new Evento();
-			$view = new EventoView;
-			
-			$img = $eventos->load_ImgEvento($id);		
-			
-			$view->set_img($img);
-
-			$view->renderC();
-
-		}
-
 }
 
 ?>

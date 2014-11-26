@@ -1,26 +1,30 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 20:53:15
-         compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:333054716d8fb129a0-42126079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-26 00:41:05
+         compiled from ".\templates\headerBusqEventoC.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:196495474e464810ec7-91928162%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
+    '8e79eaf984b4545888b12747b61a6fc780c6bfb2' => 
     array (
-      0 => '.\\templates\\header.tpl',
-      1 => 1416944811,
+      0 => '.\\templates\\headerBusqEventoC.tpl',
+      1 => 1416958838,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '333054716d8fb129a0-42126079',
+  'nocache_hash' => '196495474e464810ec7-91928162',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54716d8fb200e2_51859945',
+  'unifunc' => 'content_5474e464818262_67683679',
+  'variables' => 
+  array (
+    'usuario' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54716d8fb200e2_51859945')) {function content_54716d8fb200e2_51859945($_smarty_tpl) {?><!DOCTYPE html>
-<html lang="en">
+<?php if ($_valid && !is_callable('content_5474e464818262_67683679')) {function content_5474e464818262_67683679($_smarty_tpl) {?><!DOCTYPE html>
+<html lang="es">
 
 <head>
 
@@ -51,6 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
@@ -74,7 +79,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="indexAdmin.php?action=index">Inicio</a>
-                    </li>                    
+                    </li>
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle">M&aacute;quinas<b class="caret"></b>
                         </a>
@@ -87,11 +92,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </li>
                             <li>
                                 <a href="indexAdmin.php?action=verCrearMaq">Agregar</a>
-                            </li>                            
+                            </li>
                         </ul>           
                     </li>
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle">Evento<b class="caret"></b>
+                        <a data-toggle="dropdown" class="dropdown-toggle">Evento
+                                <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -105,12 +111,36 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <li>
                         <a href="indexAdmin.php?action=turno">Turno</a>
                     </li>
-                    <li>
-                      <a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>Iniciar sesión</a>
-                    </li>                    
-                </ul>
+                    <?php if ((!isset($_smarty_tpl->tpl_vars['usuario']->value))){?>
+                        <li>
+                          <a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>Iniciar sesión</a>
+                        </li>
+                    <?php }else{ ?>
+                        <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  <?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
+</a></li>
+                    <?php }?>
+                </ul>                 
             </div>
-            <!-- /.navbar-collapse -->            
+            <!-- /.navbar-collapse -->
+
+            <form class = "busqueda" id="formBusquedaE" method="POST">
+                <div class="row">
+                    <div class="col-sm-8 text-center">
+                        <input id = "tipeoUser" name = "inputBuscarE" placeholder = 'Buscar...'>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <button class = "btn btn-primary" type = "submit" value = "B&uacute;squeda">
+                            <i class="fa fa-search-plus"></i>
+                            <span>Búsqueda</span>
+                        </button>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id = "cantResultados">0 Resultados</p>
+                    </div>   
+                </div>          
+            </form>
+        </div>
+        <!-- /.container -->
     </nav>
 
     <div class="brand">
@@ -123,10 +153,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <!--*************************************************************************************-->
 <!--*************************************************************************************-->
-                            <!-- Modal login -->
+                                <!-- Modal login -->
 
-
-<div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="Ingresar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
             <div class="modal-header">
@@ -134,26 +163,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <h4 class="modal-title  text-center" id="myModalLabel">Ingresar</h4>
             </div>
 
-        <div class="modal-body">
+      <div class="modal-body">
 
-            <form class="form-horizontal" method="post" action="indexAdmin.php?action=login">
-                <fieldset>
+            <form class="form-horizontal"   method="post" action="indexAdmin.php?action=login">
+              <fieldset>
                 
                     <div class="form-group">
                       <label for="inputEmail" class="col-lg-2 control-label">Usuario</label>
                           <div class="col-lg-10">
-                            <input type="text" type="email" name="user" class="form-control" id="usuario" required>
+                            <input type="text" name="user" class="form-control" id="usuario" type="email" required>                           
                           </div>
                     </div>
                     <div class="form-group">
                       <label for="inputPassword"  class="col-lg-2 control-label" required>Contraseña</label>
                           <div class="col-lg-10">
-                            <input type="password" name="pass" class="form-control" id="inputPassword" required>
+                            <input type="password" name="pass" class="form-control" id="inputPassword" required> -->
                             <!-- <div id="error_login_div">
                                  <?php echo $_smarty_tpl->getSubTemplate ("error_login.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
                             </div> -->
-                          </div>
+                          <!-- </div>
                     </div>
                     <div class="form-group">
                       <div class="col-lg-10 col-lg-offset-2">
@@ -163,14 +192,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </div>
                      
                      <script src="./js/Ajax_login.js"></script>
-                </fieldset>
-            </form>
+                 </fieldset>
+              </form> -->
                <!--  <form method="post" action="indexAdmin.php?action=login">
                     <p><input type="text" name="user" value="" placeholder="Username o E-mail"></p>
                     <p><input type="password" name="pass" value="" placeholder="Password"></p>
                     <p><input type="submit" name="commit" value="Login"></p>
-                </form> -->           
-        </div>   
+                </form> -->
+           
+        <!-- </div>   
     </div>
   </div>
-</div><?php }} ?>
+</div> --><?php }} ?>

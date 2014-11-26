@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-24 20:51:40
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 23:06:16
          compiled from ".\templates\agregarMaq.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2212554724c2b09e8a6-70003343%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef689b00cc8d06ed62b1ea38e7f6181fef715c9c' => 
     array (
       0 => '.\\templates\\agregarMaq.tpl',
-      1 => 1416858659,
+      1 => 1416946041,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_54724c2b0ecbf5_43179484',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54724c2b0ecbf5_43179484')) {function content_54724c2b0ecbf5_43179484($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+<?php if ($_valid && !is_callable('content_54724c2b0ecbf5_43179484')) {function content_54724c2b0ecbf5_43179484($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("headerC.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 
 <div class="container">        
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <h2 class="intro-text text-center"><strong>Nueva Maquina</strong></h2>
                     <hr>
                         
-                    <form role="form" action="index.php?action=insertarMaq" method="POST"> <!-- enctype="multipart/form-data" -->
+                    <form role="form" action="indexAdmin.php?action=insertarMaq" method="POST"> 
                         <div class="row">
                             
                             <div class="form-group col-lg-12">

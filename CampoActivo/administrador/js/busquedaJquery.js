@@ -5,7 +5,7 @@
 $("#formBusquedaM").submit(function() 
 {
   $.ajax({
-    url: 'index.php',
+    url: 'indexAdmin.php',
     type: "POST",
     data:$("#formBusquedaM").serialize(), 
    success: function(data) {
@@ -23,7 +23,7 @@ $("#formBusquedaM").submit(function()
 $("#formBusquedaE").submit(function() 
 {
   $.ajax({
-    url: 'index.php',
+    url: 'indexAdmin.php',
     type: "POST",
     data:$("#formBusquedaE").serialize(), 
    success: function(data) {

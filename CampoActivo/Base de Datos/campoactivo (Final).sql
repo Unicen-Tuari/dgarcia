@@ -32,20 +32,20 @@ CREATE TABLE `contenido` (
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 INSERT INTO `contenido` (`id_contenido`, `nombre`, `texto`) VALUES
-(1, 'FR600',  '0Km, 4WD, Motor FPT Cursor 13 Tier III, 6 cilindros en línea, 544 cv de potencia nominal hasta 600 cv de potencia máxima, tanque de combustible de 1.220 lts, de capacidad, transmisión hidrostática con traba de diferencial, velocidad máxima en carretera de 40 km. a 1400 rpm, detección de metal con indicador de posición.\r\nCabezal de 6 mts. 8-70.'),
-(2, 'New Holland Erca', 'La línea T8 llega para atender a una agricultura moderna y al productor exigente. Robusta y versátil, su modelo más potente llega a alcanzar 389 cv.\r\nIntegra el proyecto de alineación global de la marca y coloca a New Holland como la marcacon el mejor escalonamiento de potencia: de 55 cv a 389 cv.\r\nEl productor exigente va a tener asegurados el rendimiento y la alta productividad de esta línea, que posee un desempeño superior en las más diversas actividades.\r\nSu Sistema de Administración de Potencia (EPM) coloca a disposición más potencia para la toma de fuerza y aplicaciones hidráulicas, lo que le da una enorme capacidad de trabajo y un elevado rendimiento. Con ergonomía de clase mundial, su consola SideWinder IITM hace que la operación sea más intuitiva y con menores niveles de fatiga.\r\nNotablemente confortable, su cabina es la mayor y la más silenciosa del mercado.\r\nCon un sistema hidráulico de elevada capacidad y transmisión FullPowershift 18x4, los tractores T8 son verdaderas máquinas de productividad en gran escala.'),
-(3, 'New Holland T6080 y T6090',  'Con el sistema de gestión de potencia del motor usted obtiene mucho más. \r\nLa potencia nominal de todos los modelos T6000 Range Command o Power Command aumenta de manera automática para responder a aplicaciones exigentes de transporte, del sistema hidráulico o de la TDF. Hasta 36 CV de potencia y 68 Nm de par adicionales aportan la reserva de potencia que usted necesita para realizar el trabajo. \r\nSiempre en el momento adecuado.'),
-(4, 'CR9080 DUAL 4WD',  'Vendemos CR9080/4CD, año 2009, doble tracción, rodado dual, cabezal \"35, piloto automático, 2400 hs de uso. IMPECABLE.'),
-(5, 'FIAT 60',  'Estado bueno, tdf, toma de fuerza y dirección hidráulica.'),
-(6, 'GherardiG-230',  '30 Líneas a 17,5, cajón alfalfero y monitor de siembra. Muy buen estado.'),
-(7, 'JactoUnipor2000plus',  'Año 2003, computadora de abordo, banderillero satelital Trimble, rodado 12.4x36, cabina con A/A, 21 mts botalon.'),
-(8, 'New Holland 8030DT', '132 CV, caja 16 x 4 con Dual Power, rodado 23.1x30, año 1996.'),
-(9, 'New Holland FX375',  'Año 1997, única mano, cabezal de maíz, sorgo, CLASS y cabezal de pasturas original NH, uso particular, no de contratista, con pocas horas de uso. EXCELENTE.'),
-(10,  'New Holland TL75', 'Año 2006, 4400 hs de uso, con pala frontal TBeH, LH3P y cabina Cabimetal.'),
-(11,  'Segadora Acondicionadora 1411',  '3,16 mts de trabajo, rodillos acondicionadores de goma Chevron, lanza curva hidráulica, tdf 540 rpm, año 2006. Muy buena.'),
-(12,  '12° Fiesta del Chacarer&oacute;',  'Estuvimos presentes en la Fiesta del Chacarero que se realizó en Chillar.'),
-(13,  'Agroactiva 2014',  'Agroactiva, la exposición anual de productores agropecuarios, empresas fabricantes de maquinarias e insumos, celebra este años sus primeros 20 años.\r\nLa muestra agropecuaria a campo abierto más grande del mundo que se desarrolla en Argentina del 4 al 7 de junio de 2014, en ruta nacional Nº 9 kilómetro 386, Cañada de Gómez, Santa Fe.'),
-(14,  'Fiesta de la Cebolla 2014',  'El segundo carretón partió hoy para la ciudad de Hilario Ascasubi con cinco unidades para la expo. Los esperamos en nuestro stand desde el 11 al 14!!!!.')
+(1,	'FR600',	'0Km, 4WD, Motor FPT Cursor 13 Tier III, 6 cilindros en línea, 544 cv de potencia nominal hasta 600 cv de potencia máxima, tanque de combustible de 1.220 lts, de capacidad, transmisión hidrostática con traba de diferencial, velocidad máxima en carretera de 40 km. a 1400 rpm, detección de metal con indicador de posición.\r\nCabezal de 6 mts. 8-70.'),
+(2,	'New Holland Erca',	'La línea T8 llega para atender a una agricultura moderna y al productor exigente. Robusta y versátil, su modelo más potente llega a alcanzar 389 cv.\r\nIntegra el proyecto de alineación global de la marca y coloca a New Holland como la marcacon el mejor escalonamiento de potencia: de 55 cv a 389 cv.\r\nEl productor exigente va a tener asegurados el rendimiento y la alta productividad de esta línea, que posee un desempeño superior en las más diversas actividades.\r\nSu Sistema de Administración de Potencia (EPM) coloca a disposición más potencia para la toma de fuerza y aplicaciones hidráulicas, lo que le da una enorme capacidad de trabajo y un elevado rendimiento. Con ergonomía de clase mundial, su consola SideWinder IITM hace que la operación sea más intuitiva y con menores niveles de fatiga.\r\nNotablemente confortable, su cabina es la mayor y la más silenciosa del mercado.\r\nCon un sistema hidráulico de elevada capacidad y transmisión FullPowershift 18x4, los tractores T8 son verdaderas máquinas de productividad en gran escala.'),
+(3,	'New Holland T6080 y T6090',	'Con el sistema de gestión de potencia del motor usted obtiene mucho más. \r\nLa potencia nominal de todos los modelos T6000 Range Command o Power Command aumenta de manera automática para responder a aplicaciones exigentes de transporte, del sistema hidráulico o de la TDF. Hasta 36 CV de potencia y 68 Nm de par adicionales aportan la reserva de potencia que usted necesita para realizar el trabajo. \r\nSiempre en el momento adecuado.'),
+(4,	'CR9080 DUAL 4WD',	'Vendemos CR9080/4CD, año 2009, doble tracción, rodado dual, cabezal \"35, piloto automático, 2400 hs de uso. IMPECABLE.'),
+(5,	'FIAT 60',	'Estado bueno, tdf, toma de fuerza y dirección hidráulica.'),
+(6,	'GherardiG-230',	'30 Líneas a 17,5, cajón alfalfero y monitor de siembra. Muy buen estado.'),
+(7,	'JactoUnipor2000plus',	'Año 2003, computadora de abordo, banderillero satelital Trimble, rodado 12.4x36, cabina con A/A, 21 mts botalon.'),
+(8,	'New Holland 8030DT',	'132 CV, caja 16 x 4 con Dual Power, rodado 23.1x30, año 1996.'),
+(9,	'New Holland FX375',	'Año 1997, única mano, cabezal de maíz, sorgo, CLASS y cabezal de pasturas original NH, uso particular, no de contratista, con pocas horas de uso. EXCELENTE.'),
+(10,	'New Holland TL75',	'Año 2006, 4400 hs de uso, con pala frontal TBeH, LH3P y cabina Cabimetal.'),
+(11,	'Segadora Acondicionadora 1411',	'3,16 mts de trabajo, rodillos acondicionadores de goma Chevron, lanza curva hidráulica, tdf 540 rpm, año 2006. Muy buena.'),
+(12,	'12° Fiesta del Chacarer&oacute;',	'Estuvimos presentes en la Fiesta del Chacarero que se realizó en Chillar.'),
+(13,	'Agroactiva 2014',	'Agroactiva, la exposición anual de productores agropecuarios, empresas fabricantes de maquinarias e insumos, celebra este años sus primeros 20 años.\r\nLa muestra agropecuaria a campo abierto más grande del mundo que se desarrolla en Argentina del 4 al 7 de junio de 2014, en ruta nacional Nº 9 kilómetro 386, Cañada de Gómez, Santa Fe.'),
+(14,	'Fiesta de la Cebolla 2014',	'El segundo carretón partió hoy para la ciudad de Hilario Ascasubi con cinco unidades para la expo. Los esperamos en nuestro stand desde el 11 al 14!!!!.')
 ON DUPLICATE KEY UPDATE `id_contenido` = VALUES(`id_contenido`), `nombre` = VALUES(`nombre`), `texto` = VALUES(`texto`);
 
 DROP TABLE IF EXISTS `dia`;
@@ -74,7 +74,7 @@ CREATE TABLE `evento` (
 
 INSERT INTO `evento` (`id_contenido`, `fecha`, `ubicacion`) VALUES
 (12,	'2014-03-21',	'Chillar'),
-(13,	'2014-06-08',	'Cañada de Gómez'),
+(13,	'2014-06-08',	'Ca&ntilde;ada de G&oacute;mez'),
 (14,	'2014-04-11',	'Hilario Ascasubi')
 ON DUPLICATE KEY UPDATE `id_contenido` = VALUES(`id_contenido`), `fecha` = VALUES(`fecha`), `ubicacion` = VALUES(`ubicacion`);
 
@@ -293,4 +293,4 @@ INSERT INTO `usuario` (`id_persona`, `usuario`, `nombre`, `apellido`, `dni_perso
 (11,	'roberto',	'carlos ',	'mangieri',	23,	'2014-11-18',	'pepeq@a.com',	0,	0,	'matiasapecena@yahoo.com',	'loquito',	'2014-11-18',	CONV('0', 2, 10) + 0)
 ON DUPLICATE KEY UPDATE `id_persona` = VALUES(`id_persona`), `usuario` = VALUES(`usuario`), `nombre` = VALUES(`nombre`), `apellido` = VALUES(`apellido`), `dni_persona` = VALUES(`dni_persona`), `fecha_nacimiento` = VALUES(`fecha_nacimiento`), `email` = VALUES(`email`), `celular` = VALUES(`celular`), `telefono_fijo` = VALUES(`telefono_fijo`), `direccion` = VALUES(`direccion`), `password` = VALUES(`password`), `fecha_registro` = VALUES(`fecha_registro`), `esAdmin` = VALUES(`esAdmin`);
 
--- 2014-11-23 18:33:41
+-- 2014-11-25 15:55:20

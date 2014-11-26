@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 17:25:11
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 20:53:59
          compiled from ".\templates\headerBusqEvento.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1015473c60f300e24-72381618%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd32acfabbcebff2554cc677186775d5d24611d61' => 
     array (
       0 => '.\\templates\\headerBusqEvento.tpl',
-      1 => 1416932277,
+      1 => 1416944881,
       2 => 'file',
     ),
   ),
@@ -73,20 +73,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.php?action=index">Inicio</a>
+                        <a href="indexAdmin.php?action=index">Inicio</a>
                     </li>
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle">M&aacute;quinas<b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="index.php?action=maquina&amp;estado=NUEVA">Nuevas</a>
+                                <a href="indexAdmin.php?action=maquina&amp;estado=NUEVA">Nuevas</a>
                             </li>
                             <li>
-                                <a href="index.php?action=maquina&amp;estado=USADA">Usadas</a>
+                                <a href="indexAdmin.php?action=maquina&amp;estado=USADA">Usadas</a>
                             </li>
                             <li>
-                                <a href="index.php?action=verCrearMaq">Agregar</a>
+                                <a href="indexAdmin.php?action=verCrearMaq">Agregar</a>
                             </li>
                         </ul>           
                     </li>
@@ -96,15 +96,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="index.php?action=evento">Eventos</a>
+                                <a href="indexAdmin.php?action=evento">Eventos</a>
                             </li>
                             <li>
-                                <a href="index.php?action=verCrearEvento">Agregar</a>
+                                <a href="indexAdmin.php?action=verCrearEvento">Agregar</a>
                             </li>                                                     
                         </ul>           
                     </li>
                     <li>
-                        <a href="index.php?action=turno">Turno</a>
+                        <a href="indexAdmin.php?action=turno">Turno</a>
                     </li>
                     <li>
                       <a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>Iniciar sesión</a>
@@ -155,7 +155,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
       <div class="modal-body">
 
-            <form class="form-horizontal"   method="post" action="index.php?action=login">
+            <form class="form-horizontal"   method="post" action="indexAdmin.php?action=login">
               <fieldset>
                 
                     <div class="form-group">
@@ -184,7 +184,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                      <script src="./js/Ajax_login.js"></script>
                  </fieldset>
               </form> -->
-               <!--  <form method="post" action="index.php?action=login">
+               <!--  <form method="post" action="indexAdmin.php?action=login">
                     <p><input type="text" name="user" value="" placeholder="Username o E-mail"></p>
                     <p><input type="password" name="pass" value="" placeholder="Password"></p>
                     <p><input type="submit" name="commit" value="Login"></p>

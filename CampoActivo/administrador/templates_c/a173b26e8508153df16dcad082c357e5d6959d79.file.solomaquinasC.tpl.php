@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 20:53:39
-         compiled from ".\templates\solomaquinas.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:245905473cb81811bf1-03924135%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 21:18:48
+         compiled from ".\templates\solomaquinasC.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:39625474e428afbd20-63218970%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '490e07f9b90eb13a8bd8536030998fd9d05d1299' => 
+    'a173b26e8508153df16dcad082c357e5d6959d79' => 
     array (
-      0 => '.\\templates\\solomaquinas.tpl',
+      0 => '.\\templates\\solomaquinasC.tpl',
       1 => 1416945038,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '245905473cb81811bf1-03924135',
+  'nocache_hash' => '39625474e428afbd20-63218970',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5473cb818454c1_75911106',
   'variables' => 
   array (
     'cantidad' => 0,
@@ -24,8 +22,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'maquina' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5474e428b4cf34_84561776',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5473cb818454c1_75911106')) {function content_5473cb818454c1_75911106($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['cantidad']->value>0){?>
+<?php if ($_valid && !is_callable('content_5474e428b4cf34_84561776')) {function content_5474e428b4cf34_84561776($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['cantidad']->value>0){?>
     <?php  $_smarty_tpl->tpl_vars['maquina'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['maquina']->_loop = false;
  $_smarty_tpl->tpl_vars['id_maquina'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['maquinas']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}

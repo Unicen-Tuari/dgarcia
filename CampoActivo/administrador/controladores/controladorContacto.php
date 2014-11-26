@@ -1,28 +1,38 @@
 <?php
 
-	include "./modelos/modeloContacto.php";
-	include "./vistas/vistaContacto.php";
-	
-	class ContactoController
+class ContactoController
+{
+	private $modeloEventos;
+	private	$view;
+
+	public function __construct()
 	{
-		
-		public function actionContacto(){
-			
-			$view = new ContactoView;
-			$view->render();
-		}
+		include "./modelos/modeloContacto.php";
+		include "./vistas/vistaContacto.php";
 
-		public function actionMensaje($nombre,$correoelectronico,$telefono,$mensaje){
-			
-			$contacto = new Contacto;
-			$view = new ContactoView;
-				
-			$arrCont = $contacto->nuevoMensaje($nombre,$correoelectronico,$telefono,$mensaje);		 	 
-			
-			$view->set_contacto($arrCont);
-
-			$view->renderContacto();
-		}
+		$this->contacto = new Contacto;
+		$this->view = new ContactoView;
 	}
+	
+	public function actionContacto()
+	{
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+
+		$this->view->render();
+	}
+
+	public function actionMensaje($nombre,$correoelectronico,$telefono,$mensaje)
+	{			
+		$arrCont = $this->contacto->nuevoMensaje($nombre,$correoelectronico,$telefono,$mensaje);		 	 
+		
+		$this->view->set_contacto($arrCont);
+
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+		
+		$this->view->renderContacto();
+	}
+}
 
 ?>

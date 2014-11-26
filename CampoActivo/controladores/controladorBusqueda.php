@@ -1,45 +1,49 @@
 <?php
 
-include "./vistas/vistaMaquina.php";
-include "./modelos/modeloMaquina.php";
-include "./vistas/vistaEvento.php";
-include "./modelos/modeloEvento.php";
+
 
 class BusquedaController()
 {
-	public function actionBusquedaMaq($q)
+	private $modeloMaquinas;
+	private	$view;
+	private $eventos;
+
+	public function __construct()
 	{
-		$maquinasB = new Maquina();
-		$view = new MaquinaView;
+		include "./vistas/vistaMaquina.php";
+		include "./modelos/modeloMaquina.php";
+		include "./vistas/vistaEvento.php";
+		include "./modelos/modeloEvento.php";
+
+		$this->modeloMaquinas = new Maquina();
+		$this->view = new MaquinaView;
+
+		$this->eventos = new Evento();
+		$this->view = new EventoView;
+	}
+
+	public function actionBusquedaMaq($q)
+	{		
+		$imgMaqB = $this->modeloMaquinas->load_ResFinales($q);		 	 
 		
-		$imgMaqB = $maquinasB->load_ResFinales($q);		 	 
-		
-		$view->set_maquinas($imgMaqB);
-		$view->render();
+		$this->$view->set_maquinas($imgMaqB);
+		$this->$view->render();
 	}
 
 	public function actionCarouselMaq($estado,$id_maq)
 	{
-		$maquinasI = new Maquina();
-		$view = new MaquinaView;
+		$imgMaq = $this->modeloMaquinas->load_ImgMaq($estado,$id_maq);		 	 
 		
-		$imgMaq = $maquinasI->load_ImgMaq($estado,$id_maq);		 	 
-		
-		$view->set_imgMaq($imgMaq);
-
-		$view->renderCM();
+		$this->$view->set_imgMaq($imgMaq);
+		$this->$view->renderCM();
 	}
 
 	public function actionCarousel($id)
 	{
-			$eventos = new Evento();
-			$view = new EventoView;
-			
-			$img = $eventos->load_ImgEvento($id);		
-			
-			$view->set_img($img);
-
-			$view->renderC();
+		$img = $this->eventos->load_ImgEvento($id);	
+					
+		$this->view->set_img($img);
+		$this->view->renderC();
 	}
 }
 

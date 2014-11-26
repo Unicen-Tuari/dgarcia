@@ -2,7 +2,6 @@
 
 class EventoController
 {	
-
 	private $modeloEventos;
 	private	$view;
 
@@ -19,7 +18,10 @@ class EventoController
 	{		
 		$e = $this->modeloEventos->load();		
 		
-		$this->view->set_eventos($e);		
+		$this->view->set_eventos($e);
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+
 		$this->view->render();
 	}
 
@@ -28,6 +30,9 @@ class EventoController
 		$img = $this->modeloEventos->load_ImgEvento($id);		
 		
 		$this->view->set_img($img);
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+
 		$this->view->renderC();
 	}
 
@@ -41,6 +46,9 @@ class EventoController
 
 	public function vistaAgregarE()
 	{
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+		
 		$this->view->nuevoEvento();
 	}
 
@@ -95,6 +103,5 @@ class EventoController
 		$this->actionEvento();
 	}
 }
-
 
 ?>

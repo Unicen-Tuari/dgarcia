@@ -2,11 +2,20 @@
 
 class TurnoController
 {
+	private	$view;
+
+	public function __construct()
+	{
+		include "./vistas/vistaTurno.php";		
+		$this->view = new TurnoView;
+	}
+	
 	public function actionTurno()
 	{
-		include "./vistas/vistaTurno.php";
-		$view = new TurnoView;
-		$view->render();
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+		
+		$this->view->render();
 	}
 }
 

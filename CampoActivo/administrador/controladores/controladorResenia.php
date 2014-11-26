@@ -2,11 +2,17 @@
 
 class ReseniaController
 {
+	private	$view;
+
+	public function __construct()
+	{
+		include "./vistas/vistaResenia.php";		
+		$this->view = new ReseniaView;
+	}
+
 	public function actionResenia()
 	{
-		include "./vistas/vistaResenia.php";
-		$view = new ReseniaView;
-		$view->render();
+		$this->view->render();
 	}
 }
 

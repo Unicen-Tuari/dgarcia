@@ -10,6 +10,11 @@ class View
 	{
 		$this->smarty = new Smarty();
 	}	
+
+	public function SetUser($usuario)
+	{	
+		$this->smarty->assign("usuario",$usuario);
+	}
 }
 
 ?>

@@ -19,7 +19,7 @@ class EventoView extends View
 
 	function render()
 	{
-		$this->smarty->display('evento.tpl');
+		$this->smarty->display('eventoC.tpl');
 	}	
 
 	function renderC()
@@ -44,7 +44,7 @@ class EventoView extends View
 		
 		$this->smarty->assign("cantidad",$cantidad);
 		$this->smarty->assign("eventos",$Resultado);
-		$this->smarty->display('soloevento.tpl');		
+		$this->smarty->display('soloeventoC.tpl');		
 	}
 }
 

@@ -1,26 +1,30 @@
 <?php
-
-	include "./modelos/modeloContacto.php";
-	include "./vistas/vistaContacto.php";
 	
-class ContactoController{
+class ContactoController
+{
+	private $modeloContacto;
+	private	$view;
+
+	public function __construct()
+	{
+		include "./modelos/modeloContacto.php";
+		include "./vistas/vistaContacto.php";
+
+		$this->modeloContacto = new Contacto;
+		$this->view = new ContactoView;
+	}
 	
 	public function actionContacto()
 	{
-		$view = new ContactoView;
-		$view->render();
+		$this->view->render();
 	}
 
 	public function actionMensaje($nombre,$correoelectronico,$telefono,$mensaje)
 	{
-		$contacto = new Contacto;
-		$view = new ContactoView;
-			
-		$arrCont = $contacto->nuevoMensaje($nombre,$correoelectronico,$telefono,$mensaje);		 	 
+		$arrCont = $this->modeloContacto->nuevoMensaje($nombre,$correoelectronico,$telefono,$mensaje);		 	 
 		
-		$view->set_contacto($arrCont);
-
-		$view->renderContacto();
+		$this->view->set_contacto($arrCont);
+		$this->view->renderContacto();
 	}
 }
 

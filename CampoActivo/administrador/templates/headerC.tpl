@@ -1,25 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-25 20:53:15
-         compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:333054716d8fb129a0-42126079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-$_valid = $_smarty_tpl->decodeProperties(array (
-  'file_dependency' => 
-  array (
-    '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
-    array (
-      0 => '.\\templates\\header.tpl',
-      1 => 1416944811,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '333054716d8fb129a0-42126079',
-  'function' => 
-  array (
-  ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54716d8fb200e2_51859945',
-  'has_nocache_code' => false,
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54716d8fb200e2_51859945')) {function content_54716d8fb200e2_51859945($_smarty_tpl) {?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -105,9 +84,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <li>
                         <a href="indexAdmin.php?action=turno">Turno</a>
                     </li>
-                    <li>
-                      <a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>Iniciar sesión</a>
-                    </li>                    
+                    {if (!isset($usuario))}
+                        <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  Iniciar sesión</a>
+                        </li> 
+                    {else}
+                        <li><a href="#"   data-toggle="modal" data-target="#Ingresar" title="Click para ingresar. Debe estar registrado"><i class="fa fa-user"></i>  {$usuario}</a></li>
+                    {/if}                   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->            
@@ -150,8 +132,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                           <div class="col-lg-10">
                             <input type="password" name="pass" class="form-control" id="inputPassword" required>
                             <!-- <div id="error_login_div">
-                                 <?php echo $_smarty_tpl->getSubTemplate ("error_login.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
+                                 {include file="error_login.tpl" }
                             </div> -->
                           </div>
                     </div>
@@ -173,4 +154,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>   
     </div>
   </div>
-</div><?php }} ?>
+</div>

@@ -2,14 +2,22 @@
 
 class IndexController
 {
+	private	$view;
+
+	public function __construct()
+	{
+		include "./vistas/vistaInicio.php";		
+		$this->view = new IndexView;
+	}
+
 	public function actionIndex()
 	{
-		include "./vistas/vistaInicio.php";
-		$view = new IndexView;
-		$view->render();
+		if (isset($_SESSION['usuario']))
+			$this->view->SetUser($_SESSION['usuario']);
+		
+		$this->view->render();
 	}
-	
-	
+		
 	// public function actionLoginForm(){
 	// 	include "./views/LoginFormView.php";
 	// 	$view = new LoginFormView;
