@@ -2017,10 +2017,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 
 
 
-
-
-
-
+/*Nuestros estilos*/
 
 .elite-grid h4{
   color: #F43C60;
@@ -2040,4 +2037,16 @@ ul.callbacks_tabs.callbacks1_tabs {
 	bottom: 50px;
 	z-index: 999;
 	left: 47%;
+}
+
+.our_blog h3, .team h3 {
+    font-size: 2em;
+    margin-top: 2.5em;
+}
+
+.logo a {
+    background: #F43C60;
+    padding: 1.3em 0.5em;
+    display: inline-block;
+    margin-left: -1em;
 }
