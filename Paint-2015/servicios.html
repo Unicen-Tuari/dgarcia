@@ -93,18 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<div class="top-banner"></div>
 <script src="js/responsiveslides.min.js"></script>
-<script>
-    $(function () {
-      $("#slider").responsiveSlides({
-      	auto: false,
-      	nav: false,
-      	speed: 500,
-        namespace: "callbacks",
-        pager: true,
-      });
-    });
-	
-</script>
+
 		 
 <!---->
 <!-- <div class="content">
@@ -159,26 +148,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="testimonial">
 		<!-- container -->
 		<div class="container">
-		 	<script>
-						// You can also use "$(window).load(function() {"
-						$(function () {
-						  // Slideshow 4
-						  $("#slider2").responsiveSlides({
-							auto: true,
-							pager: true,
-							nav: false,
-							speed: 500,
-							namespace: "callbacks",
-							before: function () {
-							  $('.events').append("<li>before event fired.</li>");
-							},
-							after: function () {
-							  $('.events').append("<li>after event fired.</li>");
-							}
-						  });
-					
-						});
-					</script>
+		 	
 					<div  id="top" class="callbacks_container">
 						<ul class="rslides" id="slider2">
 							<li>
@@ -306,11 +276,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		$().UItoTop({ easingType: 'easeOutQuart' });
 });
 </script>
+
+<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: false,
+      	nav: false,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+	
+</script>
+
+<script>
+	// You can also use "$(window).load(function() {"
+	$(function () {
+		// Slideshow 4
+		$("#slider2").responsiveSlides({
+			auto: true,
+			pager: true,
+			nav: false,
+			speed: 500,
+			namespace: "callbacks",
+			before: function () {
+				$('.events').append("<li>before event fired.</li>");
+			},
+			after: function () {
+		    	$('.events').append("<li>after event fired.</li>");
+		}
+	});			
+});
+</script>
+
 <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!----> 
+
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>	  
+    <script src="js/bootstrap.js"></script>
+    	 
 </body>
 </html>

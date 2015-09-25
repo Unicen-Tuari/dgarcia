@@ -15,18 +15,25 @@ ini_set("display_errors", 1);
 		$c = new TrabajosController();
 		$c->actionTrabajos();
 	}
-	/*else if($_REQUEST['action']=='editarPersonas')
+	else if($_REQUEST['action']=='servicios')
 	{
-		if(array_key_exists('id', $_GET)){
-			include "./controllers/PersonaController.php";
-			$c = new PersonaController();
-			$c->actionEditar($_GET['id']);
-		}
-		else {
-			echo "Error de Parametros";
-		}
+		include "./controllers/ServiciosController.php";
+		$c = new ServiciosController();
+		$c->actionServicios();
 	}
-	else 
+	else if($_REQUEST['action']=='tarifas')
+	{
+		include "./controllers/TarifasController.php";
+		$c = new TarifasController();
+		$c->actionTarifas();
+	}
+	else if($_REQUEST['action']=='contacto')
+	{
+		include "./controllers/ContactoController.php";
+		$c = new ContactoController();
+		$c->actionContacto();
+	}
+	/*else 
 	{
 		echo "ERROR ACCION NO VALIDA";
 	}*/

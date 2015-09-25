@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -18,12 +19,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
 
 <link rel="stylesheet" type="text/css" href="css/common.css" />
 <link rel="stylesheet" type="text/css" href="css/style4.css" />
-
 
 </head>
 <body>
@@ -57,9 +56,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav navbar-right">
 							<li class="active"><a href="index.php?action=index">Inicio</a></li>
 							<li><a href="index.php?action=trabajos">Trabajos</a></li>
-							<li><a href="servicios.html">Servicios</a></li>
-							<li><a href="tarifas.html">Tarifas</a></li> 
-							<!--<li><a href="typo.html">Novedades</a></li>-->
+							<li><a href="index.php?action=servicios">Servicios</a></li>
+							<li><a href="index.php?action=tarifas">Tarifas</a></li> 
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Novedades<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="novedad.html">Dise&ntilde;o</a></li>
@@ -72,11 +70,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<li><a href="gallery.html">Paisajismo</a></li>	
 								</ul>
 							</li>
-							<li><a href="contact.html">Contacto</a></li>
+							<li><a href="index.php?action=contacto">Contacto</a></li>
 						</ul>         
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>	
 		</div>
 	</div>
+
 

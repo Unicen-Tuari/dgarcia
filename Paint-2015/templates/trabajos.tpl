@@ -1,5 +1,6 @@
 {include file="header.tpl" title=foo}
 
+<div class="top-banner"></div>
 <!-- projects -->
 <div class="projects">
 	 <div class="container">
