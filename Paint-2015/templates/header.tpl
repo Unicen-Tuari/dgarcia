@@ -54,10 +54,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="index.php?action=index">Inicio</a></li>
-							<li><a href="index.php?action=trabajos">Trabajos</a></li>
-							<li><a href="index.php?action=servicios">Servicios</a></li>
-							<li><a href="index.php?action=tarifas">Tarifas</a></li> 
+							<li><a href="index.php?action=index" id="inicio_ajax">Inicio</a></li>
+							<li><a href="index.php?action=trabajos" id="trabajos">Trabajos</a></li>
+							<li><a href="index.php?action=servicios" id="servicios_ajax">Servicios</a></li>
+							<li><a href="index.php?action=tarifas" id="tarifas">Tarifas</a></li> 
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Novedades<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="novedad.html">Dise&ntilde;o</a></li>
@@ -65,12 +65,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</ul>
 							</li>
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galer&iacute;a<span class="caret"></span></a>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-menu galeria">
 									<li><a href="gallery.html">Dise&ntilde;o</a></li>
 									<li><a href="gallery.html">Paisajismo</a></li>	
 								</ul>
 							</li>
-							<li><a href="index.php?action=contacto">Contacto</a></li>
+							<li><a href="index.php?action=contacto" id="contacto_ajax">Contacto</a></li>
 						</ul>         
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->

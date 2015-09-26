@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-24 20:50:25
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-25 23:33:25
          compiled from "C:\xampp\htdocs\Paint-2015\templates\footer.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_560445f112a116_19375469',
+  'unifunc' => 'content_5605bda514d8e3_66502331',
   'file_dependency' => 
   array (
     'c0d5bc03a2a37898e187a2be2acf6da10bf982a6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\footer.tpl',
-      1 => 1443119259,
+      1 => 1443207693,
       2 => 'file',
     ),
   ),
@@ -18,10 +18,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_560445f112a116_19375469')) {
-function content_560445f112a116_19375469 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5605bda514d8e3_66502331')) {
+function content_5605bda514d8e3_66502331 ($_smarty_tpl) {
 ?>
+
 <!-- footer -->
+
 <div class="footer">
 	 <div class="container">
 		 <div class="footer-grids">
@@ -57,26 +59,24 @@ function content_560445f112a116_19375469 ($_smarty_tpl) {
 	 </div>
 </div>
 <!---->
-<?php echo '<script'; ?>
- src="js/responsiveslides.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="js/funciones.js"><?php echo '</script'; ?>
->
+
 <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!----> 
+
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-<?php echo '<script'; ?>
- src="js/bootstrap.js"><?php echo '</script'; ?>
->	  
-<?php echo '<script'; ?>
- type="application/x-javascript"><?php echo '</script'; ?>
->
+<!-- <?php echo '<script'; ?>
+ type="text/javascript" src="js/jquery-1.11.0.js"><?php echo '</script'; ?>
+>-->
 
 <?php echo '<script'; ?>
  src="js/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="js/bootstrap.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="js/responsiveslides.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  type="text/javascript" src="js/modernizr.custom.79639.js"><?php echo '</script'; ?>
@@ -89,11 +89,19 @@ function content_560445f112a116_19375469 ($_smarty_tpl) {
  type="text/javascript" src="js/easing.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- type="text/javascript" src="js/jquery-1.11.0.js"><?php echo '</script'; ?>
+ type="text/javascript" src="js/funciones.js"><?php echo '</script'; ?>
 >
-
-
 <!--/script-->
+<?php echo '<script'; ?>
+ type="text/javascript">
+//cuando la pagina esta lista
+$(function () {
+	$("#<?php echo $_smarty_tpl->tpl_vars['pagina']->value;?>
+").parent().click();//hago click en el boton pasado por parametro
+});
+
+<?php echo '</script'; ?>
+>
 </body>
 </html><?php }
 }

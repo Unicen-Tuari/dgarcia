@@ -9,6 +9,7 @@ ini_set("display_errors", 1);
 		$controller = new IndexController();
 		$controller->actionIndex();		
 	}
+	/*
 	else if($_REQUEST['action']=='trabajos')
 	{
 		include "./controllers/TrabajosController.php";
@@ -32,6 +33,25 @@ ini_set("display_errors", 1);
 		include "./controllers/ContactoController.php";
 		$c = new ContactoController();
 		$c->actionContacto();
+	}
+	*/
+	else if($_REQUEST['action']=='inicio_ajax')
+	{
+		include "./controllers/IndexController.php";
+		$c = new IndexController();
+		$c->actionIndexAjax();
+	}
+	else if($_REQUEST['action']=='servicios_ajax')
+	{
+		include "./controllers/ServiciosController.php";
+		$c = new ServiciosController();
+		$c->actionServiciosAjax();
+	}
+	else if($_REQUEST['action']=='contacto_ajax')
+	{
+		include "./controllers/ContactoController.php";
+		$c = new ContactoController();
+		$c->actionContactoAjax();
 	}
 	/*else 
 	{

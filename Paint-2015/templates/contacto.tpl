@@ -10,14 +10,20 @@
 				 <div class="contact-text">					
 					<div class="col-md-9 contact-left">
 						<form>
-							<input type="text" class="text" value="Ingrese E-mail" placeholder="Su correo *" id="email" required data-validation-required-message="Please enter your email address.">
-							<input type="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}" />
+							<!-- <input type="text" class="text" value="Ingrese E-mail" placeholder="Su correo *" id="email" required data-validation-required-message="Please enter your email address."> -->
+							<!-- <input type="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}" />
 							<input type="text" value="E-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail';}" />
-							<input type="text" value="Tel&eacute;fono" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Teléfono';}" />
-							<textarea value="Mensaje:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mensaje';}">Mensaje...</textarea>
-								<div class="submit-btn">								
-										<input type="submit" value="Enviar">							
-								</div>
+							<input type="text" value="Tel&eacute;fono" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Teléfono';}" /> -->
+							<input type="text" name="name" class="form-control" placeholder="Su nombre *" id="name" required data-validation-required-message="Please enter your name.">
+							<input type="email" name="email" class="form-control" placeholder="Su correo *" id="email" required data-validation-required-message="Please enter your email address.">
+							<input type="tel" name="tel"class="form-control" placeholder="Su teléfono " id="phone" required data-validation-required-message="Please enter your phone number.">
+
+							<!-- <textarea value="Mensaje:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mensaje';}">Mensaje...</textarea> -->
+							<textarea type="text" placeholder="Su mensaje *" id="mensaje"</textarea>
+
+							<div class="submit-btn">								
+								<input type="submit" value="Enviar">							
+							</div>
 						</form>
 					</div>
 					<div class="col-md-3 contact-right">

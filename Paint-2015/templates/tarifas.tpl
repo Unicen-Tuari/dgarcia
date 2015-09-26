@@ -33,12 +33,10 @@
 	              
 	                            </tr>
                         	</tbody>
-                        </thead>
-                        
+                        </thead>                        
             </table>
             </div>
         </div>
-
-        <br><br><br><br>
+    <br><br><br><br>
 
 {include file="footer.tpl"}

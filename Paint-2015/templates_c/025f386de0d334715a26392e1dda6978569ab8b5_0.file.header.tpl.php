@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-24 20:50:25
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-26 01:59:48
          compiled from "C:\xampp\htdocs\Paint-2015\templates\header.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_560445f111cc62_04372580',
+  'unifunc' => 'content_5605dff49d1b67_10399645',
   'file_dependency' => 
   array (
     '025f386de0d334715a26392e1dda6978569ab8b5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\header.tpl',
-      1 => 1443120233,
+      1 => 1443225512,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_560445f111cc62_04372580')) {
-function content_560445f111cc62_04372580 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5605dff49d1b67_10399645')) {
+function content_5605dff49d1b67_10399645 ($_smarty_tpl) {
 ?>
 <!--A Design by W3layouts
 Author: W3layout
@@ -27,6 +27,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -41,12 +42,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
 
 <link rel="stylesheet" type="text/css" href="css/common.css" />
 <link rel="stylesheet" type="text/css" href="css/style4.css" />
-
 
 </head>
 <body>
@@ -78,11 +77,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="index.php?action=index">Inicio</a></li>
-							<li><a href="index.php?action=trabajos">Trabajos</a></li>
-							<li><a href="servicios.html">Servicios</a></li>
-							<li><a href="tarifas.html">Tarifas</a></li> 
-							<!--<li><a href="typo.html">Novedades</a></li>-->
+							<li><a href="index.php?action=index" id="inicio_ajax">Inicio</a></li>
+							<li><a href="index.php?action=trabajos" id="trabajos">Trabajos</a></li>
+							<li><a href="index.php?action=servicios" id="servicios_ajax">Servicios</a></li>
+							<li><a href="index.php?action=tarifas" id="tarifas">Tarifas</a></li> 
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Novedades<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="novedad.html">Dise&ntilde;o</a></li>
@@ -90,18 +88,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</ul>
 							</li>
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galer&iacute;a<span class="caret"></span></a>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-menu galeria">
 									<li><a href="gallery.html">Dise&ntilde;o</a></li>
 									<li><a href="gallery.html">Paisajismo</a></li>	
 								</ul>
 							</li>
-							<li><a href="contact.html">Contacto</a></li>
+							<li><a href="index.php?action=contacto" id="contacto_ajax">Contacto</a></li>
 						</ul>         
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>	
 		</div>
 	</div>
+
 
 <?php }
 }

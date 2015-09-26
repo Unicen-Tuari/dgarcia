@@ -156,8 +156,15 @@ ul.dropdown-menu {
 .dropdown-menu > li > a {
     font-size: 1em;
     color: #fff;
-    padding: 9px 20px;
+    padding: 15px 35px;
 }
+.dropdown-menu.galeria > li > a {
+    padding: 15px 20px;
+}
+.dropdown-menu{
+  min-width:0px;
+}
+
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     color: #FFF;
     background-color: #F43C60;
@@ -281,12 +288,20 @@ padding: 0.6em;
 	display:inline-block;
 	
 }
-ul.callbacks_tabs.callbacks1_tabs {
-	position: absolute;
+#slider-inicio ul.callbacks_tabs {
+	position: relative;
 	bottom: 50px;
 	z-index: 999;
 	left: 47%;
 }
+/*
+ul.callbacks_tabs.callbacks1_tabs {
+  position: absolute;
+  bottom: 50px;
+  z-index: 999;
+  left: 47%;
+}
+*/
 .callbacks_nav {
   position: absolute;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -482,7 +497,7 @@ a.button {
   line-height: .1em;
   vertical-align: middle;
 }
-ul.callbacks_tabs.callbacks2_tabs {
+#top ul.callbacks_tabs {
   position: absolute;
   z-index: 999;
   left: 46%;
@@ -1127,13 +1142,16 @@ h3.ghj {
 	margin-top:2em;
 }
 .contact-left input[type="text"] {
-	width: 32.51%;
-	margin: 0px;
+	/*width: 32.51%;*/
+  margin: 0px;
 	color: #333;
 	background: none;
-	padding: 15px 10px;
+	/*padding: 15px 10px;*/
 	outline: none;
 	border: 1px solid #333;
+}
+.contact-left input:focus{
+  border: solid 5px yellow;
 }
 .contact-left textarea {
 	width: 100%;
@@ -2012,7 +2030,6 @@ ul.callbacks_tabs.callbacks1_tabs {
   width: 32%;
 }
 }
-
 
 
 
