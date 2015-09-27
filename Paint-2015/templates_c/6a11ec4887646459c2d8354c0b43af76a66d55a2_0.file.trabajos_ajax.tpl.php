@@ -1,10 +1,10 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-26 22:42:55
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-27 22:32:03
          compiled from "C:\xampp\htdocs\Paint-2015\templates\trabajos_ajax.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5607034f59fc58_77812895',
+  'unifunc' => 'content_5608524374bfc1_66251147',
   'file_dependency' => 
   array (
     '6a11ec4887646459c2d8354c0b43af76a66d55a2' => 
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_5607034f59fc58_77812895')) {
-function content_5607034f59fc58_77812895 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5608524374bfc1_66251147')) {
+function content_5608524374bfc1_66251147 ($_smarty_tpl) {
 ?>
 
 <div class="top-banner"></div>

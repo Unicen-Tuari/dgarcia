@@ -1,4 +1,4 @@
-
+<div class="top-banner"></div>
 <div class="gallery">
 		<div class="container">
 			<h3>Dise&ntilde;o</h3>

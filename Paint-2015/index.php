@@ -61,26 +61,22 @@ ini_set("display_errors", 1);
 	}
 
 	else if($_REQUEST['action']=='novedades_ajax')
-	{			
-		print_r($_REQUEST);	
+	{		
 		if(array_key_exists('categoria', $_GET))
 		{
 			include "./controllers/NovedadesController.php";
-		$c = new NovedadesController();
-		$c->actionNovedadesAjax($_GET['categoria']);										
+			$c = new NovedadesController();
+			$c->actionNovedadesAjax($_GET['categoria']);										
 		}
-	}
-	else if($_REQUEST['action']=='novedades_ajax')
-	{
-		include "./controllers/NovedadesController.php";
-		$c = new NovedadesController();
-		$c->actionNovedadesAjax();
-	}
+	}	
 	else if($_REQUEST['action']=='galeria_ajax')
 	{
-		include "./controllers/GaleriaController.php";
-		$c = new GaleriaController();
-		$c->actionGaleriaAjax();
+		if(array_key_exists('categoria', $_GET))
+		{
+			include "./controllers/GaleriaController.php";
+			$c = new GaleriaController();
+			$c->actionGaleriaAjax($_GET['categoria']);
+		}
 	}
 	else if($_REQUEST['action']=='contacto_ajax')
 	{

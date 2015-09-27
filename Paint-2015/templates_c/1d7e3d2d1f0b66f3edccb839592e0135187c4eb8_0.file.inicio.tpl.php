@@ -1,10 +1,10 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-25 23:33:25
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-27 21:52:47
          compiled from "C:\xampp\htdocs\Paint-2015\templates\inicio.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5605bda50ead84_67823007',
+  'unifunc' => 'content_5608490fb98f80_84435551',
   'file_dependency' => 
   array (
     '1d7e3d2d1f0b66f3edccb839592e0135187c4eb8' => 
@@ -20,8 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'file:footer.tpl' => 1,
   ),
 ),false);
-if ($_valid && !is_callable('content_5605bda50ead84_67823007')) {
-function content_5605bda50ead84_67823007 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5608490fb98f80_84435551')) {
+function content_5608490fb98f80_84435551 ($_smarty_tpl) {
 $_smarty_tpl->setupSubTemplate('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>'foo'), 0, false)->render();
 ?>
 

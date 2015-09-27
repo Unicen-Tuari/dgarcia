@@ -1,10 +1,10 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-26 01:52:14
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-27 22:28:33
          compiled from "C:\xampp\htdocs\Paint-2015\templates\contacto_ajax.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5605de2ec33224_05328404',
+  'unifunc' => 'content_560851712608f6_60969232',
   'file_dependency' => 
   array (
     'ebd16eaf1940241ea0b198903d5327aa28a109d4' => 
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_5605de2ec33224_05328404')) {
-function content_5605de2ec33224_05328404 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560851712608f6_60969232')) {
+function content_560851712608f6_60969232 ($_smarty_tpl) {
 ?>
 <div class="top-banner"></div>	
 <div class="contact">

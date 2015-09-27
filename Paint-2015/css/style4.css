@@ -60,12 +60,12 @@
 	backface-visibility: hidden;
 }
 .ch-info .ch-info-back {
-	-webkit-transform: rotate3d(0,1,0,180deg);
-	-moz-transform: rotate3d(0,1,0,180deg);
-	-o-transform: rotate3d(0,1,0,180deg);
-	-ms-transform: rotate3d(0,1,0,180deg);
-	transform: rotate3d(0,1,0,180deg);
-	background:#F43C60;
+    -webkit-transform: rotate3d(0,1,0,180deg);
+    -moz-transform: rotate3d(0,1,0,180deg);
+    -o-transform: rotate3d(0,1,0,180deg);
+    -ms-transform: rotate3d(0,1,0,180deg);
+    transform: rotate3d(0,1,0,180deg);
+    background: #3b5998;
 }
 
 .ch-img-1 { 
@@ -134,3 +134,4 @@
 	-ms-transform: rotate3d(0,1,0,-180deg);
 	transform: rotate3d(0,1,0,-180deg);
 }
+
