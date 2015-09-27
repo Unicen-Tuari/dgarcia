@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-26 01:59:48
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-27 02:53:29
          compiled from "C:\xampp\htdocs\Paint-2015\templates\header.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5605dff49d1b67_10399645',
+  'unifunc' => 'content_56073e098a9a61_01664278',
   'file_dependency' => 
   array (
     '025f386de0d334715a26392e1dda6978569ab8b5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\header.tpl',
-      1 => 1443225512,
+      1 => 1443314938,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_5605dff49d1b67_10399645')) {
-function content_5605dff49d1b67_10399645 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56073e098a9a61_01664278')) {
+function content_56073e098a9a61_01664278 ($_smarty_tpl) {
 ?>
 <!--A Design by W3layouts
 Author: W3layout
@@ -78,19 +78,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.php?action=index" id="inicio_ajax">Inicio</a></li>
-							<li><a href="index.php?action=trabajos" id="trabajos">Trabajos</a></li>
+							<li><a href="index.php?action=trabajos" id="trabajos_ajax">Trabajos</a></li>
 							<li><a href="index.php?action=servicios" id="servicios_ajax">Servicios</a></li>
-							<li><a href="index.php?action=tarifas" id="tarifas">Tarifas</a></li> 
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Novedades<span class="caret"></span></a>
+							<li><a href="index.php?action=tarifas" id="tarifas_ajax">Tarifas</a></li> 
+							<li class="dropdown">
+								<a data-toggle="dropdown" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Novedades<span class="caret"></span>
+								</a>
 								<ul class="dropdown-menu">
-									<li><a href="novedad.html">Dise&ntilde;o</a></li>
-									<li><a href="novedad.html">Paisajismo</a></li>	
+									<li><a href="index.php?action=novedades&amp;categoria=D" id="novedades_ajax">Dise&ntilde;o</a></li>
+									<li><a href="index.php?action=novedades&amp;categoria=P" id="novedades_ajax">Paisajismo</a></li>	
 								</ul>
 							</li>
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galer&iacute;a<span class="caret"></span></a>
 								<ul class="dropdown-menu galeria">
-									<li><a href="gallery.html">Dise&ntilde;o</a></li>
-									<li><a href="gallery.html">Paisajismo</a></li>	
+									<li><a href="index.php?action=galeria" id="galeria_ajax">Dise&ntilde;o</a></li>
+									<li><a href="index.php?action=galeria" id="galeria_ajax">Paisajismo</a></li>	
 								</ul>
 							</li>
 							<li><a href="index.php?action=contacto" id="contacto_ajax">Contacto</a></li>

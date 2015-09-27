@@ -1,3 +1,26 @@
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-26 22:48:31
+         compiled from "C:\xampp\htdocs\Paint-2015\templates\tarifas_ajax.tpl" */ ?>
+<?php
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'has_nocache_code' => false,
+  'version' => '3.1.28-dev/63',
+  'unifunc' => 'content_5607049f3945f5_18553547',
+  'file_dependency' => 
+  array (
+    'f9e49c8b4664a949c81fe9146bf34e828bfe6207' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\tarifas_ajax.tpl',
+      1 => 1443300505,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false);
+if ($_valid && !is_callable('content_5607049f3945f5_18553547')) {
+function content_5607049f3945f5_18553547 ($_smarty_tpl) {
+?>
 
 <div class="top-banner"></div>
 <div class="container">
@@ -37,3 +60,5 @@
             </div>
         </div>
     <br><br><br><br>
+<?php }
+}

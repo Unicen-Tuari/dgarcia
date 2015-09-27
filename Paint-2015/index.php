@@ -41,11 +41,46 @@ ini_set("display_errors", 1);
 		$c = new IndexController();
 		$c->actionIndexAjax();
 	}
+	else if($_REQUEST['action']=='trabajos_ajax')
+	{
+		include "./controllers/TrabajosController.php";
+		$c = new TrabajosController();
+		$c->actionTrabajosAjax();
+	}
 	else if($_REQUEST['action']=='servicios_ajax')
 	{
 		include "./controllers/ServiciosController.php";
 		$c = new ServiciosController();
 		$c->actionServiciosAjax();
+	}
+	else if($_REQUEST['action']=='tarifas_ajax')
+	{
+		include "./controllers/TarifasController.php";
+		$c = new TarifasController();
+		$c->actionTarifasAjax();
+	}
+
+	else if($_REQUEST['action']=='novedades_ajax')
+	{			
+		print_r($_REQUEST);	
+		if(array_key_exists('categoria', $_GET))
+		{
+			include "./controllers/NovedadesController.php";
+		$c = new NovedadesController();
+		$c->actionNovedadesAjax($_GET['categoria']);										
+		}
+	}
+	else if($_REQUEST['action']=='novedades_ajax')
+	{
+		include "./controllers/NovedadesController.php";
+		$c = new NovedadesController();
+		$c->actionNovedadesAjax();
+	}
+	else if($_REQUEST['action']=='galeria_ajax')
+	{
+		include "./controllers/GaleriaController.php";
+		$c = new GaleriaController();
+		$c->actionGaleriaAjax();
 	}
 	else if($_REQUEST['action']=='contacto_ajax')
 	{

@@ -8,6 +8,11 @@ class TrabajosController{
 		$view->render();
 	}
 	
+	public function actionTrabajosAjax(){
+		include "./views/TrabajosViewAjax.php";
+		$view = new TrabajosViewAjax;
+		$view->render();
+	}	
 }
 
 ?>
