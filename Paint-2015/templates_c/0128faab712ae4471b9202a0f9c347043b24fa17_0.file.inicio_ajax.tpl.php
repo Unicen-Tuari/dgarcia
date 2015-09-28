@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-27 21:52:47
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-28 00:49:30
          compiled from "C:\xampp\htdocs\Paint-2015\templates\inicio_ajax.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5608490fd82599_63459084',
+  'unifunc' => 'content_5608727a324616_05280798',
   'file_dependency' => 
   array (
     '0128faab712ae4471b9202a0f9c347043b24fa17' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\inicio_ajax.tpl',
-      1 => 1443223282,
+      1 => 1443394167,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_5608490fd82599_63459084')) {
-function content_5608490fd82599_63459084 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5608727a324616_05280798')) {
+function content_5608727a324616_05280798 ($_smarty_tpl) {
 ?>
 
  <div class="header-slider">
@@ -28,17 +28,17 @@ function content_5608490fd82599_63459084 ($_smarty_tpl) {
 			  <ul class="rslides" id="slider">
 				<div class="slid banner1">				  
 				  <div class="caption">
-					<h3>"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
+					<h3 class = "stroke">"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
 				  </div>
 				</div>
 				<div class="slid banner2">				  
 				  <div class="caption">
-					<h3>"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
+					<h3 class = "stroke">"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
 				  </div>
 				</div>
 				<div class="slid banner3">				  
 				  <div class="caption">
-					<h3>"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
+					<h3 class = "stroke">"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
 				  </div>
 				</div>
 			</ul>

@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-27 21:52:47
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-28 03:30:26
          compiled from "C:\xampp\htdocs\Paint-2015\templates\header.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5608490fbab034_96066655',
+  'unifunc' => 'content_560898328b2740_26893242',
   'file_dependency' => 
   array (
     '025f386de0d334715a26392e1dda6978569ab8b5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\header.tpl',
-      1 => 1443380864,
+      1 => 1443403820,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_5608490fbab034_96066655')) {
-function content_5608490fbab034_96066655 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560898328b2740_26893242')) {
+function content_560898328b2740_26893242 ($_smarty_tpl) {
 ?>
 <!--A Design by W3layouts
 Author: W3layout
@@ -94,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</a>
 								<ul class="dropdown-menu galeria">
 									<li><a href="#" id="galeria_ajax" id-categoria="1">Dise&ntilde;o</a></li>
-									<li><a href="#" id="galeria_ajax" id-categoria="1">Paisajismo</a></li>	
+									<li><a href="#" id="galeria_ajax" id-categoria="2">Paisajismo</a></li>	
 								</ul>
 							</li>
 							<li><a href="#" id="contacto_ajax">Contacto</a></li>

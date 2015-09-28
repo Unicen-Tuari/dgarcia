@@ -8,10 +8,16 @@ class GaleriaController{
 		$view->render();
 	}
 
-	public function actionGaleriaAjax(){
+	public function actionGaleriaAjax($categoria){
 		include "./views/GaleriaViewAjax.php";
-		$view = new GaleriaViewAjax;
-		$view->render();
+		include "./models/GaleriaModelo.php";
+		$this->GaleriaModelo = new Galeria();
+		$this->view = new GaleriaViewAjax;
+
+		$cat = $this->GaleriaModelo->load_Categoria($categoria);
+		$imagen = $this->GaleriaModelo->load_Imagen($categoria);
+		$this->view->set_Imagenes($imagen,$cat);
+		$this->view->render();
 	}	
 }
 

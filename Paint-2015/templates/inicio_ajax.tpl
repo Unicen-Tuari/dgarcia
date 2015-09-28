@@ -5,17 +5,17 @@
 			  <ul class="rslides" id="slider">
 				<div class="slid banner1">				  
 				  <div class="caption">
-					<h3>"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
+					<h3 class = "stroke">"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
 				  </div>
 				</div>
 				<div class="slid banner2">				  
 				  <div class="caption">
-					<h3>"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
+					<h3 class = "stroke">"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
 				  </div>
 				</div>
 				<div class="slid banner3">				  
 				  <div class="caption">
-					<h3>"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
+					<h3 class = "stroke">"Cuida el exterior tanto como el interior, porque todo es uno".</h3>
 				  </div>
 				</div>
 			</ul>

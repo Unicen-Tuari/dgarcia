@@ -41,8 +41,8 @@ $(function () {
 	$("#bs-example-navbar-collapse-1 ul li").not("li.dropdown").click(function(e){
 		//selecciono todos los li del menu que no son dropdown
 
-		$(".nav.navbar-nav.navbar-right li").removeClass("active");
-		$(this).addClass("active");
+		$(".nav.navbar-nav.navbar-right li").removeClass("active");//desactiva la pestaña anterior
+		$(this).addClass("active");//activa la pestaña
 
 		//localizamos cada elemento del menu
 		e.preventDefault();//anula el click asi no navega

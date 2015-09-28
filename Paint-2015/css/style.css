@@ -2192,3 +2192,8 @@ ul.callbacks_tabs.callbacks1_tabs {
     transform: rotate3d(0,1,0,180deg);
     background: #3b5998;
 }
+
+.stroke {
+-webkit-text-fill-color: white;
+-webkit-text-stroke: 1px grey;
+}

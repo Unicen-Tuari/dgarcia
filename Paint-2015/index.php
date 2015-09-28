@@ -8,33 +8,7 @@ ini_set("display_errors", 1);
 		include "./controllers/IndexController.php";
 		$controller = new IndexController();
 		$controller->actionIndex();		
-	}
-	/*
-	else if($_REQUEST['action']=='trabajos')
-	{
-		include "./controllers/TrabajosController.php";
-		$c = new TrabajosController();
-		$c->actionTrabajos();
-	}
-	else if($_REQUEST['action']=='servicios')
-	{
-		include "./controllers/ServiciosController.php";
-		$c = new ServiciosController();
-		$c->actionServicios();
-	}
-	else if($_REQUEST['action']=='tarifas')
-	{
-		include "./controllers/TarifasController.php";
-		$c = new TarifasController();
-		$c->actionTarifas();
-	}
-	else if($_REQUEST['action']=='contacto')
-	{
-		include "./controllers/ContactoController.php";
-		$c = new ContactoController();
-		$c->actionContacto();
-	}
-	*/
+	}	
 	else if($_REQUEST['action']=='inicio_ajax')
 	{
 		include "./controllers/IndexController.php";

@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-27 22:38:34
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-28 03:42:49
          compiled from "C:\xampp\htdocs\Paint-2015\templates\galeria_ajax.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_560853ca05cac3_87646825',
+  'unifunc' => 'content_56089b19e6d053_01752910',
   'file_dependency' => 
   array (
     '6a947ab6d7301b8ef28a61d6c609eafe9d22fb70' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\galeria_ajax.tpl',
-      1 => 1443386305,
+      1 => 1443404561,
       2 => 'file',
     ),
   ),
@@ -18,61 +18,58 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_560853ca05cac3_87646825')) {
-function content_560853ca05cac3_87646825 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56089b19e6d053_01752910')) {
+function content_56089b19e6d053_01752910 ($_smarty_tpl) {
 ?>
 <div class="top-banner"></div>
 <div class="gallery">
-		<div class="container">
-			<h3>Dise&ntilde;o</h3>
-			<div class="gallery-bottom">
-				<div class="gallery-1">
+	<div class="container">
+		 <h3><?php echo utf8_encode($_smarty_tpl->tpl_vars['categoria']->value[0]['Nombre']);?>
+</h3> 
+		 <div class="gallery-bottom">
+			<div class="gallery-1">
+				<?php if ($_smarty_tpl->tpl_vars['cantidad']->value > 0) {?>
+				<?php $_smarty_tpl->tpl_vars['espacio'] = new Smarty_Variable(0, null, 0);?>
+				<?php
+$_from = $_smarty_tpl->tpl_vars['imagenes']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_imagen_0_saved_item = isset($_smarty_tpl->tpl_vars['imagen']) ? $_smarty_tpl->tpl_vars['imagen'] : false;
+$__foreach_imagen_0_saved_key = isset($_smarty_tpl->tpl_vars['id_imagen']) ? $_smarty_tpl->tpl_vars['id_imagen'] : false;
+$_smarty_tpl->tpl_vars['imagen'] = new Smarty_Variable();
+$__foreach_imagen_0_total = $_smarty_tpl->_count($_from);
+if ($__foreach_imagen_0_total) {
+$_smarty_tpl->tpl_vars['id_imagen'] = new Smarty_Variable();
+foreach ($_from as $_smarty_tpl->tpl_vars['id_imagen']->value => $_smarty_tpl->tpl_vars['imagen']->value) {
+$__foreach_imagen_0_saved_local_item = $_smarty_tpl->tpl_vars['imagen'];
+?>
 					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g2.jpg" alt=""/></a>
+						<a class="example-image-link" href="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['Ruta'];?>
+" data-lightbox="example-set" data-title=""><img class="example-image" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['Ruta'];?>
+" alt=""/></a>
+						<?php if ($_smarty_tpl->tpl_vars['espacio']->value == 3) {?>
+							<div>
+								<br>
+							</div>
+							<?php $_smarty_tpl->tpl_vars['espacio'] = new Smarty_Variable(0, null, 0);?>
+						<?php }?>
+						<?php $_smarty_tpl->tpl_vars['espacio'] = new Smarty_Variable($_smarty_tpl->tpl_vars['espacio']->value+1, null, 0);?>
 					</div>
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g1.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g1.jpg" alt=""/></a>
-					</div>
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g3.jpg" alt=""/></a>
-					</div>
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g4.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g4.jpg" alt=""/></a>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="gallery-1">
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g5.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g5.jpg" alt=""/></a>
-					</div>
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g6.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g6.jpg" alt=""/></a>
-					</div>
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g1.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g1.jpg" alt=""/></a>
-					</div>
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g7.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g7.jpg" alt=""/></a>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="gallery-1">
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g4.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g4.jpg" alt=""/></a>
-					</div>
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g7.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g7.jpg" alt=""/></a>
-					</div>
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g5.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g5.jpg" alt=""/></a>
-					</div>
-					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g2.jpg" alt=""/></a>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				
-		 </div>
+				<?php
+$_smarty_tpl->tpl_vars['imagen'] = $__foreach_imagen_0_saved_local_item;
+}
+}
+if ($__foreach_imagen_0_saved_item) {
+$_smarty_tpl->tpl_vars['imagen'] = $__foreach_imagen_0_saved_item;
+}
+if ($__foreach_imagen_0_saved_key) {
+$_smarty_tpl->tpl_vars['id_imagen'] = $__foreach_imagen_0_saved_key;
+}
+?>
+				<?php }?>
+			</div>				
+		 </div> 
 	 </div>
 </div>	
 <?php }

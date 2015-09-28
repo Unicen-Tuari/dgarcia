@@ -1,7 +1,5 @@
 <?php
 
-
-
 class IndexController{
 
 	public function actionIndex(){
@@ -14,10 +12,7 @@ class IndexController{
 		include "./views/IndexViewAjax.php";
 		$view = new IndexViewAjax;
 		$view->render();
-
-	
 	}
-	
 }
 
 ?>
