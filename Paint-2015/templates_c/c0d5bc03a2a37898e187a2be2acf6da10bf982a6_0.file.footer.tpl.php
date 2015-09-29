@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-27 21:52:47
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-29 02:23:32
          compiled from "C:\xampp\htdocs\Paint-2015\templates\footer.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5608490fbbd583_20852234',
+  'unifunc' => 'content_5609da04c4b7b8_50917257',
   'file_dependency' => 
   array (
     'c0d5bc03a2a37898e187a2be2acf6da10bf982a6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\footer.tpl',
-      1 => 1443207693,
+      1 => 1443486200,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_5608490fbbd583_20852234')) {
-function content_5608490fbbd583_20852234 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5609da04c4b7b8_50917257')) {
+function content_5609da04c4b7b8_50917257 ($_smarty_tpl) {
 ?>
 
 <!-- footer -->
@@ -44,7 +44,9 @@ function content_5608490fbbd583_20852234 ($_smarty_tpl) {
 				 <h4>Recibir Novedades</h4>
 				 <p>Si quieres recibir nuestro bolet&iacute;n de novedades suscribete aqu&iacute;.</p>
 				 <form>					 
-					  <input type="text" class="text" value="Ingrese E-mail" placeholder="Su correo *" id="email" required data-validation-required-message="Please enter your email address.">
+					<div class="col-md-6">
+						<input type="email" name="email" class="form-control" placeholder="Su correo *" id="email" required data-validation-required-message="Please enter your email address.">
+					</div>
 					 <input type="submit" value="Suscribirse">
 					 <div class="clearfix"></div>
 				 </form>
@@ -60,7 +62,8 @@ function content_5608490fbbd583_20852234 ($_smarty_tpl) {
 </div>
 <!---->
 
-<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> -->
+
 
 <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -69,8 +72,16 @@ function content_5608490fbbd583_20852234 ($_smarty_tpl) {
  type="text/javascript" src="js/jquery-1.11.0.js"><?php echo '</script'; ?>
 >-->
 
+
 <?php echo '<script'; ?>
  src="js/jquery.min.js"><?php echo '</script'; ?>
+>
+
+<?php echo '<script'; ?>
+ type="text/javascript" src="js/jquery-1.11.3.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="js/lightbox-plus-jquery.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="js/bootstrap.js"><?php echo '</script'; ?>
@@ -78,19 +89,28 @@ function content_5608490fbbd583_20852234 ($_smarty_tpl) {
 <?php echo '<script'; ?>
  src="js/responsiveslides.min.js"><?php echo '</script'; ?>
 >
+
 <?php echo '<script'; ?>
  type="text/javascript" src="js/modernizr.custom.79639.js"><?php echo '</script'; ?>
 >
 <!--/animated-css-->
+
 <?php echo '<script'; ?>
  type="text/javascript" src="js/move-top.js"><?php echo '</script'; ?>
 >
+
 <?php echo '<script'; ?>
  type="text/javascript" src="js/easing.js"><?php echo '</script'; ?>
 >
+
+<?php echo '<script'; ?>
+ language="javascript"><?php echo '</script'; ?>
+>
+
 <?php echo '<script'; ?>
  type="text/javascript" src="js/funciones.js"><?php echo '</script'; ?>
 >
+
 <!--/script-->
 <?php echo '<script'; ?>
  type="text/javascript">
@@ -102,6 +122,7 @@ $(function () {
 
 <?php echo '</script'; ?>
 >
+
 </body>
 </html><?php }
 }

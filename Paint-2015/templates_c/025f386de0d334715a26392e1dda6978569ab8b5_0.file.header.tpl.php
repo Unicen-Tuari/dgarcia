@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-28 03:30:26
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-29 02:21:41
          compiled from "C:\xampp\htdocs\Paint-2015\templates\header.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_560898328b2740_26893242',
+  'unifunc' => 'content_5609d995c35987_50010261',
   'file_dependency' => 
   array (
     '025f386de0d334715a26392e1dda6978569ab8b5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\header.tpl',
-      1 => 1443403820,
+      1 => 1443482071,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_560898328b2740_26893242')) {
-function content_560898328b2740_26893242 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5609d995c35987_50010261')) {
+function content_5609d995c35987_50010261 ($_smarty_tpl) {
 ?>
 <!--A Design by W3layouts
 Author: W3layout
@@ -35,6 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
+<link rel="stylesheet" href="css/lightbox.css">
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <!--//theme-style-->
