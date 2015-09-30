@@ -48,26 +48,30 @@ class Novedades extends ModeloDB
         ");			
 	}
 
-	private function subirImagenesAjax($imagenes){
-	    $carpeta = "uploads/images/";
-	    $destinos_finales = array();
-	    foreach ($imagenes as $imagen) {
-	      $destino =  $carpeta.uniqid().$imagen["name"];
-	      move_uploaded_file($imagen["tmp_name"], $destino);
-	      $destinos_finales[] = $destino;
-	    }
-	    return $destinos_finales;
+	/*Funciones que utiliza el administrador!!!!*/
+
+	public function agregarImagen($url_img){
+		return $this->query("
+
+			INSERT INTO imagenes (ruta)
+					VALUES ('$url_img')
+		");
 	}
 
+	public function obtenerIdImg($url_img){
+		return $this->query("
+			SELECT i.id_imagen
+        	FROM imagenes i        
+	        WHERE(i.ruta ='images/$url_img')        		
+        ");	
+	}
 
-	public function agregarNovedad($titulo, $imagenes, $detalle){
-		$rutas=$this->subirImagenesAjax($imagenes);
-		$consulta = $this->db->prepare('
-			INSERT INTO imagenes(titulo,path,detalle) VALUES(?,?,?)
-		');
-		//foreach($rutas as $ruta){
-		$consulta->execute(array($titulo,$ruta,$detalle));
-		//}
+	public function agregarNovedad($titulo,$id_categoria,$contenido,$id_imagen){
+		return $this->query("
+
+			INSERT INTO noticias (titulo,id_categoria,contenido,id_imagen)
+					VALUES ('$titulo','$id_categoria','$contenido','$id_imagen')
+		");
 	}
 }
 

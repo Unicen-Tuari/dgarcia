@@ -1,3 +1,26 @@
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-30 22:16:56
+         compiled from "C:\xampp\htdocs\Paint-2015\templates\headerAdmin.tpl" */ ?>
+<?php
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'has_nocache_code' => false,
+  'version' => '3.1.28-dev/63',
+  'unifunc' => 'content_560c43380d4511_96062475',
+  'file_dependency' => 
+  array (
+    '7901d55770bfdadb62955e8909f941871752e513' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\headerAdmin.tpl',
+      1 => 1443643918,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false);
+if ($_valid && !is_callable('content_560c43380d4511_96062475')) {
+function content_560c43380d4511_96062475 ($_smarty_tpl) {
+?>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -42,45 +65,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</button>
 						<div class="logo">
 							<h1><a href=""><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>Paint</a></h1>
-						</div>
-						<form class="navbar-form navbar-left search" role="search">						
-							<div class="form-group">
-								<button type="submit" class="btn btn-default" aria-label="Left Align">
-									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-								</button>
-								<input type="text" class="form-control" placeholder="Search">
-							</div>						
-						</form>
-					</div>					  
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#" id="inicio_ajax">Inicio</a></li>
-							<li><a href="#" id="trabajos_ajax">Trabajos</a></li>
-							<li><a href="#" id="servicios_ajax">Servicios</a></li>
-							<li><a href="#" id="tarifas_ajax">Tarifas</a></li> 
-							<li class="dropdown">
-								<a data-toggle="dropdown" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Novedades<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#" id="novedades_ajax" id-categoria="1">Dise&ntilde;o</a></li>
-									<li><a href="#" id="novedades_ajax" id-categoria="2">Paisajismo</a></li>	
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a data-toggle="dropdown" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Galer&iacute;a<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu galeria">
-									<li><a href="#" id="galeria_ajax" id-categoria="1">Dise&ntilde;o</a></li>
-									<li><a href="#" id="galeria_ajax" id-categoria="2">Paisajismo</a></li>	
-								</ul>
-							</li>
-							<li><a href="#" id="contacto_ajax">Contacto</a></li>
-						</ul>         
-					</div><!-- /.navbar-collapse -->
+						</div>						
+					</div>	
 				</div><!-- /.container-fluid -->
 			</nav>	
 		</div>
 	</div>
 
 
+<?php }
+}

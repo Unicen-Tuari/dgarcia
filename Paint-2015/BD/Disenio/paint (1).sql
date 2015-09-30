@@ -23,31 +23,25 @@ INSERT INTO `categorias` (`id_categoria`, `nombre`) VALUES
 DROP TABLE IF EXISTS `imagenes`;
 CREATE TABLE `imagenes` (
   `id_imagen` int(11) NOT NULL AUTO_INCREMENT,
-  `id_noticia` int(11) NOT NULL,
-  `id_categoria` int(11) NOT NULL,
   `ruta` varchar(250) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`id_imagen`),
-  KEY `fk_not` (`id_noticia`),
-  KEY `fk_cat1` (`id_categoria`),
-  CONSTRAINT `fk_cat1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id_categoria`),
-  CONSTRAINT `fk_not` FOREIGN KEY (`id_noticia`) REFERENCES `noticias` (`id_noticia`)
+  PRIMARY KEY (`id_imagen`), 
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
-INSERT INTO `imagenes` (`id_imagen`, `id_noticia`, `id_categoria`, `ruta`) VALUES
-(1,	1,	1,	'images/g1.jpg'),
-(2,	2,	1,	'images/g2.jpg'),
-(3,	3,	1,	'images/g3.jpg'),
-(4,	4,	1,	'images/g4.jpg'),
-(5,	5,	1,	'images/g5.jpg'),
-(6,	6,	1,	'images/g6.jpg'),
-(7,	7,	1,	'images/g7.jpg'),
-(8,	8,	2,	'images/g8.jpg'),
-(9,	9,	2,	'images/g9.jpg'),
-(10,	10,	2,	'images/g10.jpg'),
-(11,	11,	2,	'images/g11.jpg'),
-(12,	12,	2,	'images/g12.jpg'),
-(13,	13,	2,	'images/g13.jpg'),
-(14,	14,	2,	'images/g14.jpg');
+INSERT INTO `imagenes` (`id_imagen`, `ruta`) VALUES
+(1,	'uploads/images/g1.jpg'),
+(2,	'uploads/images/g2.jpg'),
+(3,	'uploads/images/g3.jpg'),
+(4,	'uploads/images/g4.jpg'),
+(5,	'uploads/images/g5.jpg'),
+(6,	'uploads/images/g6.jpg'),
+(7,	'uploads/images/g7.jpg'),
+(8,	'uploads/images/g8.jpg'),
+(9,	'uploads/images/g9.jpg'),
+(10, 'uploads/images/g10.jpg'),
+(11, 'uploads/images/g11.jpg'),
+(12, 'uploads/images/g12.jpg'),
+(13, 'uploads/images/g13.jpg'),
+(14, 'uploads/images/g14.jpg');
 
 DROP TABLE IF EXISTS `noticias`;
 CREATE TABLE `noticias` (

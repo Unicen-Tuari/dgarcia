@@ -22,21 +22,7 @@ $(function () {
 			$('.events').append("<li>after event fired.</li>");
 		}
 	});	
-
 	
-// $(document).ready(function(){
-//    $('# example-set').lightBox();
-// });
-
-		
-	// var defaults = {
-	// 	containerID: 'toTop', // fading element id
-	// 	containerHoverID: 'toTopHover', // fading element hover id
-	// 	scrollSpeed: 1200,
-	// 	easingType: 'linear' 
-	// };
-	
-
 	//si no esta definido lo defino
 	if ($("#toTop").length==0){
 		$().UItoTop({ easingType: 'easeOutQuart' });
@@ -84,53 +70,8 @@ $(function () {
 		event.preventDefault();
 		$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
 	});	
-
-	$(".botonAgregarImagenes").on("click", function(event){
-        event.preventDefault();
-
-        var archivos = $("#imagesToUpload").prop('files');
-
-        if(typeof(archivos) == 'undefined'){
-          //mostrarMensaje("No pusiste imagenes");
-          alert("No pusiste imagen");
-          return;
-        }
-
-        var datos = new FormData();
-
-        $.each(archivos, function(key,value){
-          datos.append(key,value);
-        });
-
-        datos.append("titulo",$("input[name=titulo]").val());
-        datos.append("detalle",$("textarea[name=detalle]").val());
-
-        //console.log(datos);
-        console.log(event.target.href);
-
-        $.ajax({
-          type: "POST",
-          dataType: "json",
-          //url: event.target.href,
-          url: 'admin.php?action=agregarNovedad',
-          data: datos,
-          success: function(data){
-            alert(data.result);
-          },
-          error: function(){
-            alert("No anduvo la llamada AJAX");
-          },
-          contentType : false,
-          processData : false
-        });
-
-      });
-
 });
-
-
-      
-    
+  
 addEventListener("load", function() {
 	setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); 
 };

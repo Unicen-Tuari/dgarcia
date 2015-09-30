@@ -42,42 +42,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</button>
 						<div class="logo">
 							<h1><a href=""><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>Paint</a></h1>
-						</div>
-						<form class="navbar-form navbar-left search" role="search">						
-							<div class="form-group">
-								<button type="submit" class="btn btn-default" aria-label="Left Align">
-									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-								</button>
-								<input type="text" class="form-control" placeholder="Search">
-							</div>						
-						</form>
-					</div>					  
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#" id="inicio_ajax">Inicio</a></li>
-							<li><a href="#" id="trabajos_ajax">Trabajos</a></li>
-							<li><a href="#" id="servicios_ajax">Servicios</a></li>
-							<li><a href="#" id="tarifas_ajax">Tarifas</a></li> 
-							<li class="dropdown">
-								<a data-toggle="dropdown" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Novedades<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#" id="novedades_ajax" id-categoria="1">Dise&ntilde;o</a></li>
-									<li><a href="#" id="novedades_ajax" id-categoria="2">Paisajismo</a></li>	
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a data-toggle="dropdown" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Galer&iacute;a<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu galeria">
-									<li><a href="#" id="galeria_ajax" id-categoria="1">Dise&ntilde;o</a></li>
-									<li><a href="#" id="galeria_ajax" id-categoria="2">Paisajismo</a></li>	
-								</ul>
-							</li>
-							<li><a href="#" id="contacto_ajax">Contacto</a></li>
-						</ul>         
-					</div><!-- /.navbar-collapse -->
+						</div>						
+					</div>	
 				</div><!-- /.container-fluid -->
 			</nav>	
 		</div>

@@ -1,26 +1,40 @@
-{include file="header.tpl" title=foo}
+{include file="headerAdmin.tpl" title=foo}
+<div class="top-banner"></div>	
 
-<div class="col-lg-12">
-	<hr><hr><hr><hr><hr>
+<div class="col-lg-12 text-center">
+	<br><br>
 	<h2>Cargar nueva novedad</h2>
-	<form class="form" action="admin.php?action=agregarNovedad" method="POST" enctype="multipart/form-data">
-		<div class="col-lg-12 form-group">
-			<label>T&iacute;tulo</label>
-			<input name="titulo" class="form-control">
+	<br><br>
+<div class="contact-bottom">
+         <div class="contact-text">         
+          <div class="col-md-12 contact-left">
+              	<form id="formulario" class="form" action="admin.php?action=agregarNovedad" method="POST">
+              		
+              		<div class="col-lg-12 form-group">
+              			<label> Categoria: </label>
+                          <input name="id_categoria" type="number" min="1" max="2" class="form-control" required>
+              		</div>
+              		<div class="col-lg-12 form-group">
+              			<label>T&iacute;tulo</label>
+              			<input name="titulo" class="form-control" required>
+              		</div>
+              		<div class="col-lg-12 form-group">
+              			<label>Imagen</label>
+              			<input type="file" name="imagesToUpload" class="form-control" files="" id="imagesToUpload" required>
+              		</div>
+              		<div class="col-lg-12 form-group">
+              			<label>Contenido</label>
+              			<textarea rows="6" name="contenido" class="form-control" required></textarea>
+              		</div>
+              		<div class="col-lg-12 form-group">
+              			<!-- <input type="hidden" name="save" value="contact"> -->
+                          <button id="btn-enviar" type="submit">Insertar</button>
+              		</div>
+              	</form>
 
-		</div>
-		<div class="col-lg-12 form-group">
-			<label>Foto</label>
-			<input type="file" name="foto" class="form-control" files="" id="imagesToUpload">
-		</div>
-		<div class="col-lg-12 form-group">
-			<label>Detalle</label>
-			<textarea rows="6" name="detalle" class="form-control"></textarea>
-		</div>
-		<div class="col-lg-12 form-group">
-			<button href="admin.php?action=agregarNovedad" class="btn btn-primary botonAgregarImagenes">Cargar</button>
-		</div>
-	</form>
+            </div>
+            </div>
+            </div>
 
 </div>
 
@@ -34,4 +48,4 @@
 				{/foreach}
 				<div class="clearfix"></div>
 
-{include file="footer.tpl" pagina=admin}
+<script type="text/javascript" src="js/funcionesAdmin.js"></script>

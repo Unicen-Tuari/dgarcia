@@ -2232,3 +2232,10 @@ ul.callbacks_tabs.callbacks1_tabs {
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
       background-color: #3B5998;
 }
+
+input.form-control {
+    padding: 8px 32px 8px 13px;
+    height: inherit;
+    font-size: 1.1em;
+    border-color: #3B5998;
+}

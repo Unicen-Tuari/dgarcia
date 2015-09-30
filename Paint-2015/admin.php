@@ -8,8 +8,9 @@ ini_set("display_errors", 1);
 	$controller = new AdminController();
 	$controller->actionIndex();		
 
-	if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='agregar')
+	if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='agregarNovedad')
 	{
+		//print_r($_REQUEST);
 		$controller = new AdminController();
 		$controller->actionAgregarNovedad();		
 	}	

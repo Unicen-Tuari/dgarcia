@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-29 22:31:38
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-30 21:06:09
          compiled from "C:\xampp\htdocs\Paint-2015\templates\header.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_560af52abc0cb3_61713503',
+  'unifunc' => 'content_560c32a15e0b74_62615366',
   'file_dependency' => 
   array (
     '025f386de0d334715a26392e1dda6978569ab8b5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\header.tpl',
-      1 => 1443482071,
+      1 => 1443639965,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_560af52abc0cb3_61713503')) {
-function content_560af52abc0cb3_61713503 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560c32a15e0b74_62615366')) {
+function content_560c32a15e0b74_62615366 ($_smarty_tpl) {
 ?>
 <!--A Design by W3layouts
 Author: W3layout
@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="icon-bar"></span>
 						</button>
 						<div class="logo">
-							<h1><a href="home.html"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>Paint</a></h1>
+							<h1><a href=""><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>Paint</a></h1>
 						</div>
 						<form class="navbar-form navbar-left search" role="search">						
 							<div class="form-group">

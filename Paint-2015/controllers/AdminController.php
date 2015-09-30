@@ -1,5 +1,6 @@
 <?php
 include "./models/NovedadesModelo.php";
+include "./views/AdminView.php";
 
 class AdminController{
 
@@ -7,22 +8,36 @@ class AdminController{
 	
 	function __construct(){
 		$this->model = new Novedades();
-		
+		$this->view = new AdminView();
 	}
 
 	public function actionIndex(){
-		include "./views/AdminView.php";
-		$view = new AdminView();
-		$view->render($this->model->load_NovedadesAdmin());
+		
+		$this->view->render($this->model->load_NovedadesAdmin());
+		// $a = $this->model->load_NovedadesAdmin();
+		// print_r($a);;
 	}
 
 	public function actionAgregarNovedad(){
-		if(isset($_REQUEST['titulo']) && isset($_FILES) && isset($_REQUEST['detalle'])){
-      		$this->model->agregarNovedad($_REQUEST['titulo'],$_FILES,$_REQUEST['detalle']);
-      		echo '{ "result" :  "OK" }';
-    	}else{
-      		echo '{ "result" :  "Faltan paramentros" }';
-    	}
+
+		$urlDefault = "uploads/";
+		
+		$titulo = $_REQUEST['titulo'];
+		$id_categoria = $_REQUEST['id_categoria'];
+		//$url_img = $urlDefault.$_FILES[0]['name'];
+		$url_img = $_REQUEST['imagesToUpload'][0];
+		// $url_img = 'pepito.jpg'; //esto ya funciona
+		$contenido = $_REQUEST['contenido'];	
+		
+		// $id_imagen=$this->NovedadesModelo->obtenerIdImg($url_img);//obtenerIdImg no anda nop
+		$id_imagen=$this->model->obtenerIdImg($url_img);//obtenerIdImg no anda nop
+		
+		$arrNot = $this->model->agregarNovedad($titulo,$id_categoria,$contenido,
+						$id_imagen);
+		//$this->view->renderRecarga();
+
+		echo '{ "result" :  "OK" }';
+		return;		
 	}
 }
 
