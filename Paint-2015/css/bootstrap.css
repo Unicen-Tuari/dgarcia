@@ -1188,7 +1188,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: 'SourceSansPro-Regular';
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1221,6 +1221,14 @@ h6 .small,
   line-height: 1;
   color: #777;
 }
+
+/*.gallery-1 .h4{
+  font-family: 'SourceSansPro-Regular';
+}
+.gallery-1 .h3{
+  font-family: 'SourceSansPro-Regular';
+}*/
+
 h1,
 .h1,
 h2,

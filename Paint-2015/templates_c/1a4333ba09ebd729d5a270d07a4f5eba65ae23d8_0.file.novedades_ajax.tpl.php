@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-27 22:38:11
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-29 22:32:58
          compiled from "C:\xampp\htdocs\Paint-2015\templates\novedades_ajax.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_560853b3147151_31424548',
+  'unifunc' => 'content_560af57a5517e1_94944868',
   'file_dependency' => 
   array (
     '1a4333ba09ebd729d5a270d07a4f5eba65ae23d8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\novedades_ajax.tpl',
-      1 => 1443386268,
+      1 => 1443556423,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_560853b3147151_31424548')) {
-function content_560853b3147151_31424548 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560af57a5517e1_94944868')) {
+function content_560af57a5517e1_94944868 ($_smarty_tpl) {
 ?>
 <div class="top-banner"></div>
 <div class="gallery">
@@ -43,15 +43,14 @@ $_smarty_tpl->tpl_vars['id_noticia'] = new Smarty_Variable();
 foreach ($_from as $_smarty_tpl->tpl_vars['id_noticia']->value => $_smarty_tpl->tpl_vars['noticia']->value) {
 $__foreach_noticia_0_saved_local_item = $_smarty_tpl->tpl_vars['noticia'];
 ?>
-				<div class="col-md-3 gallery-grid">
-					<h2><?php echo $_smarty_tpl->tpl_vars['noticia']->value['Titulo'];?>
-</h2>
-					<a class="example-image-link" href="<?php echo $_smarty_tpl->tpl_vars['noticia']->value['Ruta'];?>
-" data-lightbox="example-set" data-title="<?php echo $_smarty_tpl->tpl_vars['noticia']->value['Titulo'];?>
-"><img class="example-image" src="<?php echo $_smarty_tpl->tpl_vars['noticia']->value['Ruta'];?>
-" alt=""/></a>
-					<p><?php echo utf8_encode($_smarty_tpl->tpl_vars['noticia']->value['Contenido']);?>
-</p>
+				<div class="col-md-3 gallery-grid text-center" >
+					<h1><p><br><?php echo $_smarty_tpl->tpl_vars['noticia']->value['Titulo'];?>
+</p></h1>	
+					<a href="" class="link-noticia" id-noticia="<?php echo $_smarty_tpl->tpl_vars['noticia']->value['id_noticia'];?>
+">
+						<br><img class="example-image" src="<?php echo $_smarty_tpl->tpl_vars['noticia']->value['Ruta'];?>
+" alt=""/>
+					</a>
 				</div>
 				<?php
 $_smarty_tpl->tpl_vars['noticia'] = $__foreach_noticia_0_saved_local_item;

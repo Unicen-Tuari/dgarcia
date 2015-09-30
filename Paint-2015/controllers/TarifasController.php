@@ -12,8 +12,7 @@ class TarifasController{
 		include "./views/TarifasViewAjax.php";
 		$view = new TarifasViewAjax;
 		$view->render();
-	}	
-	
+	}
 }
 
 ?>

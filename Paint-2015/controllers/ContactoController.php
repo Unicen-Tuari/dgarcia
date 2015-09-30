@@ -13,7 +13,6 @@ class ContactoController{
 		$view = new ContactoViewAjax;
 		$view->render();
 	}
-	
 }
 
 ?>

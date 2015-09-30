@@ -8,7 +8,7 @@
 				{$espacio=0}
 				{foreach key=id_imagen item=imagen from=$imagenes}
 					<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="{$imagen['Ruta']}" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="{$imagen['Ruta']}" alt=""/></a>
+						<a class="example-image-link" href="{$imagen['Ruta']}" data-lightbox="example-set" ><img class="example-image" src="{$imagen['Ruta']}" alt=""/></a>
 						{if $espacio == 3}
 							<div>
 								<br>
@@ -21,7 +21,7 @@
 				<!-- <div class="clearfix"></div> -->
 				{/if}
 				<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g2.jpg" alt=""/></a>
+						<a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" ><img class="example-image" src="images/g2.jpg" alt=""/></a>
 					</div>
 			</div>				
 		 </div> 

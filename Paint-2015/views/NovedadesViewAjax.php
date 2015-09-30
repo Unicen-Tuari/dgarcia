@@ -16,6 +16,15 @@ class NovedadesViewAjax extends View{
 	function render(){
 		$this->smarty->display('novedades_ajax.tpl');
 	}	
+
+	function set_novedad($nov)
+	{		
+		$this->smarty->assign("novedad",$nov);
+	}
+
+	function render_novedad(){
+		$this->smarty->display('amplia_noticia.tpl');
+	}
 }
 
 ?>

@@ -6,10 +6,11 @@
 			<div class="gallery-1">
 				{if $cantidad gt 0}
 				{foreach key=id_noticia item=noticia from=$noticias}
-				<div class="col-md-3 gallery-grid">
-					<h2>{$noticia['Titulo']}</h2>
-					<a class="example-image-link" href="{$noticia['Ruta']}" data-lightbox="example-set" data-title="{$noticia['Titulo']}"><img class="example-image" src="{$noticia['Ruta']}" alt=""/></a>
-					<p>{utf8_encode($noticia['Contenido'])}</p>
+				<div class="col-md-3 gallery-grid text-center" >
+					<h1><p><br>{$noticia['Titulo']}</p></h1>	
+					<a href="" class="link-noticia" id-noticia="{$noticia['id_noticia']}">
+						<br><img class="example-image" src="{$noticia['Ruta']}" alt=""/>
+					</a>
 				</div>
 				{/foreach}
 				{/if}

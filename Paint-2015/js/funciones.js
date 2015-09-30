@@ -60,7 +60,7 @@ $(function () {
 			var auxString='';
 		} else {
 			var idCategoria = $(this).children("a").attr("id-categoria");
-			console.log($(this));
+			//console.log($(this));
 			var auxString='&categoria='+idCategoria;
 		}
 		$.get( "index.php?action="+contenido+auxString, function( data ) {
@@ -69,12 +69,68 @@ $(function () {
 		});		
 	});	
 
+	$(".link-noticia").unbind();//para evitar multiples triggers
+	$(".link-noticia").click(function(e){
+		e.preventDefault();//anula el click asi no navega
+		var idNoticia=$(this).attr("id-noticia");
+		$.get( "index.php?action=amplia_noticia&id_noticia="+idNoticia, function( data ) {
+			// console.log("carge el contenido del amplia");
+			$(".contenido").html(data);//ponemos el resultado de la pagina en el div contenido
+		 	$.getScript('js/funciones.js');//llamamos al js aca para que tenga contenido a la hora de aplicar
+		});	
+	});
+
 	$(".scroll").click(function(event) {		
 		event.preventDefault();
 		$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
 	});	
+
+	$(".botonAgregarImagenes").on("click", function(event){
+        event.preventDefault();
+
+        var archivos = $("#imagesToUpload").prop('files');
+
+        if(typeof(archivos) == 'undefined'){
+          //mostrarMensaje("No pusiste imagenes");
+          alert("No pusiste imagen");
+          return;
+        }
+
+        var datos = new FormData();
+
+        $.each(archivos, function(key,value){
+          datos.append(key,value);
+        });
+
+        datos.append("titulo",$("input[name=titulo]").val());
+        datos.append("detalle",$("textarea[name=detalle]").val());
+
+        //console.log(datos);
+        console.log(event.target.href);
+
+        $.ajax({
+          type: "POST",
+          dataType: "json",
+          //url: event.target.href,
+          url: 'admin.php?action=agregarNovedad',
+          data: datos,
+          success: function(data){
+            alert(data.result);
+          },
+          error: function(){
+            alert("No anduvo la llamada AJAX");
+          },
+          contentType : false,
+          processData : false
+        });
+
+      });
+
 });
 
+
+      
+    
 addEventListener("load", function() {
 	setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); 
 };

@@ -43,6 +43,15 @@ ini_set("display_errors", 1);
 			$c->actionNovedadesAjax($_GET['categoria']);										
 		}
 	}	
+	else if($_REQUEST['action']=='amplia_noticia')
+	{		
+		if(array_key_exists('id_noticia', $_GET))
+		{
+			include "./controllers/NovedadesController.php";
+			$c = new NovedadesController();
+			$c->actionNovedadAjax($_GET['id_noticia']);										
+		}
+	}	
 	else if($_REQUEST['action']=='galeria_ajax')
 	{
 		if(array_key_exists('categoria', $_GET))

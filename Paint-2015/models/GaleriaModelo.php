@@ -9,12 +9,22 @@ class Galeria extends ModeloDB
 
 	}
 
+	// public function load_Imagen($categoria) 
+	// {			
+	// 	return $this->query("
+	// 		 SELECT i.ruta as Ruta
+	//          FROM imagenes i
+	//          WHERE(i.id_categoria = '".$categoria."')        		
+ //        ");			
+	// }
+
 	public function load_Imagen($categoria) 
 	{			
 		return $this->query("
-			SELECT i.ruta as Ruta
-	        FROM imagenes i 
-	        WHERE(i.id_categoria = '".$categoria."')        		
+			 SELECT i.ruta as Ruta
+	         FROM imagenes i 
+	         INNER JOIN noticias n ON (n.id_imagen = i.id_imagen)
+	         WHERE(n.id_categoria = '".$categoria."')        		
         ");			
 	}
 	

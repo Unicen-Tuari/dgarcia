@@ -130,7 +130,7 @@ span.glyphicon.glyphicon-search {
 /*--//search--*/
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #fff;
-    background-color: #F43C60;
+    background-color: #3b5998;
 }
 .nav > li > a {
     padding: 1.45em 1.3em;
@@ -140,18 +140,18 @@ span.glyphicon.glyphicon-search {
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #fff;
-    background-color: #F43C60;
+    background-color: #3b5998;
 }
 .caret {
     margin-left: 9px;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: #fff;
-    background-color: #F43C60;
+    background-color: #3B5998;
 }
 ul.dropdown-menu {
     background-color: #333333;
-	padding: 0;
+	  padding: 0;
 }
 .dropdown-menu > li > a {
     font-size: 1em;
@@ -159,7 +159,8 @@ ul.dropdown-menu {
     padding: 15px 35px;
 }
 .dropdown-menu.galeria > li > a {
-    padding: 15px 20px;
+    padding: 15px 21px;
+
 }
 .dropdown-menu{
   min-width:0px;
@@ -167,7 +168,7 @@ ul.dropdown-menu {
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     color: #FFF;
-    background-color: #F43C60;
+    background-color: #3b5998;
 }
 /*--- slider-css --*/
 .slider {
@@ -289,7 +290,7 @@ padding: 0.6em;
 	
 }
 #slider-inicio ul.callbacks_tabs {
-	position: relative;
+	position: absolute;
 	bottom: 50px;
 	z-index: 999;
 	left: 47%;
@@ -761,7 +762,7 @@ color: #333333;
   border-top-right-radius: 50px;
 }
 .event-grid-sec:hover div.event-time{
-	background:#F43C60;  
+	background:#3b5998;  
 	color:#fff;
 }
 .latest-pics h3 {
@@ -2051,7 +2052,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 
 ul.callbacks_tabs.callbacks1_tabs {
-	position: relative;
+	position: absolute;
 	bottom: 50px;
 	z-index: 999;
 	left: 47%;
@@ -2153,7 +2154,7 @@ ul.callbacks_tabs.callbacks1_tabs {
     font-weight: 700;
 }
 
-.service-info h3, .projects-info h3 {
+.service-info h3 {
     /*text-align: center;
     font-family: 'LobsterTwo-Regular';
     color: #3b5998;
@@ -2166,6 +2167,21 @@ ul.callbacks_tabs.callbacks1_tabs {
     padding-bottom: 0.5em;
     font-family: 'LobsterTwo-Bold';
     margin-top: 1em;
+}
+
+.projects-info h3 {
+    /*text-align: center;
+    font-family: 'LobsterTwo-Regular';
+    color: #3b5998;
+    font-size: 2.5em;
+    margin: 0;*/
+
+    font-size: 2.5em;
+    color: #3b5998;
+    text-align: center;
+    padding-bottom: 0.5em;
+    font-family: 'LobsterTwo-Bold';
+
 }
 
 .service-box .icon {
@@ -2203,4 +2219,16 @@ ul.callbacks_tabs.callbacks1_tabs {
 .stroke {
 -webkit-text-fill-color: white;
 -webkit-text-stroke: 1px grey;
+}
+
+.event-grid_pic h3 {
+    color: #3b5998;
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+      background-color: #3B5998;
 }

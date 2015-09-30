@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-29 01:12:23
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-29 22:33:07
          compiled from "C:\xampp\htdocs\Paint-2015\templates\galeria_ajax.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5609c9572cfdc9_16085234',
+  'unifunc' => 'content_560af5837290d7_87047520',
   'file_dependency' => 
   array (
     '6a947ab6d7301b8ef28a61d6c609eafe9d22fb70' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Paint-2015\\templates\\galeria_ajax.tpl',
-      1 => 1443481939,
+      1 => 1443553753,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_5609c9572cfdc9_16085234')) {
-function content_5609c9572cfdc9_16085234 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560af5837290d7_87047520')) {
+function content_560af5837290d7_87047520 ($_smarty_tpl) {
 ?>
 <div class="top-banner"></div>
 <div class="gallery">
@@ -46,7 +46,7 @@ $__foreach_imagen_0_saved_local_item = $_smarty_tpl->tpl_vars['imagen'];
 ?>
 					<div class="col-md-3 gallery-grid">
 						<a class="example-image-link" href="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['Ruta'];?>
-" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['Ruta'];?>
+" data-lightbox="example-set" ><img class="example-image" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['Ruta'];?>
 " alt=""/></a>
 						<?php if ($_smarty_tpl->tpl_vars['espacio']->value == 3) {?>
 							<div>
@@ -70,7 +70,7 @@ $_smarty_tpl->tpl_vars['id_imagen'] = $__foreach_imagen_0_saved_key;
 				<!-- <div class="clearfix"></div> -->
 				<?php }?>
 				<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/g2.jpg" alt=""/></a>
+						<a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" ><img class="example-image" src="images/g2.jpg" alt=""/></a>
 					</div>
 			</div>				
 		 </div> 
