@@ -1,10 +1,10 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-29 22:31:39
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-14 00:12:48
          compiled from "C:\xampp\htdocs\Paint-2015\templates\inicio_ajax.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_560af52b35ae45_66713182',
+  'unifunc' => 'content_561d81e104f6b7_86330917',
   'file_dependency' => 
   array (
     '0128faab712ae4471b9202a0f9c347043b24fa17' => 
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_560af52b35ae45_66713182')) {
-function content_560af52b35ae45_66713182 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_561d81e104f6b7_86330917')) {
+function content_561d81e104f6b7_86330917 ($_smarty_tpl) {
 ?>
 
  <div class="header-slider">

@@ -2,18 +2,41 @@
 
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-
 	
 	include "./controllers/AdminController.php";
-	$controller = new AdminController();
-	$controller->actionIndex();		
-
-	if(! array_key_exists('action', $_REQUEST)||$_REQUEST['action']=='agregarNovedad')
+			
+	if(! array_key_exists('action', $_REQUEST))
 	{
-		//print_r($_REQUEST);
+		
 		$controller = new AdminController();
-		$controller->actionAgregarNovedad();		
+		$controller->mostrarHome();		
 	}	
+
+	if(array_key_exists('action', $_REQUEST) && $_REQUEST['action']=='agregar_novedad')
+	{
+		
+		$controller = new AdminController();
+		$controller->agregarNovedad();		
+	}	
+	
+	if(array_key_exists('action', $_REQUEST) && $_REQUEST['action']=='agregar_imagenes')
+	{
+		$controller = new AdminController();
+		$controller->agregarImagenes();		
+	}
+
+	if(array_key_exists('action', $_REQUEST) && $_REQUEST['action']=='noticias_partial')
+	{
+		$controller = new AdminController();
+		$controller->mostrarHomeParcial();		
+	}
+
+	if(array_key_exists('action', $_REQUEST) && $_REQUEST['action']=='borrar_novedad')
+	{
+		$controller = new AdminController();
+		$controller->borrarNovedad();		
+	}
+		
 	/*else 
 	{
 		echo "ERROR ACCION NO VALIDA";

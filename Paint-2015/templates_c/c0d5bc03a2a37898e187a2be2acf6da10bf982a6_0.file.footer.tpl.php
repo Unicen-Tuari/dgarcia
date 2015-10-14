@@ -1,10 +1,10 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-29 22:31:38
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-14 00:12:47
          compiled from "C:\xampp\htdocs\Paint-2015\templates\footer.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_560af52ac0d051_39837737',
+  'unifunc' => 'content_561d81df958689_79038575',
   'file_dependency' => 
   array (
     'c0d5bc03a2a37898e187a2be2acf6da10bf982a6' => 
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_560af52ac0d051_39837737')) {
-function content_560af52ac0d051_39837737 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_561d81df958689_79038575')) {
+function content_561d81df958689_79038575 ($_smarty_tpl) {
 ?>
 
 <!-- footer -->

@@ -7,37 +7,59 @@ class AdminController{
 	private $model;
 	
 	function __construct(){
+
 		$this->model = new Novedades();
 		$this->view = new AdminView();
 	}
 
 	public function actionIndex(){
 		
-		$this->view->render($this->model->load_NovedadesAdmin());
-		// $a = $this->model->load_NovedadesAdmin();
-		// print_r($a);;
+		$this->view->render($this->model->load_NovedadesAdmin());		
 	}
 
-	public function actionAgregarNovedad(){
+	function mostrarHome(){
 
-		$urlDefault = "uploads/";
-		
-		$titulo = $_REQUEST['titulo'];
-		$id_categoria = $_REQUEST['id_categoria'];
-		//$url_img = $urlDefault.$_FILES[0]['name'];
-		$url_img = $_REQUEST['imagesToUpload'][0];
-		// $url_img = 'pepito.jpg'; //esto ya funciona
-		$contenido = $_REQUEST['contenido'];	
-		
-		// $id_imagen=$this->NovedadesModelo->obtenerIdImg($url_img);//obtenerIdImg no anda nop
-		$id_imagen=$this->model->obtenerIdImg($url_img);//obtenerIdImg no anda nop
-		
-		$arrNot = $this->model->agregarNovedad($titulo,$id_categoria,$contenido,
-						$id_imagen);
-		//$this->view->renderRecarga();
+    	$this->view->render($this->model->getNoticias());
+	}
 
-		echo '{ "result" :  "OK" }';
-		return;		
+	function mostrarHomeParcial(){
+
+    	$this->view->mostrarParcial($this->model->getNoticias());
+	}
+
+	function mostrarBorrar(){
+
+    	$this->view->mostrarBorrar($this->model->getNoticias());
+	}
+	  
+	function agregarNovedad(){	  	 
+
+		if(isset($_REQUEST['titulo']) && isset($_REQUEST['contenido']) && isset($_FILES['imagesToUpload'])){
+	        $this->model->agregarNoticia($_REQUEST['titulo'],$_REQUEST['contenido'],$_FILES['imagesToUpload']);
+	    }
+	    $this->mostrarHomeParcial();	      
+	}
+
+	function borrarNovedad(){
+
+	    if(isset($_REQUEST['id_task'])){
+
+	      $this->model->borrarNovedad($_REQUEST['id_task']);
+	    }
+	    // else{
+	    //   $this->view->mostrarError('La tarea que intenta borrar no existe');
+	    // }
+	    $this->mostrarBorrar();
+	}
+
+	function agregarImagenes(){
+
+	    if(isset($_REQUEST['id_task']) && isset($_FILES)){
+	      $this->model->agregarImagenes($_REQUEST['id_task'],$_FILES);
+	      echo '{ "result" :  "OK" }';
+	    }else{
+	      echo '{ "result" :  "Faltan paramentros" }';
+	    }
 	}
 }
 

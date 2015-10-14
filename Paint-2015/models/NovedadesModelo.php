@@ -4,6 +4,14 @@ include_once "modelodb.php";
 
 class Novedades extends ModeloDB
 {
+
+	private $noticias;
+  	private $db;
+
+	  function __construct() {
+	      $this->db = new PDO('mysql:host=localhost;dbname=paint;charset=utf8', 'root', '');
+	      $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	  }
 	public function load()	
 	{			
 
@@ -49,30 +57,78 @@ class Novedades extends ModeloDB
 	}
 
 	/*Funciones que utiliza el administrador!!!!*/
+	
+  	private function subirImagenes($imagenes){
 
-	public function agregarImagen($url_img){
-		return $this->query("
+	    $carpeta = "uploads/images/";
+	    $destinos_finales = array();
+	    foreach ($imagenes["tmp_name"] as $key => $value){
+	      $destinos_finales[] = $carpeta.uniqid().$imagenes["name"][$key];
+	      move_uploaded_file($value, end($destinos_finales));
+	    }
+	    return $destinos_finales;
+  	}
 
-			INSERT INTO imagenes (ruta)
-					VALUES ('$url_img')
-		");
+	function getNoticias(){
+
+	    $noticias = array();
+	    $consulta = $this->db->prepare("SELECT * FROM noticias");
+	    $consulta->execute();
+	//Todas las noticias
+	    while($noticia = $consulta->fetch(PDO::FETCH_ASSOC)){
+	      $consultaImagenes = $this->db->prepare("SELECT * FROM imagenes where fk_id_noticia=?");
+	      $consultaImagenes->execute(array($noticia['id_noticia']));
+	      $imagenes_noticia = $consultaImagenes->fetchAll();
+	      $noticia['imagenes'] = $imagenes_noticia;
+	      $noticias[]=$noticia;
+	    }
+	    return $noticias;
+  	}
+
+  	function agregarNoticia($titulo, $contenido, $imagenes, $id_categoria = 1){
+	
+		  $destinos_finales=$this->subirImagenes($imagenes);
+		//Inserto la noticia
+		  $this->db->beginTransaction();
+		  $consulta = $this->db->prepare('INSERT INTO noticias(titulo,contenido,id_categoria) VALUES(?,?,?)');
+		  $consulta->execute(array($titulo,$contenido,$id_categoria));
+		  $id_noticia = $this->db->lastInsertId();
+		//Insertar las imagenes
+		  foreach ($destinos_finales as $key => $value){
+		   	$consulta = $this->db->prepare('INSERT INTO imagenes(fk_id_noticia,ruta) VALUES(?,?)');
+		    $consulta->execute(array($id_noticia, $value));
+		   }
+		   $this->db->commit();		  
+  	}
+
+	function borrarNovedad($id_noticia){
+
+		$consulta = $this->db->prepare('DELETE FROM imagenes WHERE fk_id_noticia=?');
+	    $consulta->execute(array($id_noticia));
+	  	$consulta1 = $this->db->prepare('DELETE FROM noticias WHERE id_noticia=?');
+	    $consulta1->execute(array($id_noticia));
 	}
 
-	public function obtenerIdImg($url_img){
-		return $this->query("
-			SELECT i.id_imagen
-        	FROM imagenes i        
-	        WHERE(i.ruta ='images/$url_img')        		
-        ");	
+	private function subirImagenesAjax($imagenes){
+
+	   $carpeta = "uploads/images/";
+	   $destinos_finales = array();
+	   foreach ($imagenes as $imagen){
+	      $destino =  $carpeta.uniqid().$imagen["name"];
+	      move_uploaded_file($imagen["tmp_name"], $destino);
+	      $destinos_finales[] = $destino;
+	    }
+	   return $destinos_finales;
 	}
 
-	public function agregarNovedad($titulo,$id_categoria,$contenido,$id_imagen){
-		return $this->query("
+  	function agregarImagenes($id_noticia, $imagenes){
 
-			INSERT INTO noticias (titulo,id_categoria,contenido,id_imagen)
-					VALUES ('$titulo','$id_categoria','$contenido','$id_imagen')
-		");
-	}
+	    $rutas=$this->subirImagenesAjax($imagenes);
+	    $consulta = $this->db->prepare('INSERT INTO imagenes(fk_id_noticia,ruta) VALUES(?,?)');
+	    foreach($rutas as $ruta){
+	      $consulta->execute(array($id_noticia,$ruta));
+    }
+  }
 }
 
 ?>
