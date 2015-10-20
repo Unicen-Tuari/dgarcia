@@ -36,6 +36,12 @@ ini_set("display_errors", 1);
 		$controller = new AdminController();
 		$controller->borrarNovedad();		
 	}
+
+	if(array_key_exists('action', $_REQUEST) && $_REQUEST['action']=='agregar_imagenes')
+	{
+		$controller = new AdminController();
+		$controller->agregarImagenes();		
+	}
 		
 	/*else 
 	{

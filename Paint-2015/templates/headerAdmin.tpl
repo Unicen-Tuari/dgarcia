@@ -1,10 +1,3 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -42,11 +35,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</button>
 						<div class="logo">
 							<h1><a href=""><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>Paint</a></h1>
-						</div>						
+						</div>
+						<form class="navbar-form navbar-left search" role="search">						
+							<div class="form-group">
+								<button type="submit" class="btn btn-default" aria-label="Left Align">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</button>
+								<input type="text" class="form-control" placeholder="Search">
+							</div>						
+						</form>
 					</div>	
 				</div><!-- /.container-fluid -->
 			</nav>	
 		</div>
 	</div>
-
-

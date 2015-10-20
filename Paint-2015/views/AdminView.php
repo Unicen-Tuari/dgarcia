@@ -4,10 +4,11 @@ require('View.php');
 
 class AdminView extends View{
 
-	function render($datos){
-
+	function render($datos, $categorias){
+		$this->smarty->assign('categorias',$categorias);
 		$this->smarty->assign('noticias',$datos);
 		$this->smarty->display('admin.tpl');
+		
 	}
 
 	function mostrarParcial($noticias){
@@ -21,7 +22,7 @@ class AdminView extends View{
 
 	  // $this->smarty->assign('errores', $this->errores);
 	  $this->smarty->assign('noticias', $noticias);
-	  $this->smarty->display('admin.tpl');
+	  $this->smarty->display('noticiasPartial.tpl');
 	}
 }
 

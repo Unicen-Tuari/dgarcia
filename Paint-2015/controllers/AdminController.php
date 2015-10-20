@@ -1,5 +1,6 @@
 <?php
 include "./models/NovedadesModelo.php";
+include "./models/CategoriasModelo.php";
 include "./views/AdminView.php";
 
 class AdminController{
@@ -13,13 +14,13 @@ class AdminController{
 	}
 
 	public function actionIndex(){
-		
-		$this->view->render($this->model->load_NovedadesAdmin());		
+		$catModel = new Categorias();
+		$this->view->render($this->model->load_NovedadesAdmin(), $catModel->load_Categorias());		
 	}
 
 	function mostrarHome(){
-
-    	$this->view->render($this->model->getNoticias());
+		$catModel = new Categorias();
+    	$this->view->render($this->model->getNoticias(), $catModel->load_Categorias());
 	}
 
 	function mostrarHomeParcial(){
@@ -34,8 +35,12 @@ class AdminController{
 	  
 	function agregarNovedad(){	  	 
 
-		if(isset($_REQUEST['titulo']) && isset($_REQUEST['contenido']) && isset($_FILES['imagesToUpload'])){
-	        $this->model->agregarNoticia($_REQUEST['titulo'],$_REQUEST['contenido'],$_FILES['imagesToUpload']);
+		if(isset($_REQUEST['titulo']) 
+			&& isset($_REQUEST['contenido']) 
+			&& isset($_REQUEST['id_categoria']) 
+			&& isset($_FILES['imagesToUpload'])
+			){
+	        $this->model->agregarNoticia($_REQUEST['titulo'],$_REQUEST['contenido'],$_FILES['imagesToUpload'], $_REQUEST['id_categoria']);
 	    }
 	    $this->mostrarHomeParcial();	      
 	}

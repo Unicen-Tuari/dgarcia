@@ -22,7 +22,7 @@ class Novedades extends ModeloDB
 		return $this->query("
 			SELECT n.id_noticia as id_noticia,  n.titulo as Titulo, i.ruta as Ruta
 	        FROM noticias n  
-	        INNER JOIN imagenes i ON (n.id_imagen = i.id_imagen)
+	        INNER JOIN imagenes i ON (n.id_noticia = i.fk_id_noticia)
 	        WHERE(n.id_categoria = '".$categoria."')        		
         ");			
 	}
@@ -31,7 +31,7 @@ class Novedades extends ModeloDB
 	{			
 		return $this->query("
 			SELECT n.id_noticia as id_noticia,  n.titulo as Titulo, i.ruta as Ruta, c.nombre as Categoria
-	        FROM noticias n INNER JOIN imagenes i ON (n.id_imagen = i.id_imagen) 
+	        FROM noticias n INNER JOIN imagenes i ON (n.id_noticia = i.fk_id_noticia) 
 	        INNER JOIN categorias c ON(n.id_categoria = c.id_categoria)        		
         ");			
 	}
@@ -51,7 +51,7 @@ class Novedades extends ModeloDB
 			SELECT n.id_noticia as id_noticia,  n.titulo as Titulo, n.contenido as Contenido, 
                             i.ruta as Ruta
 	        FROM noticias n  
-	        INNER JOIN imagenes i ON (n.id_imagen = i.id_imagen)
+	        INNER JOIN imagenes i ON (n.id_noticia = i.fk_id_noticia)
 	        WHERE(n.id_noticia = '".$id_noticia."')        		
         ");			
 	}
@@ -85,7 +85,7 @@ class Novedades extends ModeloDB
 	    return $noticias;
   	}
 
-  	function agregarNoticia($titulo, $contenido, $imagenes, $id_categoria = 1){
+  	function agregarNoticia($titulo, $contenido, $imagenes, $id_categoria){
 	
 		  $destinos_finales=$this->subirImagenes($imagenes);
 		//Inserto la noticia

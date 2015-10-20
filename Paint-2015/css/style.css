@@ -2239,3 +2239,17 @@ input.form-control {
     font-size: 1.1em;
     border-color: #3B5998;
 }
+
+.glyphicon {
+    position: relative;
+  top: 3px;
+  display: block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 999;
+}

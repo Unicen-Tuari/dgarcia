@@ -23,7 +23,7 @@ class Galeria extends ModeloDB
 		return $this->query("
 			 SELECT i.ruta as Ruta
 	         FROM imagenes i 
-	         INNER JOIN noticias n ON (n.id_imagen = i.id_imagen)
+	         INNER JOIN noticias n ON (n.id_noticia = i.fk_id_noticia)
 	         WHERE(n.id_categoria = '".$categoria."')        		
         ");			
 	}

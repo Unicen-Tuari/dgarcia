@@ -19,10 +19,7 @@
 					</div>
 				{/foreach}
 				<!-- <div class="clearfix"></div> -->
-				{/if}
-				<div class="col-md-3 gallery-grid">
-						<a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" ><img class="example-image" src="images/g2.jpg" alt=""/></a>
-					</div>
+				{/if}				
 			</div>				
 		 </div> 
 	 </div>
