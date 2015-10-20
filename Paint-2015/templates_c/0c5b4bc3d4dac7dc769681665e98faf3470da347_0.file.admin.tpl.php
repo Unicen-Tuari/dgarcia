@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-20 02:26:12
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-20 19:46:25
          compiled from "C:\xampp\htdocs\dany\k\Paint-2015\templates\admin.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_56258a24e735e2_37379089',
+  'unifunc' => 'content_56267df131dcc2_01704059',
   'file_dependency' => 
   array (
     '0c5b4bc3d4dac7dc769681665e98faf3470da347' => 
     array (
       0 => 'C:\\xampp\\htdocs\\dany\\k\\Paint-2015\\templates\\admin.tpl',
-      1 => 1445293222,
+      1 => 1445363139,
       2 => 'file',
     ),
   ),
@@ -21,8 +21,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'file:footerAdmin.tpl' => 1,
   ),
 ),false);
-if ($_valid && !is_callable('content_56258a24e735e2_37379089')) {
-function content_56258a24e735e2_37379089 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56267df131dcc2_01704059')) {
+function content_56267df131dcc2_01704059 ($_smarty_tpl) {
 $_smarty_tpl->setupSubTemplate('file:headerAdmin.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>'foo'), 0, false)->render();
 ?>
 
@@ -81,7 +81,7 @@ $_smarty_tpl->tpl_vars['categoria'] = $__foreach_categoria_0_saved_item;
               <label for="task">Contenido</label>
               <input type="text" class="form-control" id="contenido" name="contenido" placeholder="Contenido">
             </div>
-            <div class="form-group id="imagenes" ">
+            <div class="form-group">
               <label for="imagesToUpload">Im&aacute;genes</label>
               <input type="file" name="imagesToUpload[]" id="imagesToUpload" multiple/>
             </div>

@@ -7,7 +7,7 @@
 				{if $cantidad gt 0}
 				{foreach key=id_noticia item=noticia from=$noticias}
 				<div class="col-md-3 gallery-grid text-center" >
-					<h1><p><br>{$noticia['Titulo']}</p></h1>	
+					<h2><p><br>{$noticia['Titulo']}</p></h2>	
 					<a href="" class="link-noticia" id-noticia="{$noticia['id_noticia']}">
 						<br><img class="example-image" src="{$noticia['Ruta']}" alt=""/>
 					</a>

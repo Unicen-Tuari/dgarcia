@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-20 01:09:12
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-20 19:43:10
          compiled from "C:\xampp\htdocs\dany\k\Paint-2015\templates\novedades_ajax.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_56257818b489a1_47956290',
+  'unifunc' => 'content_56267d2ec2f4e3_35918753',
   'file_dependency' => 
   array (
     'ba3e46ab4541a4dde4370fde5dddb642c2a71eb2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\dany\\k\\Paint-2015\\templates\\novedades_ajax.tpl',
-      1 => 1443622651,
+      1 => 1445362983,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_56257818b489a1_47956290')) {
-function content_56257818b489a1_47956290 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56267d2ec2f4e3_35918753')) {
+function content_56267d2ec2f4e3_35918753 ($_smarty_tpl) {
 ?>
 <div class="top-banner"></div>
 <div class="gallery">
@@ -44,8 +44,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['id_noticia']->value => $_smarty_tpl->
 $__foreach_noticia_0_saved_local_item = $_smarty_tpl->tpl_vars['noticia'];
 ?>
 				<div class="col-md-3 gallery-grid text-center" >
-					<h1><p><br><?php echo $_smarty_tpl->tpl_vars['noticia']->value['Titulo'];?>
-</p></h1>	
+					<h2><p><br><?php echo $_smarty_tpl->tpl_vars['noticia']->value['Titulo'];?>
+</p></h2>	
 					<a href="" class="link-noticia" id-noticia="<?php echo $_smarty_tpl->tpl_vars['noticia']->value['id_noticia'];?>
 ">
 						<br><img class="example-image" src="<?php echo $_smarty_tpl->tpl_vars['noticia']->value['Ruta'];?>

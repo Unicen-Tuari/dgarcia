@@ -32,7 +32,7 @@
               <label for="task">Contenido</label>
               <input type="text" class="form-control" id="contenido" name="contenido" placeholder="Contenido">
             </div>
-            <div class="form-group id="imagenes" ">
+            <div class="form-group">
               <label for="imagesToUpload">Im&aacute;genes</label>
               <input type="file" name="imagesToUpload[]" id="imagesToUpload" multiple/>
             </div>
